@@ -1,0 +1,368 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../images/home-bg.png);
+    background-size: cover;
+    padding: opx;
+    justify-items: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#logo{
+    height: 50px;
+    margin: 0px 10px;
+}
+#header-container{
+    width: 100%;
+    height: max-content;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: inline-flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0,0.2);
+    padding: 0;
+}
+.center-alignment{
+    display: flex;
+    align-items: center;
+    
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+.block-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+nav{
+    margin-right: 10px;
+}
+.a-nav{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin: 0px 10px;
+}
+.a-nav:hover{
+    color: rgb(3, 3, 143);
+    text-decoration: solid;
+    background-color: rgb(255, 252, 58,0.3);
+    padding: 10px;
+    border-radius: 100px;
+}
+.btn-nav{
+    background-color: rgb(3, 3, 143);
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 100px;
+    color: white;
+    font-style: bold;
+    padding: 0;
+}
+#home-banner{
+    width: 100%;
+    height:700px;
+    display: block;
+    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    background-size: 100%;
+    align-content: center;
+    justify-items: center;
+    color: white;
+}
+.largest-font{
+    font-size: 50px;
+}
+#inquire-btn{
+    margin: 20px 0px;
+    background-color: rgb(3, 3, 143);
+    width: 300px;
+    height: 60px;
+    border: none;
+    border-radius: 100px;
+    font-size: 24px;
+    color: white;
+}
+.btn-nav:hover,#inquire-btn:hover{
+    background-color: yellow;
+    color: black;
+    transition: 0.3s;
+}
+.txt-shadow{
+    text-shadow: 2px 2px 5px black;
+}
+.shadow{
+    box-shadow: 2px 2px 5px black;
+}
+
+#home-about{
+    height: max-content;
+    padding-top: 20px;
+}
+#home-about-description{
+    width: 50%;
+    padding: 20px 50px;
+    background-color: rgb(255, 255, 255,0.5);
+    border-radius: 20px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 135%;
+    margin: 40px 0px;
+}
+#more-info{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.per-info-teacher{
+    height: max-content;
+    width: 250px;
+    border: solid #FF66BF 5px;
+    justify-items: center;
+    padding: 30px 10px;
+    color: #FF66BF;
+}
+
+.icon-container-teacher{
+    width: 100px;
+    height: 100px;
+    background-color: #FF66BF;
+    padding: 20px;
+    font-size: 80px;
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    align-content: center;
+    color: white;
+}
+.per-info-program{
+    height: max-content;
+    width: 250px;
+    border: solid #D0B100 5px;
+    justify-items: center;
+    padding: 30px 10px;
+    background-color: rgb(255, 255, 255,0.8);
+    color: #D0B100;
+}
+
+.icon-container-program{
+    width: 100px;
+    height: 100px;
+    background-color: #D0B100;
+    padding: 20px;
+    font-size: 80px;
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    align-content: center;
+    color: white;
+}
+
+.per-info-schedule{
+    height: max-content;
+    width: 250px;
+    border: solid #52ADFC 5px;
+    justify-items: center;
+    padding: 30px 10px;
+    background-color: rgb(255, 255, 255,0.8);
+    color: #52ADFC;
+}
+
+.icon-container-schedule{
+    width: 100px;
+    height: 100px;
+    background-color: #52ADFC;
+    padding: 20px;
+    font-size: 80px;
+    border-radius: 100px;
+    text-align: center;
+    display: block;
+    align-content: center;
+    color: white;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.line-separator{
+    color: black;
+    margin-top: 50px;
+}
+
+#image-slides-container{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    align-items: center;
+}
+#image-slide{
+    height: 80%;
+    width: 60%;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0,0.2);
+    background-color: blue;
+    background-image: url(../images/home-image-slide.jpg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+#event-container{
+    width: 100%;
+    height: 700px;
+    justify-items: center;
+}
+#latest-event{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+#event1{
+    width: 600px;
+    height: 400px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 0px 20px;
+}
+.no-margin-y{
+    margin: 10px 10px;
+}
+.small-margin{
+    margin: 10px 10px;
+}
+
+#event1-image-container{
+    width: 100%;
+    height: 70%;
+    background-image: url(../images/holloween.png);
+}
+
+#team-container{
+    width: 100%;
+    height: max-content;
+    justify-items: center;
+    
+}
+
+#team{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 0px 80px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#per-member{
+    height: 250px;
+    width: 150px;
+    border: solid black 2px;
+    background-color: rgb(255, 255, 255,0.9);
+}
+
+#tutor-pic{
+    width: 150px;
+    height: 200px;
+    background-color: grey;
+    background-image: url(../images/Team/member1.png);
+    background-size: cover;
+    background-position-x: center;
+}
+
+#tutor-details{
+    width: 100%;
+    height: max-content;
+    text-align: center;
+}
+
+.clickable-txt{
+    text-decoration: none;
+    color: inherit;
+}
+.clickable-txt:hover{
+    color: red;
+    transition: 0.4s;
+}
+
+/* below are the style for team page */
+
+#team-page-body{
+    background-image: url(../images/bg3.png);
+    background-size: cover;
+}
+
+#team-page-container{
+    width: 100%;
+    height: max-content;
+    justify-items: center;
+    
+}
+#founder-container{
+    width: 60%;
+    height: 300px;
+    display: flex;
+    
+
+}
+#founder-pic{
+    height: 200px;
+}
+#founder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#founder-details{
+    width: max-content;
+    margin-left: 50px;
+    font-size: x-large;
+    align-content: center;
+}
+
+#banner{
+    width: 100%;
+    height: 300px;
+    padding-top: 80px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    color: white;
+}
+
+#tutor-container{
+    justify-items: center;
+    width: 100%;
+}
+
+#tutors-text-team{
+    margin-top: 20px;
+}
+
+.current-page{
+    color: rgb(3, 3, 143);
+    text-decoration: solid;
+    background-color: rgb(255, 252, 58,0.3);
+    padding: 10px;
+    border-radius: 100px; 
+}
