@@ -16,7 +16,7 @@
             <h1 class="largest-font txt-shadow no-margin">ABOUT US</h1>
                 <h3 class="txt-shadow">learn what Happy Head really is</h3>
         </div>
-        <h1>HELLO DARLY</h1>
+        <h1>HELLO PAPA</h1>
         <div class="section">
             <h2>What is Happy Head Tutorial?</h2>
             <p>Happy Heads provides tutoring classes for students from pre-nursery to high school. Our experienced tutors focus on fostering a positive and engaging learning environment in different subjects while helping them gain confidence, nurturing both emotional and academic development.</p>
