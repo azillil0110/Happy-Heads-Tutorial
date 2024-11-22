@@ -13,6 +13,7 @@
     <body>
         <?php include('includes/header.php') ?>
 
+        
         <div id="home-banner" >
                 <h1 class="largest-font txt-shadow">Welcome to Happy Heads Tutorial Center</h1>
                 <h2 class="txt-shadow">LEARN WITH US!</h5>
