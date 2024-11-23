@@ -7,7 +7,7 @@
             <div id="description-left-container">
                 <h5 >We are always happy  to serve you and give you the best tutorial to you children</h5>
             </div>
-            <h6 ><a href="" class="clickable-txt">Tutor Login</a></h6>
+            <h6 ><a href="login.php" class="clickable-txt">Tutor Login</a></h6>
         </div>
 
         <div class="footer-container">
