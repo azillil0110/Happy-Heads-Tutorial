@@ -22,7 +22,6 @@
                     <label style="font-weight: bold;" for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-                <p>Try</p>
                 <button type="submit">Login</button>
                 <a href="forgot-password.php">Forgot Password?</a>
             </form>
