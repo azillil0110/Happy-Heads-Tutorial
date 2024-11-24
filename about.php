@@ -13,7 +13,7 @@
     <main>
         
         <div id="banner">
-            <h1 class="largest-font txt-shadow no-margin">ABOUT US</h1>
+            <h1 class="largest-font txt-shadow no-margin">ABOUT USSSS</h1>
                 <h3 class="txt-shadow">learn what Happy Head really is</h3>
         </div>
 
