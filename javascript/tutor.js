@@ -50,7 +50,6 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 break;
             default:
                 stylesheet.href = 'css/tutor/tutor-dashboard.css';
-                break;
         }
         
     });

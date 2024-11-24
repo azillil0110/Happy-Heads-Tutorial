@@ -34,12 +34,12 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
         const stylesheet = document.getElementById('rightsidestyle');
         switch (section) {
             case 'dashboard':
-                stylesheet.href = 'css/admin/admindashboard.css';
+                stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
                 stylesheet.href = 'css/admin/.css';
                 break;
-            case 'tutorschedule':
+            case 'tutors':
                 stylesheet.href = 'css/admin/.css';
                 break;
             case 'tutorschedule':
@@ -48,9 +48,11 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'addevent':
                 stylesheet.href = 'css/admin/.css';
                 break;
-            default:
+            case 'settings':
                 stylesheet.href = 'css/admin/.css';
                 break;
+            default:
+                stylesheet.href = 'css/admin/admin-dashboard.css';
         }
         
     });
@@ -90,7 +92,11 @@ function getContent(section) {
             return `
                 
             `;
-        case 'myschedule':
+        case 'tutors':
+            return `
+                
+            `;
+        case 'tutorschedule':
             return `
                 
             `;
