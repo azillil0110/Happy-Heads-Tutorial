@@ -43,9 +43,14 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/tutor/addevent.css';
                 break;
             case 'myschedule':
-                stylesheet.href = 'css/tutor/mysched.css'
+                stylesheet.href = 'css/tutor/mysched.css';
+                break;
+            case 'settings':
+                stylesheet.href = 'css/tutor/settings.css';
+                break;
             default:
                 stylesheet.href = 'css/tutor/tutor-dashboard.css';
+                break;
         }
         
     });

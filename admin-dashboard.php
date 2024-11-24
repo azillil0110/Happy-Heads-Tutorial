@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tutor Dashboard</title>
-    <link id="rightsidestyle" rel="stylesheet" href="css/tutor/tutor-dashboard.css">
+    <title>Admin Dashboard</title>
+    <link id="rightsidestyle" rel="stylesheet" href="css/admin/admin-dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/tutor/tutorheader.css">
-    <link rel="stylesheet" href="css/tutor/tutordashboard.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin/adminheader.css">
+    <link rel="stylesheet" href="css/admin/admindashboard.css">
+    <script src="https://kit.fontawesome.com/9a257cd74f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php include('includes/tutorheader.php') ?>
-    <div id="overlay" onclick="off()">
-        <div class="col-100" id="ov-textContainer">
-          <p class="ov-text" id="ov-title"> STUDENT LIST</p>
-        </div>
-    </div>
+    <?php include('includes/adminheader.php') ?>
     <div class="main_body">
-        <?php include('includes/tutordashboard.php') ?>
-
+        <?php include('includes/admindashboard.php') ?>
         <div class="rightside">
             <div class="righttop">
                 <p class="righttoptext">Welcome Back, Teacher John!</p>
@@ -28,8 +22,12 @@
                     <p class="righttitle">Students</p>
                 </div>
                 <div class="box">
+                    <i class="fa-solid fa-user righticons"></i>
+                    <p class="righttitle">Tutors</p>
+                </div>
+                <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
-                    <p class="righttitle">My Schedule</p>
+                    <p class="righttitle" id="righttitle1">Tutor's Schedule</p>
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
@@ -43,6 +41,6 @@
         </div>
     </div>
     <?php include('includes/footer.php') ?>
-    <script src="javascript/tutor.js"></script>
+    <script src="javascript/admin.js"></script>
 </body>
 </html>
