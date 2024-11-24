@@ -131,8 +131,36 @@ function getContent(section) {
             return `
                 <div class="righttop">
                     <p class="righttoptext">Your Schedule</p>
-
-                    <div class= row>
+                </div>
+                <div class="rightbot">
+                    <div class="rowcenter" >
+                        <p class="righttitletext"> My Schedule</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-16-tc">
+                        <p class="textlabel" >MONDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >TUESDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >WEDNESDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >THURSDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >FRIDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >SATURDAY</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-16-tc">
+                        <p class="txt-mysched" onclick="on()">7:00-8:00</p>
+                        </div>
+                    </div>
                 </div>
             `;
         case 'addevent':
