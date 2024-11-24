@@ -15,7 +15,7 @@
             <form>
                 <a href="index.php" id="logo"><img  src="images/hpt_logo.png" alt="HPT Logo"></a>
                 <div>
-                    <label style="font-weight: bold;" for="username">Username1</label>
+                    <label style="font-weight: bold;" for="username">Username2</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 </div>
                 <div>
