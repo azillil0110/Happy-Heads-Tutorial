@@ -135,9 +135,6 @@ function getContent(section) {
                     <p class="righttoptext">Your Schedule</p>
                 </div>
                 <div class="rightbot">
-                    <div class="rowcenter" >
-                        <p class="righttitletext"> My Schedule</p>
-                    </div>
                     <div class="row">
                         <div class="col-16-tc">
                         <p class="textlabel" >MONDAY</p>
