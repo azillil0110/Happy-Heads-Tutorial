@@ -1,0 +1,171 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main_body {
+    width: 100%;
+    height: 882px;
+    height: fit-content;
+    display: flex;
+}
+
+.square {
+   color:  white;
+}
+
+.square1 {
+    color: #044c8c;
+}
+
+.rightside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+
+.righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 180px;
+    background-color: #C1DDF6;
+    border: none;
+    margin: 40px;
+}
+
+.righttoptext {
+    font-weight: 700;
+    color: #000000;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+
+.rightbot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.bottop {
+    display: flex;
+}
+
+.leftbottop {
+    width: 600px;
+    height: 220px;
+    font-size: 20px;
+}
+
+.uploadbox {
+    justify-self: end;
+    margin-right: 50px;
+    width: 160px;
+    height: 200px;
+    background-color: #C8C8C8;
+    border: 1px solid;
+    border-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.uploadicon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.uploadtext {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.rightbottop {
+    width: 800px;
+    height: 220px;
+}
+
+.formtext {
+    margin: 5px;
+    margin-left: 0px;
+    font-size: 20px;
+}
+
+.textevent {
+    width: 600px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin: 10px;
+}
+
+#date {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 10px;
+}
+
+.botbot {
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.midform {
+    width: 1200px;
+}
+
+#desc {
+    margin: 0;
+    padding: 0;
+}
+
+#descinp {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #ffffff;
+    color: #333;
+    margin: 10px;
+}
+
+.bottomform {
+    width: 1150px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnAddEvent {
+    padding: 20px;
+    width: 220px;
+    border: 1px solid rgba(255, 255, 255, 0.719);
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #044c8c;
+    margin-top: 16px;
+}

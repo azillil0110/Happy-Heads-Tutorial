@@ -22,7 +22,7 @@
                     <label style="font-weight: bold;" for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit" href="tutor-dashboard.php">Login</button>
                 <a href="forgot-password.php">Forgot Password?</a>
             </form>
         </div>
