@@ -131,6 +131,8 @@ function getContent(section) {
             return `
                 <div class="righttop">
                     <p class="righttoptext">Your Schedule</p>
+
+                    <div class= row>
                 </div>
             `;
         case 'addevent':
