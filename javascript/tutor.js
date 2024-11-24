@@ -42,6 +42,8 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'addevent':
                 stylesheet.href = 'css/tutor/addevent.css';
                 break;
+            case 'myschedule':
+                stylesheet.href = ''
             default:
                 stylesheet.href = 'css/tutor/tutor-dashboard.css';
         }
@@ -162,6 +164,15 @@ function getContent(section) {
                         </div>
                     </div>
                 </div>
+                <script>
+                    function on() {
+                    document.getElementById("overlay").style.display = "flex";
+                    }
+                    
+                    function off() {
+                    document.getElementById("overlay").style.display = "none";
+                    }
+                </script>
             `;
         case 'addevent':
             return `
