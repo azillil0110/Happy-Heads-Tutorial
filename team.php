@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/footer.css">
+        <?php include_once 'includes/dbh.inc.php'?>
     </head>
     <body id="team-page-body">
         <?php include('includes/header.php') ?>
@@ -31,20 +32,13 @@
             </div>
         </div>
 
+        
+
         <hr>
 
         <div id="tutor-container">
             <h1 id="tutors-text-team">Tutors</h1>
                 <div id="team">
-                    <div id="per-member">
-                        <div id="tutor-pic">
-
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder & Head</h6>
-                        </div>
-                    </div>
 
                     <div id="per-member">
                         <div id="tutor-pic">
@@ -56,25 +50,29 @@
                         </div>
                     </div>
 
-                    <div id="per-member">
-                        <div id="tutor-pic">
+                    <?php 
+                        $sql = "SELECT * FROM `moderator`";
+                        $result = mysqli_query($conn, $sql);
+                        $resultcheck = mysqli_num_rows($result);
 
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
+                        if($resultcheck > 0){
+                            while($row = mysqli_fetch_assoc($result)){ 
+                                
+                                ?>
+                                <div id="per-member">
+                                    <div id="tutor-pic">
 
-                    <div id="per-member">
-                        <div id="tutor-pic">
+                                    </div>
+                                    <div id="tutor-details">
+                                        <h5 class="no-margin-y"><?php echo $row['First Name']?></h5>
+                                        <h6 class="no-margin-y"><?php echo $row['Position']?></h6>
+                                    </div>
+                                </div>
 
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
+                                <?php
+                            }
+                        }
+                    ?>
                 </div>
         </div>
 

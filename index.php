@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/all.css">
         <link rel="stylesheet" href="css/footer.css">
+        <?php include_once 'includes/dbh.inc.php'?>
     </head>
     <body>
         <?php include('includes/header.php') ?>
@@ -114,6 +115,8 @@
             </div>
 
             <hr>
+
+            
 
             <div id="team-container">
                 <h1>Our Team</h1>
