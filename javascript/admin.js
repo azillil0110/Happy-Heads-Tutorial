@@ -34,7 +34,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
         const stylesheet = document.getElementById('rightsidestyle');
         switch (section) {
             case 'dashboard':
-                stylesheet.href = 'css/admin/tutor-dashboard.css';
+                stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
                 stylesheet.href = 'css/admin/.css';
