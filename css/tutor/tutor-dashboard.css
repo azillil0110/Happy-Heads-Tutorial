@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -7,7 +8,7 @@ body {
 
 .main_body {
     width: 100%;
-    height: 882px;
+    height: auto;
     height: fit-content;
     display: flex;
 }
@@ -32,7 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 95%;
-    height: 180px;
+    height: 140px;
     background-color: #C1DDF6;
     border: none;
     margin: 40px;
@@ -53,8 +54,8 @@ body {
 }
 
 .box {
-    width: 183px;
-    height: 180px;
+    width: 173px;
+    height: 170px;
     background-color: #ffffff;
     border-radius: 50px;
     border: 4px solid;
@@ -67,15 +68,15 @@ body {
 
 .righticons {
     color: #044c8c;
-    font-size: 95px;
-    width: 95px;
-    height: 95px;
+    font-size: 85px;
+    width: 85px;
+    height: 85px;
     text-align: center;
 }
 
 .righttitle {
     color: #044c8c;
-    font-size: 22px;
+    font-size: 20px;
     margin: 5px;
     margin-bottom: 0px;
 }
