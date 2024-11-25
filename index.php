@@ -17,7 +17,7 @@
         
         <div id="home-banner" >
                 <h1 class="largest-font txt-shadow">Welcome to Happy Heads Tutorial Center</h1>
-                <h2 class="txt-shadow">LEARN WITH US!</h5>
+                <h2 class="txt-shadow">LEARN WITH USSSS!</h5>
                 <button id="inquire-btn" class="shadow">Inquire Now</button>
         </div>
 
