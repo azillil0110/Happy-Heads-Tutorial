@@ -83,7 +83,7 @@ function getContent(section) {
                         <p class="righttitle">Event</p>
                     </div>
                     <div class="box">
-                        <i class="fa-solid fa-gear righticons"></i>
+                        <i class="fa-solid fa-user righticons"></i>
                         <p class="righttitle">Settings</p>
                     </div>
                 </div>
@@ -147,10 +147,10 @@ function getContent(section) {
                             <form action="#" method="post">
                                 <input id="field" type="hidden" name="form-name" value="form 1">
                             <div class="contact-form-field">
-                                <input id="field" required placeholder="Enter your FirstName" type="text" name="name" id="name">
+                                <input id="field" required placeholder="First Name" type="text" name="name" id="name">
                             </div>
                             <div class="contact-form-field">
-                                <input id="field" required placeholder="Enter your LastName" type="text" name="name" id="name">
+                                <input id="field" required placeholder="Last Name" type="text" name="name" id="name">
                             </div>
                             <div class="date-gender">
                                 <div id="date">
@@ -179,7 +179,7 @@ function getContent(section) {
                         <div class="email-phone">
                             <div id="email">
                                 <h5>Email</h5>
-                                <input id="input" required placeholder="Enter your email" type="text" name="email">
+                                <input id="input" required placeholder="Enter email" type="text" name="email">
                             </div>
                             <div id="phone">
                                 <h5>Phone</h5>
@@ -189,16 +189,16 @@ function getContent(section) {
                         <div class="usern-pass">
                             <div id="usern">
                                 <h5>Username</h5>
-                                <input id="input" required placeholder="Enter your username" type="text" name="usern">
+                                <input id="input" required placeholder="Enter username" type="text" name="usern">
                             </div>
                             <div id="pass">
                                 <h5>Password</h5>
-                                <input id="input" required placeholder="Enter your password" type="password" name="pass">
+                                <input id="input" required placeholder="Enter password" type="password" name="pass">
                                 <p>change password</p>
                             </div>
                         </div>
                         <div>
-                            <button id="btn-save">Save Changes</button>
+                            <button id="btn-save">Add</button>
                         </div>
                     </div>
             `;
