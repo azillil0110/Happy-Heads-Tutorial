@@ -10,11 +10,8 @@
 </head>
 <body>
     <?php include('includes/tutorheader.php') ?>
-    
     <div class="main_body">
         <?php include('includes/tutordashboard.php') ?>
-
-
         <div class="rightside">
             <div class="righttop">
                 <p class="righttoptext">Welcome Back, Teacher John!</p>
@@ -40,14 +37,7 @@
         </div>
     </div>
     <?php include('includes/footer.php') ?>
-    <script src="javascript/tutor.js">
-        function on() {
-                    document.getElementById("overlay").style.display = "flex";
-                    }
-                    
-                    function off() {
-                    document.getElementById("overlay").style.display = "none";
-                    }
-    </script>
+    <script src="javascript/tutor.js"></script>
+    <script src="javascript/schedule.js"></script>
 </body>
 </html>
