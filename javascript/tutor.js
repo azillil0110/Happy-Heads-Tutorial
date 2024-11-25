@@ -135,6 +135,11 @@ function getContent(section) {
             `;
         case 'myschedule':
             return `
+            <div id="overlay" onclick="off()">
+                <div class="col-100" id="ov-textContainer">
+                <p class="ov-text" id="ov-title"> STUDENT LIST</p>
+                </div>
+            </div>
                 <div class="righttop">
                     <p class="righttoptext">Your Schedule</p>
                 </div>
