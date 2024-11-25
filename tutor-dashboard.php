@@ -23,7 +23,7 @@
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
-                    <p class="righttitle">My Scheduleeee</p>
+                    <p class="righttitle">My Schedule</p>
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
