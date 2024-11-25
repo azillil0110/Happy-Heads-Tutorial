@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Student Information</title>
-    <link rel="stylesheet" href="studentinfo.css">
+    <link rel="stylesheet" href="css/studentinfo.css">
 </head>
 <body>
     <header>
