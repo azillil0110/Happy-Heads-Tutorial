@@ -9,12 +9,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php include('includes/tutorheader.php') ?>
     <div id="overlay" onclick="off()">
-                    <div class="col-100" id="ov-textContainer">
-                    <p class="ov-text" id="ov-title"> STUDENT LIST</p>
-                    </div>
-    </div>
+        <div class="col-100" id="ov-textContainer">
+        <p class="ov-text" id="ov-title"> STUDENT LIST</p>
+        </div>
+    </>
+    <?php include('includes/tutorheader.php') ?>
+    
     <div class="main_body">
         <?php include('includes/tutordashboard.php') ?>
 
