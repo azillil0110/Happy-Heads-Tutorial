@@ -1,6 +1,6 @@
 <div class="top">
     <div class="shortrectangle">
-        <p class="rectangletext">Tutor Access</p>
+        <p class="rectangletext">TUTOR ACCESS</p>
     </div>
     <div class="longrectangle">
         <div>

@@ -21,8 +21,8 @@
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Add Event</p>
     </div>
-    <div class="leftoptions" data-section="settings">
+    <div class="leftoptions" data-section="addtutor">
         <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Settings</p>
+        <p class="lefttext2">Add Tutor</p>
     </div>
 </div>

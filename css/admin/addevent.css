@@ -12,6 +12,11 @@ body {
     display: flex;
 }
 
+#textcenter{
+    display: inline-block;
+    text-align: center;
+}
+
 .square {
    color:  white;
 }
@@ -32,8 +37,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 95%;
-    height: 180px;
-    background-color: #C1DDF6;
+    height: 140px;
+    background-color: #E6E6E6;
     border: none;
     margin: 40px;
 }
@@ -47,20 +52,23 @@ body {
 }
 
 .rightbot {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 40px;
+    padding-left: 40px;
 }
 
 .bottop {
     display: flex;
+    margin-top: 10px;
 }
 
 .leftbottop {
-    width: 600px;
-    height: 220px;
+    width: 35%;
+    height: auto;
     font-size: 20px;
 }
 
@@ -92,22 +100,22 @@ body {
 }
 
 .rightbottop {
-    width: 800px;
-    height: 220px;
+    width: 50%;
+    height: auto;
 }
 
 .formtext {
     margin: 5px;
     margin-left: 0px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .textevent {
-    width: 600px;
+    width: 300px;
     padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.308);
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #ffffff;
     margin: 10px;
 }
@@ -117,28 +125,31 @@ body {
     padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.308);
     border-radius: 15px;
-    font-size: 16px;
-    color: #333;
+    font-size: 14px;
+    color: #333333c9;
     background-color: #ffffff;
     text-align: center;
     margin: 10px;
 }
 
 .botbot {
-    width: 1200px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     display: flex;
-    margin-left: 20px;
+    padding-left: 200px;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .midform {
-    width: 1200px;
+    width: auto;
 }
 
 #desc {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 #descinp {
@@ -152,11 +163,13 @@ body {
 }
 
 .bottomform {
-    width: 1150px;
-    height: 200px;
+    width: auto;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 550px;
+    margin: 20px;
 }
 
 .btnAddEvent {
@@ -166,6 +179,6 @@ body {
     border-radius: 15px;
     font-size: 16px;
     color: white;
-    background-color: #044c8c;
+    background-color: #000000;
     margin-top: 16px;
 }
