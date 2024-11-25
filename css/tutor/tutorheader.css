@@ -24,30 +24,43 @@
     letter-spacing: 0;
 }
 
-
 .longrectangle {
     width: 80%;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-around;
     border: 1px solid;
     border-color: #044c8c;
+    gap: 700px;
+}
+
+.logout {
+    font-weight: 400;
+    color: #044c8c;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.longright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 
 .pfp {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
 }
 
 
 .title {
-    font-weight: 700;
+    font-weight: 600;
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0;
     margin-left: 10px;
-    padding-right: 50px;
 }

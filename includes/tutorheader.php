@@ -3,7 +3,12 @@
         <p class="rectangletext">Tutor Access</p>
     </div>
     <div class="longrectangle">
-        <img src="PFP.png" class="pfp">
-        <p class="title">Name of the Tutor/Admin</p>
+        <div>
+            <a href="#" class="logout">| Log out</a>
+        </div>
+        <div class="longright">
+            <img src="PFP.png" class="pfp">
+            <p class="title">Name of the Tutor/Admin</p>
+        </div>
     </div>
 </div>
