@@ -69,10 +69,6 @@ function getContent(section) {
                         <p class="righttitle">My Schedule</p>
                     </div>
                     <div class="box">
-                        <i class="fa-solid fa-calendar righticons"></i>
-                        <p class="righttitle">Event</p>
-                    </div>
-                    <div class="box">
                         <i class="fa-solid fa-gear righticons"></i>
                         <p class="righttitle">Settings</p>
                     </div>
