@@ -14,11 +14,6 @@
     <div class="main_body">
         <?php include('includes/tutordashboard.php') ?>
 
-        <div id="overlay" onclick="off()">
-            <div class="col-100" id="ov-textContainer">
-            <p class="ov-text" id="ov-title"> STUDENT LIST</p>
-            </div>
-        </div>
 
         <div class="rightside">
             <div class="righttop">
