@@ -64,8 +64,8 @@
 
                                     </div>
                                     <div id="tutor-details">
-                                        <h5 class="no-margin-y"><?php echo $row['First Name']?></h5>
-                                        <h6 class="no-margin-y"><?php echo $row['Position']?></h6>
+                                        <h5 class="no-margin-y"><?php echo $row['mod_fname']?></h5>
+                                        <h6 class="no-margin-y"><?php echo $row['acc_type']?></h6>
                                     </div>
                                 </div>
 

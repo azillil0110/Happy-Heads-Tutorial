@@ -105,3 +105,6 @@ body {
     
 }
 
+.error-placeholder::placeholder{
+    color: red;
+}

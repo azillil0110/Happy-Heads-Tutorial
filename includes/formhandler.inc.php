@@ -1,36 +1,34 @@
 <?php
 
+require_once 'dbh.inc.php';
+
+$error = false;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    try{
-        require_once "dbh.inc.php";
+    $query  = "SELECT * from moderator WHERE mod_usern = '$username';";
+    $result = mysqli_query($conn, $query);
+    $resultcheck = mysqli_num_rows($result);
 
-        $query ="INSERT INTO acc(username,passw) VALUES (?,?);";
-
-        $stmt = $pdo->prepare($query);
-
-        $stmt->execute([$username,$password]);
-
-        $pdo = null;
-        $stmt = null;
-
-        header("Location: ../index.php");
-        
-        die();
-
-    }catch(PDOException $e){
-        die("Query Failed: " . $e->getMessage());
+    if($resultcheck>0){
+        while($row = mysqli_fetch_assoc($result)){
+            if($password === $row['mod_pass']){
+                header('location: ../tutor-dashboard.php');
+            }
+            else{
+                header('location: ../login.php?error=invalid_password&username='.$username);
+                exit();
+            }
+        }
     }
-
- /*   echo "Ito yung mga sinumbit";
-    echo "<br>";
-    echo $username;
-    echo "<br>";
-    echo $password; */
-
+    else{
+        header('location: ../login.php?error=no_account');
+        exit();
+        
+    }
     
 }
 else{

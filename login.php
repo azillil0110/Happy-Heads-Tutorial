@@ -9,10 +9,9 @@
 </head>
 <body>
     
-
     <main>
         <div class="login-box">
-            <form>
+            <form id="login-form" action="includes/formhandler.inc.php" method="POST">
                 <a href="index.php" id="logo"><img  src="images/hpt_logo.png" alt="HPT Logo"></a>
                 <div>
                     <label style="font-weight: bold;" for="username">Username2</label>
@@ -22,10 +21,12 @@
                     <label style="font-weight: bold;" for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" href="tutor-dashboard.php">Login</button>
+                <button type="submit">Login</button>
                 <a href="forgot-password.php">Forgot Password?</a>
             </form>
         </div>
     </main>
-
+    <script src="javascript/login.js"></script>
 </body>
+
+</html>
