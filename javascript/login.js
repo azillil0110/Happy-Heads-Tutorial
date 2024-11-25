@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         passwordInput.placeholder = "Incorrect password";
         passwordInput.style.border = '2px solid red';
+        passwordInput.classList.add('error-placeholder');
 
     } else if (error === 'no_account') {
         usernameInput.style.border = '2px solid red';
