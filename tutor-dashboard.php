@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tutor/tutorheader.css">
     <link rel="stylesheet" href="css/tutor/tutordashboard.css">
+    <link rel="stylesheet" href="css/tutor/overlay.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
