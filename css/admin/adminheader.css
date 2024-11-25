@@ -32,7 +32,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 1px solid;
     border-color: #666666;
     gap: 700px;
@@ -52,10 +52,11 @@
     gap: 10px;
 }
 
-.pfp {
+#pfp {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    background-image: url('../../images/Team/sweden.png');
 }
 
 
@@ -65,4 +66,11 @@
     font-size: 18px;
     letter-spacing: 0;
     margin-left: 10px;
+}
+
+#admin-info{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 20px;
 }
