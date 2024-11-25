@@ -15,8 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if($resultcheck>0){
         while($row = mysqli_fetch_assoc($result)){
+            $acc = $row['acc_type'];
             if($password === $row['mod_pass']){
-                header('location: ../tutor-dashboard.php');
+                if($acc == 'tutor'){
+                    header('location: ../tutor-dashboard.php');
+                }
+                else if ($acc === 'admin' || $acc === 'founder'){
+                    header('location: ../admin-dashboard.php');
+                }
+                
             }
             else{
                 header('location: ../login.php?error=invalid_password&username='.$username);
