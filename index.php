@@ -78,9 +78,47 @@
             <hr class="line-separator">
 
             <div id="image-slides-container">
-                <div id="image-slide">
+                <?php
+                $sql = "SELECT * FROM `events_`";
+                $result = mysqli_query($conn, $sql);
+                $resultcheck = mysqli_num_rows($result);
 
-                </div>
+                if ($resultcheck > 0) {
+                    $images = [];
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $images[] = $row['image_url'];
+                    }
+                }
+                ?>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        let imagearr = <?php echo json_encode($images); ?>; // Convert PHP array to JavaScript array
+                        let x = 0;
+                        const time = 3000; // Change every 3 seconds
+
+                        function changeImage() {
+                            const imageSlideContainer = document.getElementById('image-slide1');
+                            if (imageSlideContainer && imagearr.length > 0) {
+                                imageSlideContainer.style.backgroundImage = `url('./images/events/${imagearr[x]}')`;
+                                imageSlideContainer.style.backgroundSize = 'cover';
+                                imageSlideContainer.style.backgroundPosition = 'center';
+                                imageSlideContainer.style.backgroundRepeat = 'no-repeat';
+                            }
+
+                            // Update index for the next image
+                            x = (x + 1) % imagearr.length;
+
+                            // Call function again after `time` interval
+                            setTimeout(changeImage, time);
+                        }
+
+                        // Start the slideshow
+                        changeImage();
+                    });
+                </script>
+
+                <div id="image-slide1" class="image-slider"></div>
             </div>
 
             <hr>
@@ -89,25 +127,47 @@
                 <h1>Events</h1>
 
                 <div id="latest-event">
-                    <div id="event1">
-                        <h4 class="small-margin">Holloween Party</h4>
-                        <h6 class="no-margin-y"> October 31, 2024</h6>
+                    <?php 
+                        $sql = "SELECT * FROM `events_`";
+                        $result = mysqli_query($conn, $sql);
+                        $resultcheck = mysqli_num_rows($result);
 
-                        <div id="event1-image-container">
-                        </div>
+                        if($resultcheck > 0){
+                            $i = 0;
+                            while($i<2){ 
+                                $row = mysqli_fetch_assoc($result);
+                                ?>
+                                <div class="event1">
+                                    <h4 class="small-margin"><?php echo $row['event_name']?></h4>
+                                    <h6 class="no-margin-y">
+                                        <?php 
+                                        $date = $row['event_date'];
+                                        echo substr($date,0,10);
+                                    ?></h6>
 
-                        <h5 class="small-margin">A Costume Party</h5>
-                    </div>
+                                    <div id="eventpic<?php echo $i; ?>"class="event1-image-container">
+                                    </div>
+                                    <script>
+                                          document.addEventListener('DOMContentLoaded', function () {
+                                            const imageContainer = document.getElementById('eventpic<?php echo $i; ?>');
+                                            if (imageContainer) {
+                                                imageContainer.style.backgroundImage = "url('images/events/<?php echo $row['image_url']; ?>')";
+                                                imageContainer.style.backgroundSize = 'cover';
+                                                imageContainer.style.backgroundPosition = 'center';
+                                                imageContainer.style.backgroundRepeat = 'no-repeat';
+                                            }
+                                        });
+                                    </script>
 
-                    <div id="event1">
-                        <h4 class="small-margin">Holloween Party</h4>
-                        <h6 class="no-margin-y"> October 31, 2024</h6>
+                                    <h5 class="small-margin"><?php echo $row['event_description']?></h5>
+                                </div>
 
-                        <div id="event1-image-container">
-                        </div>
-
-                        <h5 class="small-margin">A Costume Party</h5>
-                    </div>
+                                <?php
+                                $i++;
+                            }
+                        }
+                    ?>
+                    
                 </div>
 
                 <h3><a href="" class="clickable-txt">See More</a></h3>
