@@ -40,9 +40,8 @@
         </div>
     </div>
     <?php include('includes/footer.php') ?>
-    <script src="javascript/tutor.js"></script>
     <script src="javascript/tutor.js">
-                    function on() {
+        function on() {
                     document.getElementById("overlay").style.display = "flex";
                     }
                     
