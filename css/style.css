@@ -274,9 +274,10 @@ nav{
     width: 150px;
     border: solid black 2px;
     background-color: rgb(255, 255, 255,0.9);
+    margin-bottom: 20px;
 }
 
-#tutor-pic{
+.tutor-pic-bg{
     width: 150px;
     height: 200px;
     background-color: grey;

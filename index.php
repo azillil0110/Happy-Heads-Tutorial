@@ -181,55 +181,41 @@
             <div id="team-container">
                 <h1>Our Team</h1>
                 <div id="team">
-                    <div id="per-member">
-                        <div id="tutor-pic">
+                    <?php 
+                        $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin'";
+                        $result = mysqli_query($conn, $sql);
+                        $resultcheck = mysqli_num_rows($result);
 
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
+                        if($resultcheck > 0){
+                            $i = 0;
+                            while($i < 4){ 
+                                $row = mysqli_fetch_assoc($result)
+                                ?>
+                                <div id="per-member">
+                                    <div id="tutor-pic<?php echo $i; ?>" class="tutor-pic-bg">
+                                    </div>
+                                    <script>
+                                          document.addEventListener('DOMContentLoaded', function () {
+                                            const imageContainer = document.getElementById('tutor-pic<?php echo $i; ?>');
+                                            if (imageContainer) {
+                                                imageContainer.style.backgroundImage = "url('images/team/<?php echo $row['pfp_url']; ?>')";
+                                                imageContainer.style.backgroundSize = 'cover';
+                                                imageContainer.style.backgroundPosition = 'center';
+                                                imageContainer.style.backgroundRepeat = 'no-repeat';
+                                            }
+                                        });
+                                    </script>
+                                    <div id="tutor-details">
+                                        <h5 class="no-margin-y"><?php echo $row['mod_fname']?></h5>
+                                        <h6 class="no-margin-y"><?php echo $row['acc_type']?></h6>
+                                    </div>
+                                </div>
 
-                    <div id="per-member">
-                        <div id="tutor-pic">
-
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
-
-                    <div id="per-member">
-                        <div id="tutor-pic">
-
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
-
-                    <div id="per-member">
-                        <div id="tutor-pic">
-
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
-
-                    <div id="per-member">
-                        <div id="tutor-pic">
-
-                        </div>
-                        <div id="tutor-details">
-                            <h5 class="no-margin-y">Sweden Alquizar</h5>
-                            <h6 class="no-margin-y">Founder</h6>
-                        </div>
-                    </div>
+                                <?php
+                                $i++;
+                            }
+                        }
+                    ?>
                 </div>
 
                 <h3 class="no-margin-y"> <a href="team.php" class="clickable-txt">See More</a></h3>
