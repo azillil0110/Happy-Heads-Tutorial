@@ -13,10 +13,6 @@
                 <i class="fa-solid fa-square square"></i>
                 <p class="lefttext2">My Schedule</p>
             </div>
-            <div class="leftoptions" data-section="addevent">
-                <i class="fa-solid fa-square square"></i>
-                <p class="lefttext2">Add Event</p>
-            </div>
             <div class="leftoptions" data-section="settings">
                 <i class="fa-solid fa-square square"></i>
                 <p class="lefttext2">Settings</p>

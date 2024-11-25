@@ -38,7 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 95%;
-    height: 180px;
+    height: 140px;
     background-color: #C1DDF6;
     border: none;
     margin: 40px;
@@ -53,6 +53,8 @@ body {
 }
 
 .rightbot {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,8 +72,8 @@ body {
 }
 
 .box {
-    width: 216px;
-    height: 280px;
+    width: 120px;
+    height: 172px;
     background-color: #ffffff;
     border: 2px solid;
     border-color: #044c8c;
@@ -82,14 +84,14 @@ body {
 }
 
 .stpfp {
-    width: 216px;
-    height: 229px;
+    width: 120px;
+    height: 140px;
 }
 
 .righttitle {
     color: #044c8c;
-    font-size: 22px;
-    line-height: 45px;
+    font-size: 12px;
+    line-height: 25px;
     margin: 5px;
     margin-bottom: 0px;
 }
