@@ -10,11 +10,8 @@
 </head>
 <body>
     <?php include('includes/tutorheader.php') ?>
-    
     <div class="main_body">
         <?php include('includes/tutordashboard.php') ?>
-
-
         <div class="rightside">
             <div class="righttop">
                 <p class="righttoptext">Welcome Back, Teacher John!</p>
