@@ -141,7 +141,7 @@ function getContent(section) {
                     </div>
                 </div>
                 <div class="righttop">
-                    <p class="righttoptext">Your Schedule</p>
+                    <p class="righttoptext">Your Schedulee</p>
                 </div>
                 <div class="rightbot">
                     <div class="row">
