@@ -41,5 +41,6 @@
     </div>
     <?php include('includes/footer.php') ?>
     <script src="javascript/tutor.js"></script>
+    <script src="javascript/schedule.js"></script>
 </body>
 </html>
