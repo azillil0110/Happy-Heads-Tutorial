@@ -14,7 +14,7 @@
         <?php include('includes/tutordashboard.php') ?>
         <div class="rightside">
             <div class="righttop">
-                <p class="righttoptext">Welcome Back, Teacher Johnnnn!</p>
+                <p class="righttoptext">Welcome Back, Teacher John!</p>
             </div>
             <div class="rightbot">
                 <div class="box">
