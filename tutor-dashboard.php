@@ -15,6 +15,15 @@
         <p class="ov-text" id="ov-title"> STUDENT LIST</p>
         </div>
     </>
+    <script>
+                    function on() {
+                    document.getElementById("overlay").style.display = "flex";
+                    }
+                    
+                    function off() {
+                    document.getElementById("overlay").style.display = "none";
+                    }
+                </script>
     <?php include('includes/tutorheader.php') ?>
     
     <div class="main_body">
