@@ -221,19 +221,6 @@ function getContent(section) {
         default:
             return `<p>Content not found.</p>`;
     }
-
-    function generateStudentCards(count) {
-        let cards = '';
-        for (let i = 0; i < count; i++) {
-            cards += `
-                <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
-                    <p class="righttitle">Student Name</p>
-                </div>
-            `;
-        }
-        return cards;
-    }
     
     function generateScheduleDays(days) {
         return days
