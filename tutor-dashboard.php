@@ -4,8 +4,8 @@
     <title>Tutor Dashboard</title>
     <link id="rightsidestyle" rel="stylesheet" href="css/tutor/tutor-dashboard.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/tutor/tutorheader.css">
     <link rel="stylesheet" href="css/tutor/tutordashboard.css">
+    <link rel="stylesheet" href="css/tutor/tutorheader.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
