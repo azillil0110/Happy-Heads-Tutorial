@@ -137,7 +137,7 @@ function getContent(section) {
             return `
                 <div id="overlay" onclick="off()">
                     <div class="col-100" id="ov-textContainer">
-                        <p class="ov-text" id="ov-title"> STUDENT LIST</p>
+                    <p class="ov-text" id="ov-title"> STUDENT LIST</p>
                     </div>
                 </div>
                 <div class="righttop">
@@ -145,14 +145,40 @@ function getContent(section) {
                 </div>
                 <div class="rightbot">
                     <div class="row">
-                        ${generateScheduleDays(['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'])}
+                        <div class="col-16-tc">
+                        <p class="textlabel" >MONDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >TUESDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >WEDNESDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >THURSDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >FRIDAY</p>
+                        </div>
+                        <div class="col-16-tc">
+                        <p class="textlabel" >SATURDAY</p>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-16-tc">
-                            <p class="txt-mysched" onclick="on()">7:00-8:00</p>
+                        <p class="txt-mysched" onclick="on()">7:00-8:00</p>
                         </div>
                     </div>
                 </div>
+                <script>
+                    function on() {
+                    document.getElementById("overlay").style.display = "flex";
+                    }
+                    
+                    function off() {
+                    document.getElementById("overlay").style.display = "none";
+                    }
+                </script>
             `;
         case 'addevent':
             return `
@@ -196,24 +222,4 @@ function getContent(section) {
         default:
             return `<p>Content not found.</p>`;
     }
-
-    function generateStudentCards(count) {
-        let cards = '';
-        for (let i = 0; i < count; i++) {
-            cards += `
-                <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
-                    <p class="righttitle">Student Name</p>
-                </div>
-            `;
-        }
-        return cards;
-    }
-    
-    function generateScheduleDays(days) {
-        return days
-            .map(day => `<div class="col-16-tc"><p class="textlabel">${day}</p></div>`)
-            .join('');
-    }
-    
 }
