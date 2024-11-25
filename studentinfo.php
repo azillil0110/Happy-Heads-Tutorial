@@ -5,21 +5,7 @@
     <link rel="stylesheet" href="css/studentinfo.css">
 </head>
 <body>
-    <header>
-        <div class="center-alignment">
-            <img id="logo" src="image/logo.jpg" alt="HPT Logo">
-            <h2>Happy Head Tutorials</h2>
-        </div>
-        
-        <nav>
-            <a class="a-nav" href="">Home</a>
-            <a class="a-nav" href="">Team</a>
-            <a class="a-nav" href="">Program</a>
-            <a class="a-nav" href="">About</a>
-            <a class="a-nav" href="">Contact</a>
-            <button class="btn-nav">APPLY</button>
-        </nav>
-    </header>
+    <?php include('includes/header.php') ?>
 
     <div id="profile-picture-section">
         <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
