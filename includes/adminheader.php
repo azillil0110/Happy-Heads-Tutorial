@@ -25,7 +25,7 @@
                                         document.addEventListener('DOMContentLoaded', function () {
                                         const imageContainer = document.getElementById('pfp');
                                         if (imageContainer) {
-                                            imageContainer.style.backgroundImage = "url(''../../images/Team/<?php echo $row['pfp_url']; ?>')";
+                                            imageContainer.style.backgroundImage = "url('./images/Team/<?php echo $row['pfp_url']; ?>')";
                                             imageContainer.style.backgroundSize = 'cover';
                                             imageContainer.style.backgroundPosition = 'center';
                                             imageContainer.style.backgroundRepeat = 'no-repeat';

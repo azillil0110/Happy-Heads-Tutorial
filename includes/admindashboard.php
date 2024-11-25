@@ -12,12 +12,12 @@
             $i =0;
             while($row = mysqli_fetch_assoc($result)){ 
                 ?>
-                <div class="main_pfp"></div>
+                <div id="main_pfp-admin"></div>
                 <script>
                         document.addEventListener('DOMContentLoaded', function () {
-                        const imageContainer = document.getElementById('pfp');
+                        const imageContainer = document.getElementById('main_pfp-admin');
                         if (imageContainer) {
-                            imageContainer.style.backgroundImage = "url(''../../images/Team/<?php echo $row['pfp_url']; ?>')";
+                            imageContainer.style.backgroundImage = "url('./images/Team/<?php echo $row['pfp_url']; ?>')";
                             imageContainer.style.backgroundSize = 'cover';
                             imageContainer.style.backgroundPosition = 'center';
                             imageContainer.style.backgroundRepeat = 'no-repeat';

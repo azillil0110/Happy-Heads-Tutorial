@@ -1,6 +1,37 @@
+<?php include_once 'includes/dbh.inc.php'?>
+
 <div class="leftside">
-            <img class="main_pfp" src="PFP.png"/>
-            <p class="title2">Name of the Tutor</p>
+
+            <?php 
+                $username = $_GET['username'];
+                $sql = "SELECT * FROM `moderator` WHERE mod_usern = '$username'";
+                $result = mysqli_query($conn, $sql);
+                $resultcheck = mysqli_num_rows($result);
+
+                if($resultcheck > 0){
+                    $i =0;
+                    while($row = mysqli_fetch_assoc($result)){ 
+                        ?>
+                        <div id="main_pfp-tutor"></div>
+                        <script>
+                                document.addEventListener('DOMContentLoaded', function () {
+                                const imageContainer = document.getElementById('main_pfp-tutor');
+                                if (imageContainer) {
+                                    imageContainer.style.backgroundImage = "url('./images/Team/<?php echo $row['pfp_url']; ?>')";
+                                    imageContainer.style.backgroundSize = 'cover';
+                                    imageContainer.style.backgroundPosition = 'center';
+                                    imageContainer.style.backgroundRepeat = 'no-repeat';
+                                }
+                            });
+                        </script>
+                        <p class="title2"><?php echo $row['mod_fname'];?></p>
+
+                        <?php
+                        $i++;
+                    }
+                }
+            ?>
+
             <div class="leftoptions1" data-section="dashboard">
                 <i class="fa-solid fa-square square1"></i>
                 <p class="lefttext1">Dashboard</p>
