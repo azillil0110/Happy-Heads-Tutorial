@@ -25,7 +25,7 @@
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
-                    <p class="righttitle">My Schedule</p>
+                    <p class="righttitle">My Scheduleeee</p>
                 </div>
                 <div class="box">
                     <i class="fa-solid fa-calendar righticons"></i>
