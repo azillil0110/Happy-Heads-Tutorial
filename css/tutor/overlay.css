@@ -1,0 +1,28 @@
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+#ov-textContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+.ov-text{
+    color: #000000;
+    font-size: 16px;
+}
+#ov-title{
+    font-size: 18px;
+}
