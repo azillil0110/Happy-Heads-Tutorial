@@ -165,15 +165,6 @@ function getContent(section) {
                         </div>
                     </div>
                 </div>
-                <script>
-                    function on() {
-                    document.getElementById("overlay").style.display = "flex";
-                    }
-                    
-                    function off() {
-                    document.getElementById("overlay").style.display = "none";
-                    }
-                </script>
             `;
         case 'addevent':
             return `
