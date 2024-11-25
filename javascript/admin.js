@@ -84,7 +84,7 @@ function getContent(section) {
                     </div>
                     <div class="box">
                         <i class="fa-solid fa-user righticons"></i>
-                        <p class="righttitle">Settings</p>
+                        <p class="righttitle">Add Tutor</p>
                     </div>
                 </div>
             `;
