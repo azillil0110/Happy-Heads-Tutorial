@@ -18,7 +18,7 @@
         <div id="home-banner" >
                 <h1 class="largest-font txt-shadow">Welcome to Happy Heads Tutorial Center</h1>
                 <h2 class="txt-shadow">LEARN WITH US!</h5>
-                <button id="inquire-btn" class="shadow">Inquire Now</button>
+                <a href="./enroll-form.php"><button id="inquire-btn" class="shadow">Inquire Now</button></a>
         </div>
 
         <div id="home-about" class="block-center">

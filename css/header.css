@@ -73,3 +73,8 @@ nav{
 .no-margin-y{
     margin: 10px 10px;
 }
+.btn-nav:hover,#inquire-btn:hover{
+    background-color: yellow;
+    color: black;
+    transition: 0.3s;
+}

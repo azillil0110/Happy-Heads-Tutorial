@@ -1,7 +1,7 @@
 
 <header>
     <div class="center-alignment">
-        <img id="logo" src="images/hpt_logo.png" alt="HPT Logo">
+        <a href="./index.php"><img id="logo" src="images/hpt_logo.png" alt="HPT Logo"></a>
         <h2>Happy Head Tutorials</h2>
     </div>
     
@@ -12,7 +12,7 @@
         <a class="a-nav <?php if(is_page('/program.php')) echo 'current-page'?>" href="program.php">Program</a>
         <a class="a-nav <?php if(is_page('/about.php')) echo 'current-page'?>" href="about.php">About</a>
         <a class="a-nav" href="#contact-container">Contact</a>
-        <button class="btn-nav">APPLY</button>
+        <a href="./enroll-form.php"><button onclick="window.location.href'../enroll-form.php'" class="btn-nav" >APPLY</button> </a>
     </nav>
 </header>
 
