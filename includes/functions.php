@@ -1,9 +1,9 @@
 <?php
 
 function is_page($filename){
-    $url = '/Happy%20Heads%20Tutorial' . $filename;
+    $url = $_SERVER['REQUEST_URI'];
 
-    if($url === $_SERVER['REQUEST_URI']){
+    if(strpos($url, $filename)){
         return true;
     }
     else return false;
