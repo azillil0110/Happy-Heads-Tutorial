@@ -6,24 +6,9 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/tutor/tutorheader.css">
     <link rel="stylesheet" href="css/tutor/tutordashboard.css">
-    <link rel="stylesheet" href="css/tutor/overlay.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div id="overlay" onclick="off()">
-        <div class="col-100" id="ov-textContainer">
-        <p class="ov-text" id="ov-title"> STUDENT LIST</p>
-        </div>
-    </>
-    <script>
-                    function on() {
-                    document.getElementById("overlay").style.display = "flex";
-                    }
-                    
-                    function off() {
-                    document.getElementById("overlay").style.display = "none";
-                    }
-                </script>
     <?php include('includes/tutorheader.php') ?>
     
     <div class="main_body">
