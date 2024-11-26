@@ -49,7 +49,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addevent.css';
                 break;
             case 'addtutor':
-                stylesheet.href = 'css/admin/addtutor-.css';
+                stylesheet.href = 'css/admin/addtutor.css';
                 break;
             default:
                 stylesheet.href = 'css/admin/admin-dashboard.css';
@@ -71,25 +71,13 @@ function getContent(section) {
                     });
                 break;
         case 'students':
-            fetch('./admin-students.php')
-                    .then(response => response.text())
-                    .then(html => {
-                        document.querySelector('.rightside').innerHTML = html;
-                    })
-                    .catch(err => {
-                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
-                    });
-                break;
+            return `
+                
+            `;
         case 'tutors':
-                fetch('./admin-tutor.php')
-                    .then(response => response.text())
-                    .then(html => {
-                        document.querySelector('.rightside').innerHTML = html;
-                    })
-                    .catch(err => {
-                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
-                    });
-                break;
+            return `
+                
+            `;
         case 'tutorschedule':
             return `
                 
