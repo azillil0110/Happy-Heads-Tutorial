@@ -11,10 +11,11 @@
 }
 
 
-.main_pfp {
+#main_pfp-admin {
     width: 200px;
     height: 200px;
     margin-top: 20px;
+    background-image: url('../../images/Team/sweden.png');
 }
 
 
