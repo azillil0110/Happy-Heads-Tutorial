@@ -279,3 +279,17 @@ h1 {
     box-sizing: border-box; 
     resize: vertical;
 }
+#uploadbox {
+    justify-self: end;
+    margin-right: 50px;
+    width: 160px;
+    height: 200px;
+    background-color: #C8C8C8;
+    border: 1px solid;
+    border-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

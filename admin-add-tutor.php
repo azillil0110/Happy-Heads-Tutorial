@@ -6,8 +6,10 @@
 <div class="contact-form">
     <h1>Personal Information</h1>
     <div class="top-container">
-        <div>
-            <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
+        <div class="row">
+            <div class="leftbottop" id="uploadbox">
+                <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
+            </div>
         </div>
         <form action="#" method="post">
             <input id="field" type="hidden" name="form-name" value="form 1">
