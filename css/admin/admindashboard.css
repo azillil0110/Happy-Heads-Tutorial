@@ -1,13 +1,14 @@
 .leftside {
     width: 20%;
     height: auto;
-    background-color: #666666;
+    background-color: #9e2323;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
     margin: 0;
     padding-top: 25px;
+    padding-bottom: 10px;
     cursor: default;
 }
 
@@ -17,6 +18,7 @@
     height: 200px;
     margin-top: 20px;
     background-image: url('../../images/Team/sweden.png');
+    border-radius: 10px;
 }
 
 
@@ -28,14 +30,14 @@
     width: 100%;
     height: 90px;
     background-color: #ffffff;
-    border: 1px solid;
-    border-color: #666666;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 
 .lefttext1 { /*for selected*/
     font-weight: 700;
-    color: #000000;
+    color: #9e2323;
     font-size: 20px;
     letter-spacing: 0;
 }
@@ -66,7 +68,7 @@
 
 
 .square1 {/* for selected*/
-    color: #000000;
+    color: #9e2323;
 }
 a{
     text-decoration: none;

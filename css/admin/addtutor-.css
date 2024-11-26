@@ -51,9 +51,10 @@ body {
     justify-content: center;
     width: 95%;
     height: 140px;
-    background-color: #E6E6E6;
+    background-color: #ff9b9b;
     border: none;
     margin: 40px;
+    border-radius: 10px;
 }
 
 .righttoptext {
