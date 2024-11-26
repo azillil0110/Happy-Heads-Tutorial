@@ -173,7 +173,7 @@ function getContent(section) {
                     </div>
             `;
         default:
-            return `<p>Content not found.</p>`;
+            return `<p>Content not found. MIYUKI</p>`;
     }
     
     function generateScheduleDays(days) {
