@@ -68,7 +68,7 @@
                         <div class="row">
                         <div class="col-16">
                             <input type="checkbox" id="student-schedday" name="mon" value="monday">
-                            <label class="labelday" for="mon">MONDAY</label><br>                    
+                            <label class="labelday" for="mon">MONDAyY</label><br>                    
                         </div>
                         <div class="col-16">
                             <input type="checkbox" id="student-schedday" name="tue" value="tuesday">
