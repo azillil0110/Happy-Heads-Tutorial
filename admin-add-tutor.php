@@ -61,6 +61,7 @@
                         <p>change password</p>
                     </div>
                 </div>
+                <div class="schedrow">
                 <div class="rowcenter" id="textcenter">
                             <p class="righttitletext" id="schedtitle"> Schedule</p>
                         </div>
@@ -130,6 +131,7 @@
                                 <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
                             </div>
                         </div>
+                </div>
             <div>
                 <button id="btn-save">Add</button>
         </div>
