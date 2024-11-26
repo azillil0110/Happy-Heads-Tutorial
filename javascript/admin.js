@@ -61,33 +61,15 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
 function getContent(section) {
     switch (section) {
         case 'dashboard':
-            return `
-                <div class="righttop">
-                    <p class="righttoptext">Administrator</p>
-                </div>
-                <div class="rightbot">
-                    <div class="box">
-                        <i class="fa-solid fa-user righticons"></i>
-                        <p class="righttitle">Students</p>
-                    </div>
-                    <div class="box">
-                        <i class="fa-solid fa-user righticons"></i>
-                        <p class="righttitle">Tutors</p>
-                    </div>
-                    <div class="box">
-                        <i class="fa-solid fa-calendar righticons"></i>
-                        <p class="righttitle" id="righttitle1">Tutor's Schedule</p>
-                    </div>
-                    <div class="box">
-                        <i class="fa-solid fa-calendar righticons"></i>
-                        <p class="righttitle">Event</p>
-                    </div>
-                    <div class="box">
-                        <i class="fa-solid fa-user righticons"></i>
-                        <p class="righttitle">Add Tutor</p>
-                    </div>
-                </div>
-            `;
+                fetch('./admin-right-dashboard.php')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.rightside').innerHTML = html;
+                    })
+                    .catch(err => {
+                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                    });
+                break;
         case 'students':
             return `
                 
@@ -101,107 +83,25 @@ function getContent(section) {
                 
             `;
         case 'addevent':
-            return `
-                <div class="righttop">
-                    <p class="righttoptext">Add an Event</p>
-                </div>
-                <div class="rightbot">
-                    <div class="bottop">
-                        <div class="leftbottop">
-                            <div class="uploadbox">
-                                <i class="fa-solid fa-upload uploadicon"></i>
-                                <p class="uploadtext">Upload<br>Images</p>
-                            </div>
-                        </div>
-                        <div class="rightbottop">
-                            <form class="topform">
-                                <p class="formtext">Name</p>
-                                <input type="text" placeholder="Input Event Name" class="textevent">
-                                <p class="formtext">Event Date</p>
-                                <input type="date" id="date" name="date" placeholder="Select a date">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="botbot">
-                        <form class="midform">
-                            <p class="formtext" id="desc">Description</p>
-                            <textarea rows="7" cols="90" id="descinp" placeholder="What is the event all about?"></textarea>
-                        </form>
-                        <form class="bottomform">
-                            <button type="submit" class="btnAddEvent">Add Event</button>
-                        </form>
-                    </div>
-                </div>
-            `;
+                fetch('./admin-add-event.php')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.rightside').innerHTML = html;
+                    })
+                    .catch(err => {
+                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                    });
+                break;
         case 'addtutor':
-            return `
-                <div class="righttop">
-                        <p class="righttoptext">Add a Tutor</p>
-                    </div>
-                    <div class="contact-form">
-                        <h1>Personal Information</h1>
-                        <div class="top-container">
-                            <div>
-                                <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
-                            </div>
-                            <form action="#" method="post">
-                                <input id="field" type="hidden" name="form-name" value="form 1">
-                            <div class="contact-form-field">
-                                <input id="field" required placeholder="First Name" type="text" name="name" id="name">
-                            </div>
-                            <div class="contact-form-field">
-                                <input id="field" required placeholder="Last Name" type="text" name="name" id="name">
-                            </div>
-                            <div class="date-gender">
-                                <div id="date">
-                                    <h5>Birth Date</h5>
-                                    <input type="date" id="date" required>
-                            </div>
-                                <div id="gender">
-                                    <h5>Gender</h5>
-                                    <select name="gender" required>
-                                        <option value="">Please select one…</option>
-                                        <option value="female">Female</option>
-                                        <option value="male">Male</option>
-                                        <option value="other">Other</option>
-                                        <option value="Prefer not to answer">Perfer not to Answer</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="description">
-                            <h5>Description</h5>
-                            <textarea required ="" cols="77" rows="6" placeholder="Short description" name="message" id="message" required></textarea>
-                        </div>
-                        <div>
-                            <h1 id="login-security">Login & Security</h1>
-                        </div>
-                        <div class="email-phone">
-                            <div id="email">
-                                <h5>Email</h5>
-                                <input id="input" required placeholder="Enter email" type="text" name="email">
-                            </div>
-                            <div id="phone">
-                                <h5>Phone</h5>
-                                <input id="input" required placeholder="Enter 11 digit phone number" type="tel" name="phone">
-                            </div>
-                        </div>
-                        <div class="usern-pass">
-                            <div id="usern">
-                                <h5>Username</h5>
-                                <input id="input" required placeholder="Enter username" type="text" name="usern">
-                            </div>
-                            <div id="pass">
-                                <h5>Password</h5>
-                                <input id="input" required placeholder="Enter password" type="password" name="pass">
-                                <p>change password</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button id="btn-save">Add</button>
-                        </div>
-                    </div>
-            `;
+            fetch('./admin-add-tutor.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+            break;
         default:
             return `<p>Content not found.</p>`;
     }

@@ -75,7 +75,6 @@ function getContent(section) {
                 </div>
             `;
         case 'students':
-<<<<<<< HEAD
             fetch('tutor/students.php')
                 .then(response => response.text())
                 .then(html => {
@@ -85,66 +84,6 @@ function getContent(section) {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
             break;
-=======
-            return `
-                <div class="righttop">
-                    <p class="righttoptext">Your Students!</p>
-                </div>
-                <div class="rightbot">
-                    <div class="firstrow">
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name </p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                    </div>
-                    <div class="secrow">
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box" onclick="toggleOverlay()">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                    </div>
-                        <div class="overlay" id="studentOverlay" onclick="toggleOverlay()">
-                            <div class="overlay-content">
-                            <h2>Student Details</h2>
-                            <p><strong>Name:</strong> Miguel Eugenio</p>
-                            <p><strong>Age:</strong> 20</p>
-                            </div>
-                </div>
-            </div>
-            `;
->>>>>>> dd48a00c423a11b8ea002baa30848f1c2713398d
         case 'myschedule':
             return `
             <div class="col-100" id="overlay" onclick="off()">
