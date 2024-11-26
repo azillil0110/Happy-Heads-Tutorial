@@ -1,0 +1,99 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#logo{
+    height: 50px;
+    margin: 0px 10px;
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0,0.2);
+}
+.center-alignment{
+    display: flex;
+    align-items: center;
+}
+nav{
+    margin-right: 10px;
+}
+.a-nav{
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px;
+}
+.btn-nav{
+    background-color: rgb(3, 3, 143);
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 100px;
+    color: white;
+    font-style: bold;
+}
+#enroll-banner{
+    width: 100%;
+    height:238px;
+    display: block;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    background-size: 100%;
+    color: white;  
+    padding-top: 80px;
+}
+.largest-font{
+    font-size: 50px;
+}
+.txt-shadow{
+    text-shadow: 2px 2px 5px black;
+}
+
+body{
+    background-image: url('../images/bg3.png');
+    background-size: cover;
+}
+
+.events{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event-pic{
+    width: 800px;
+    height: 280px;
+    background-image: url('../images/events/image1.png');
+    background-size: cover;
+    background-position-x: center;
+}
+.event-container{
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: darkgray;
+    margin: 20px 0;
+}
+#date{
+    font-size: 10px;
+    color: darkgray;
+}
+#description{
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+.event-container h1, #date, #description{
+    margin-top: 5px;
+}

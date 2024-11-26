@@ -24,30 +24,53 @@
     letter-spacing: 0;
 }
 
-
 .longrectangle {
     width: 80%;
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
     border: 1px solid;
     border-color: #044c8c;
+    gap: 700px;
+}
+
+.logout {
+    font-weight: 400;
+    color: #044c8c;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.longright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 
-.pfp {
-    width: 40px;
-    height: 40px;
+#pfp {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    background-image: url('../../images/Team/sweden.png');
+    background-size: cover;
+    background-position-x: center;
 }
 
 
 .title {
-    font-weight: 700;
+    font-weight: 600;
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0;
     margin-left: 10px;
-    padding-right: 50px;
+}
+
+#admin-info{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-right: 20px;
 }

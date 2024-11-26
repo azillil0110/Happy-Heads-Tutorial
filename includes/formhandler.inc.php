@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $acc = $row['acc_type'];
             if($password === $row['mod_pass']){
                 if($acc == 'tutor'){
-                    header('location: ../tutor-dashboard.php');
+                    header('location: ../tutor-dashboard.php?username='.$username);
                 }
                 else if ($acc === 'admin' || $acc === 'founder'){
-                    header('location: ../admin-dashboard.php');
+                    header('location: ../admin-dashboard.php?username='.$username);
                 }
                 
             }

@@ -170,7 +170,7 @@
                     
                 </div>
 
-                <h3><a href="" class="clickable-txt">See More</a></h3>
+                <h3><a href="events.php" class="clickable-txt">See More</a></h3>
 
             </div>
 

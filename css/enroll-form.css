@@ -17,6 +17,9 @@ body{
 .largest-font{
     font-size: 50px;
 }
+form{
+    background-color: rgb(255, 255, 255,0.9);
+}
 .txt-shadow{
     text-shadow: 2px 2px 5px black;
 }
