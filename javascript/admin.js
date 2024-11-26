@@ -71,13 +71,25 @@ function getContent(section) {
                     });
                 break;
         case 'students':
-            return `
-                
-            `;
+            fetch('./admin-students.php')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.rightside').innerHTML = html;
+                    })
+                    .catch(err => {
+                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                    });
+                break;
         case 'tutors':
-            return `
-                
-            `;
+                fetch('./admin-tutor.php')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.rightside').innerHTML = html;
+                    })
+                    .catch(err => {
+                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                    });
+                break;
         case 'tutorschedule':
             return `
                 

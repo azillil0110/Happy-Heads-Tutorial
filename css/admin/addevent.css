@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     width: 80%;
     height: auto;
+   align-items: center;
 }
 
 .righttop {
@@ -34,9 +35,10 @@ body {
     justify-content: center;
     width: 95%;
     height: 140px;
-    background-color: #E6E6E6;
+    background-color: #ff9b9b;
     border: none;
     margin: 40px;
+    border-radius: 10px;
 }
 
 .righttoptext {
@@ -132,7 +134,6 @@ body {
     width: max-content;
     height: auto;
     display: flex;
-    padding-left: 200px;
     flex-direction: column;
     margin-top: 30px;
 }
