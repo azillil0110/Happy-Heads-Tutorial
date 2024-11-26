@@ -5,6 +5,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 .main_body {
     width: 100%;
     height: 882px;
@@ -133,4 +134,11 @@ body {
 .clickable-txt:hover{
     color: red;
     transition: 0.4s;
+}
+.title2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    margin-bottom: 60px;
 }

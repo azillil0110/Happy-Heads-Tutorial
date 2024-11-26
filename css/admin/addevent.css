@@ -21,10 +21,6 @@ body {
    color:  white;
 }
 
-.square1 {
-    color: #044c8c;
-}
-
 .rightside {
     display: flex;
     flex-direction: column;
@@ -52,7 +48,7 @@ body {
 }
 
 .rightbot {
-    width: 100%;
+    width: max-content;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -133,7 +129,7 @@ body {
 }
 
 .botbot {
-    width: 100%;
+    width: max-content;
     height: auto;
     display: flex;
     padding-left: 200px;
@@ -142,7 +138,7 @@ body {
 }
 
 .midform {
-    width: auto;
+    width: max-content;
 }
 
 #desc {
@@ -181,4 +177,11 @@ body {
     color: white;
     background-color: #000000;
     margin-top: 16px;
+}
+.title2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    margin-bottom: 60px;
 }

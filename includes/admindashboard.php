@@ -1,4 +1,4 @@
-<?php include_once 'includes/dbh.inc.php'?>
+<?php include_once 'dbh.inc.php'?>
 
 <div class="leftside">
 
@@ -17,7 +17,7 @@
                         document.addEventListener('DOMContentLoaded', function () {
                         const imageContainer = document.getElementById('main_pfp-admin');
                         if (imageContainer) {
-                            imageContainer.style.backgroundImage = "url('./images/Team/<?php echo $row['pfp_url']; ?>')";
+                            imageContainer.style.backgroundImage = "url('images/Team/<?php echo $row['pfp_url']; ?>')";
                             imageContainer.style.backgroundSize = 'cover';
                             imageContainer.style.backgroundPosition = 'center';
                             imageContainer.style.backgroundRepeat = 'no-repeat';
@@ -31,29 +31,47 @@
             }
         }
     ?>
+    <?php require_once('functions.php') ?>
+    
+    <a href="admin-dashboard.php?username=<?php echo $username ?>" class="leftoptions">
+    <div class=" <?php if(is_page('/admin-dashboard.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-dashboard.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-dashboard.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Dashboard</p>
+    </div>
+    </a>
 
-    <div class="leftoptions1" data-section="dashboard">
-        <i class="fa-solid fa-square square1"></i>
-        <p class="lefttext1">Dashboard</p>
+    <a href="admin-tutor.php?username=<?php echo $username ?>" class="leftoptions">
+    <div class=" <?php if(is_page('/admin-tutor.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-tutor.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-tutor.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Students</p>
     </div>
-    <div class="leftoptions" data-section="students">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Students</p>
+    </a>
+
+    <a href="admin-students.php?username=<?php echo $username ?>" class="leftoptions">
+    <div class=" <?php if(is_page('/admin-students.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-students.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-students.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Tutor</p>
     </div>
-    <div class="leftoptions" data-section="tutors">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Tutors</p>
+    </a>
+    
+    <a href="admin-tutor-sched.php?username=<?php echo $username ?>" class="leftoptions">
+    <div class=" <?php if(is_page('/admin-tutor-sched.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-tutor-sched.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-tutor-sched.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Tutor Schedule</p>
     </div>
-    <div class="leftoptions" data-section="tutorschedule">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Tutor Schedule</p>
+    </a>
+
+    <a href="admin-add-event.php?username=<?php echo $username ?>" class="leftoptions">
+    <div class=" <?php if(is_page('/admin-add-event.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-add-event.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-add-event.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Add Event</p>
     </div>
-    <div class="leftoptions" data-section="addevent">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Add Event</p>
-    </div>
-    <div class="leftoptions" data-section="addtutor">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Add Tutor</p>
-    </div>
+    </a>
+
+    <a href="admin-add-tutor.php?username=<?php echo $username ?>" class="leftoptions">
+        <div class=" <?php if(is_page('/admin-add-tutor.php')) echo 'leftoptions1'; else echo 'leftoptions'?>"  data-section="addtutor">
+        <i class="fa-solid fa-square <?php if(is_page('/admin-add-tutor.php')) echo 'square1'; else echo 'square'?>"></i>
+        <p class="<?php if(is_page('/admin-add-tutor.php')) echo 'lefttext1'; else echo 'lefttext2'?>">Add Tutor</p>
+        </div>
+    </a>
 </div>

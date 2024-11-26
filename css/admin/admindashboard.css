@@ -19,16 +19,7 @@
 }
 
 
-.title2 {
-    font-weight: 500;
-    color: #ffffff;
-    font-size: 20px;
-    letter-spacing: 0;
-    margin-bottom: 30px;
-}
-
-
-.leftoptions1 {
+.leftoptions1 { /*for selected */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +32,7 @@
 }
 
 
-.lefttext1 {
+.lefttext1 { /*for selected*/
     font-weight: 700;
     color: #000000;
     font-size: 20px;
@@ -52,12 +43,10 @@
 .leftoptions {
     display: flex;
     align-items: center;
-    justify-content: center;
+
     gap: 10px;
     width: 100%;
     height: 88px;
-    border: 1px solid;
-    border-color: #ffffff;
 }
 
 
@@ -75,6 +64,17 @@
 }
 
 
-.square1 {
+.square1 {/* for selected*/
     color: #000000;
+}
+a{
+    text-decoration: none;
+    border: none;
+}
+.title2 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 23px;
+    letter-spacing: 0;
+    margin-bottom: 60px;
 }
