@@ -4,45 +4,45 @@
         <div class="rightbot">
             <div class="firstrow">
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>        
                     <p class="righttitle">Student Name</p>
                 </div>
             </div>
             <div class="secrow">
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
                 <div class="box">
-                    <img src="PFP1.jpg" class="stpfp">
+                    <a href="studentinfo.php" target="_blank"><img src="PFP1.jpg" class="stpfp"></a>
                     <p class="righttitle">Student Name</p>
                 </div>
             </div>
