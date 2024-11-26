@@ -75,57 +75,15 @@ function getContent(section) {
                 </div>
             `;
         case 'students':
-            return `
-                <div class="righttop">
-                    <p class="righttoptext">Your Students!</p>
-                </div>
-                <div class="rightbot">
-                    <div class="firstrow">
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                    </div>
-                    <div class="secrow">
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                        <div class="box">
-                            <img src="PFP1.jpg" class="stpfp">
-                            <p class="righttitle">Student Name</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            fetch('tutor/students.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+            break;
         case 'myschedule':
             return `
             <div class="col-100" id="overlay" onclick="off()">
