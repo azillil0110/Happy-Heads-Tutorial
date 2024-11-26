@@ -167,6 +167,9 @@ h1 {
 }
 .top-container{
     display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-right: 5px;
 }
 .contact-form {
     width: 70%;
@@ -185,6 +188,9 @@ h1 {
 }
 .date-gender{
     display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-right: 5px;
 }
 .date-gender #gender{
     margin: 0px 20px;
