@@ -33,5 +33,6 @@
     </div>
     <script src="javascript/tutor.js"></script>
     <script src="javascript/schedule.js"></script>
+    <script src="javascript/student-info.js"></script>
 </body>
 </html>
