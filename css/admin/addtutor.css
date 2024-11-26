@@ -234,3 +234,47 @@ h1 {
     cursor: pointer;
     margin-left: 5px;
 }
+
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-right: 5px;
+}
+.rowcenter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-right: 5px;
+}
+.col-16{
+    width: 16%;
+    display: inline-block;  
+    margin-right: 5px;
+}
+
+.righttitletext{
+    font-size: 20px;
+    font-weight: bold;
+    color: #044c8c;
+}
+#schedtitle{
+    display: inline-block;
+    padding-top: 20px;
+}
+.labelday{
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.inputtime{
+    width: 100%;
+    font-size: 18px;
+    padding: 6px 6px;
+    margin-top: 10px;
+    color: #878787;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    resize: vertical;
+}
