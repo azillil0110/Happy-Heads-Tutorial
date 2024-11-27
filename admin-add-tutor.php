@@ -141,7 +141,7 @@
                     <p> hi</p>
                 </div>
                 <div class="col-30">
-                    <button id="btn-save">Add</button>
+                    <button class="btn" id="btn-save">Add</button>
                 </div>
             </div>  
         </form>
