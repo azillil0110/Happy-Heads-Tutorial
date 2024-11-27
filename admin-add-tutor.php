@@ -80,10 +80,70 @@
                         </div>
                         <div class="row">
                             <div class="col-50" id="subrow">
-                                <div class="col-40">
+                                <div class="col-50">
                                     <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
                                 </div>
-                                <div class="col-40">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                            <div class="col-50" id="subrow">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">
+                                <label class="labelday" for="mon">MONDAY</label><br>
+                            </div>
+                            <div class="col-50">
+                                <label class="labelday" for="tue">TUESDAY</label><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" id="subrow">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                            <div class="col-50" id="subrow">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50">
+                                <label class="labelday" for="mon">MONDAY</label><br>
+                            </div>
+                            <div class="col-50">
+                                <label class="labelday" for="tue">TUESDAY</label><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" id="subrow">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                            <div class="col-50" id="subrow">
+                                <div class="col-50">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-50">
                                     <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
                                 </div>
                             </div>
