@@ -71,6 +71,24 @@
                             <h1> Schedule</h1>
                         </div>
                         <div class="row">
+                            <div class="col-50">
+                                <label class="labelday" for="mon">MONDAY</label><br>
+                            </div>
+                            <div class="col-50">
+                                <label class="labelday" for="tue">TUESDAY</label><br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50" id="subrow">
+                                <div class="col-20">
+                                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1">
+                                </div>
+                                <div class="col-30">
+                                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                         <div class="col-16">
                             <input type="checkbox" id="student-schedday" name="mon" value="monday">
                             <label class="labelday" for="mon">MONDAyY</label><br>                    
