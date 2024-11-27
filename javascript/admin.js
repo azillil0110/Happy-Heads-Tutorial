@@ -58,6 +58,9 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
     });
 });
 
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
+
 function getContent(section) {
     switch (section) {
         case 'dashboard':
@@ -95,7 +98,7 @@ function getContent(section) {
                 
             `;
         case 'addevent':
-                fetch('./admin-add-event.php')
+                fetch(`./admin-add-event.php?username=${encodeURIComponent(username)}`)
                     .then(response => response.text())
                     .then(html => {
                         document.querySelector('.rightside').innerHTML = html;
@@ -118,4 +121,3 @@ function getContent(section) {
             return `<p>Content not found.</p>`;
     }
 }
-
