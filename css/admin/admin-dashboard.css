@@ -45,6 +45,7 @@ body {
     display: flex;
     gap: 35px;
     margin-left: 40px;
+    flex-wrap: wrap;
 }
 
 .box {
