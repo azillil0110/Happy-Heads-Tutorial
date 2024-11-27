@@ -1,4 +1,5 @@
 <?php include_once 'dbh.inc.php'?>
+<meta http-equiv="Cache-control" content="no-cache">
 
 <div class="leftside">
 
@@ -55,5 +56,13 @@
     <div class="leftoptions" data-section="addtutor">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Add Tutor</p>
+    </div>
+    <div class="leftoptions" data-section="addtutor">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Add Admin</p>
+    </div>
+    <div class="leftoptions" data-section="addtutor">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Settings</p>
     </div>
 </div>
