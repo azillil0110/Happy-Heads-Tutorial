@@ -178,11 +178,14 @@
                             </div>
                         </div>
             <div class="row">
-                <div class="col-70">
+                <div class="col-50">
                    
                 </div>
+                <div class="col-20">
+                    <button class="btn" id="btn-save">Add More Schedule</button>
+                </div>
                 <div class="col-30">
-                    <button class="btn" id="btn-save">Add</button>
+                    <button class="btn" id="btn-save">Add Tutor</button>
                 </div>
             </div>  
         </form>

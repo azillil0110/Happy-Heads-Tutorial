@@ -273,6 +273,16 @@ h1 {
     display: inline-block;  
     margin-right: 5px;
 }
+.col-50{
+    width: 50%;
+    display: inline-block;  
+    margin-right: 5px;
+}
+.col-20{
+    width: 20%;
+    display: inline-block;  
+    margin-right: 5px;
+}
 .col-30{
     width: 30%;
     display: inline-block;  
