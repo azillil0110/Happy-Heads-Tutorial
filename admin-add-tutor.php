@@ -138,7 +138,7 @@
                         </div>
             <div class="row">
                 <div class="col-70">
-                    <p> hi</p>
+                   
                 </div>
                 <div class="col-30">
                     <button class="btn" id="btn-save">Add</button>
