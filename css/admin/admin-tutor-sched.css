@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    height: max-content;
+}
+
+.main_body {
+    width: 100%;
+    height: 882px;
+    height: fit-content;
+    display: flex;
+}
+
+.square {
+   color:  white;
+}
+
+.square1 {
+    color: #9e2323;
+}
+
+.rightside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+
+.righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 140px;
+    background-color: #ff9b9b;
+    border: none;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.righttoptext {
+    font-weight: 700;
+    color: #000000;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+
+.rightbot {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.tutors{
+    border: 1px solid #ff9b9b;
+    width: 80%;
+    min-height: auto;
+    display: flex;
+    margin: 20px 0px;
+}
+#tutor-img{
+    width: 180px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.tutor-card{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 45px;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+h3{
+    text-align: center;
+}
+
+.box{
+    position: relative;
+}
+
+.box .tutor-img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hover-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box:hover .hover-text{
+    opacity: 1;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-content{
+    background: #ffffff;
+    padding: 60px 100px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000000;
+    width: 300px;
+    max-width: 90%;
+}
+
+.close-btn{
+    margin-top: 20px;
+    padding: 10px 40px;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

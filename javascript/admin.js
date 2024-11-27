@@ -98,11 +98,17 @@ function getContent(section) {
                 .catch(err => {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
-        break;
+                break;
         case 'tutorschedule':
-            return `
-                
-            `;
+            fetch('./admin-tutor-sched.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+                break;
         case 'addevent':
                 fetch(`./admin-add-event.php?username=${encodeURIComponent(username)}`)
                     .then(response => response.text())
