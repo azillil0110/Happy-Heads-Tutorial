@@ -19,7 +19,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
         textElement.classList.add('lefttext1');
 
         this.classList.remove('leftoptions');
-        this.classList.add('leftoptions1');
+        this.classList.add('leftoptions1'); 
 
         const icon = this.querySelector('i');
         if (icon) {
@@ -37,10 +37,10 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
-                stylesheet.href = 'css/admin/.css'; 
+                stylesheet.href = './css/admin/admin-students.css';
                 break;
             case 'tutors':
-                stylesheet.href = 'css/admin/.css';
+                stylesheet.href = 'css/admin/admin-tutor.css';
                 break;
             case 'tutorschedule':
                 stylesheet.href = 'css/admin/.css';
@@ -118,3 +118,5 @@ function getContent(section) {
             return `<p>Content not found.</p>`;
     }
 }
+
+/*COMMENT*/

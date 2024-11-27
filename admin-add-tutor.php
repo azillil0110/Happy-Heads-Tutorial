@@ -6,16 +6,21 @@
 <div class="contact-form">
     <h1>Personal Information</h1>
     <div class="top-container">
-        <div>
-            <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
-        </div>
+        
         <form action="#" method="post">
-            <input id="field" type="hidden" name="form-name" value="form 1">
-            <div class="contact-form-field">
-                <input id="field" required placeholder="First Name" type="text" name="name" id="name">
-            </div>
-            <div class="contact-form-field">
-                <input id="field" required placeholder="Last Name" type="text" name="name" id="name">
+            <div id="form-1st-part">
+                <div id="pfp-container">
+                    <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
+                </div>
+                <div>
+                    <input id="field" type="hidden" name="form-name" value="form 1">
+                    <div class="contact-form-field">
+                        <input id="field" required placeholder="First Name" type="text" name="name" id="name">
+                    </div>
+                    <div class="contact-form-field">
+                        <input id="field" required placeholder="Last Name" type="text" name="name" id="name">
+                    </div>
+                </div>
             </div>
             <div class="date-gender">
                 <div id="date">
