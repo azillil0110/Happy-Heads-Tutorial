@@ -37,7 +37,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
-                stylesheet.href = 'css/admin/.css';
+                stylesheet.href = './css/admin/admin-students.css';
                 break;
             case 'tutors':
                 stylesheet.href = 'css/admin/.css';
@@ -118,3 +118,4 @@ function getContent(section) {
             return `<p>Content not found.</p>`;
     }
 }
+

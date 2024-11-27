@@ -7,8 +7,14 @@
         <div class="bottop">
             <div class="leftbottop">
                 <div class="uploadbox">
-                    <i class="fa-solid fa-upload uploadicon"></i>
-                    <p class="uploadtext">Upload<br>Images</p>
+                    <form action="includes/upload.php" method="POST" enctype= "multipart/form-data" class="uploadbox">
+                        <label for="fileInput" >
+                            <i class="fa-solid fa-upload uploadicon"></i>
+                            <p class="uploadtext">Upload<br>Images</p>
+                        </label>
+                        <input type="file" accept="image/jpeg, image/jpg, image/png, image/PNG" id="fileInput" name="eventImage" style="display: none;">
+                        <button type="submit" name="submit">CONFIRM</button>
+                    </form>
                 </div>
             </div>
             <div class="rightbottop">
@@ -33,6 +39,23 @@
 </div>
 
 <script src="javascript/admin.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const uploadBox = document.getElementById("uploadBox");
+        const fileInput = document.getElementById("fileInput");
+
+        uploadBox.addEventListener("click", function () {
+            fileInput.click(); 
+        });
+
+        fileInput.addEventListener("change", function () {
+            if (fileInput.files.length > 0) {
+                const fileName = fileInput.files[0].name;
+                alert("Selected file: " + fileName);
+            }
+        });
+    })
+</script>
 
 
 
