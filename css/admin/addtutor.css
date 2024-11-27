@@ -220,7 +220,7 @@ h1 {
 .usern-pass #usern, #pass{
     margin: 0px 50px;
 }
-#btn-save{
+#btn-save,#btn-addsched{
     background-color: black;
     border-radius: 10px;
     color: white;
