@@ -68,7 +68,7 @@
                 </div>
             </div>
                 <div class="rowcenter" id="textcenter">
-                            <p class="righttitletext" id="schedtitle"> Schedule</p>
+                            <h1> Schedule</h1>
                         </div>
                         <div class="row">
                         <div class="col-16">
@@ -136,8 +136,99 @@
                                 <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
                             </div>
                         </div>
-            <div>
-                <button id="btn-save">Add</button>
+                        <hr id="line-invi">
+                        <div class="row" id="">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime1-2" name="mtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime1-2" name="ttime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime1-2" name="wtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime1-2" name="thtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime1-2" name="ftime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime1-2" name="stime1-2"></br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime2-2" name="mtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime2-2" name="ttime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime2-2" name="wtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime2-2" name="thtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime2-2" name="ftime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime2-2" name="stime2-2"></br>
+                            </div>
+                        </div>
+
+                        <hr id="line-invi">
+                        <div class="row" id="">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime1-2" name="mtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime1-2" name="ttime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime1-2" name="wtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime1-2" name="thtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime1-2" name="ftime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime1-2" name="stime1-2"></br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime2-2" name="mtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime2-2" name="ttime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime2-2" name="wtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime2-2" name="thtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime2-2" name="ftime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime2-2" name="stime2-2"></br>
+                            </div>
+                        </div>
+            <div class="row">
+                <div class="col-50">
+                   
+                </div>
+                <div class="col-20">
+                    <button class="btn" id="btn-addsched">Add Schedule</button>
+                </div>
+                <div class="col-30">
+                    <button class="btn" id="btn-save">Add Tutor</button>
+                </div>
             </div>  
         </form>
     </div>

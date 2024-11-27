@@ -19,7 +19,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
         textElement.classList.add('lefttext1');
 
         this.classList.remove('leftoptions');
-        this.classList.add('leftoptions1');
+        this.classList.add('leftoptions1'); 
 
         const icon = this.querySelector('i');
         if (icon) {
@@ -121,3 +121,5 @@ function getContent(section) {
             return `<p>Content not found.</p>`;
     }
 }
+
+/*COMMENTTTTTT*/
