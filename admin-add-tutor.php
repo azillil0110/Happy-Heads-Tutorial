@@ -98,10 +98,10 @@
                         </div>
                         <div class="row">
                             <div class="col-50">
-                                <label class="labelday" for="mon">MONDAY</label><br>
+                                <label class="labelday" for="mon">WEDNESDAY</label><br>
                             </div>
                             <div class="col-50">
-                                <label class="labelday" for="tue">TUESDAY</label><br>
+                                <label class="labelday" for="tue">THURSDAY</label><br>
                             </div>
                         </div>
                         <div class="row">
@@ -124,10 +124,10 @@
                         </div>
                         <div class="row">
                             <div class="col-50">
-                                <label class="labelday" for="mon">MONDAY</label><br>
+                                <label class="labelday" for="mon">FRIDAY</label><br>
                             </div>
                             <div class="col-50">
-                                <label class="labelday" for="tue">TUESDAY</label><br>
+                                <label class="labelday" for="tue">SATURDAY</label><br>
                             </div>
                         </div>
                         <div class="row">
