@@ -49,7 +49,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addevent.css';
                 break;
             case 'addtutor':
-                stylesheet.href = 'css/admin/addtutor.css';
+                stylesheet.href = 'css/admin/addtutorR.css';
                 break;
             default:
                 stylesheet.href = 'css/admin/admin-dashboard.css';
