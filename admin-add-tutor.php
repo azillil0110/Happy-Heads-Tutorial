@@ -68,7 +68,7 @@
                 </div>
             </div>
                 <div class="rowcenter" id="textcenter">
-                            <h1 class="righttitletext" id="schedtitle"> Schedule</h1>
+                            <h1> Schedule</h1>
                         </div>
                         <div class="row">
                         <div class="col-16">
