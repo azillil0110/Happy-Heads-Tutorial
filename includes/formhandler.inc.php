@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'dbh.inc.php';
 
 $error = false;
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         while($row = mysqli_fetch_assoc($result)){
             $acc = $row['acc_type'];
             if($password === $row['mod_pass']){
+                $_SESSION['username'] = $username;
                 if($acc == 'tutor'){
                     header('location: ../tutor-dashboard.php?username='.$username);
                 }

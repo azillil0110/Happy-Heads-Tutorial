@@ -1,4 +1,12 @@
-<?php include_once 'dbh.inc.php'?>
+<?php 
+include_once 'dbh.inc.php';
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: ./login.php");
+    exit();
+}
+
+?>
 
 <div class="top">
         <div class="shortrectangle">
@@ -6,7 +14,7 @@
         </div>
         <div class="longrectangle">
             <div>
-                <a href="#" class="logout">| Log out</a>
+                <a href="includes/logout.php" class="logout">| Log out</a>
             </div>
             <div class="longright">
                 <?php 
