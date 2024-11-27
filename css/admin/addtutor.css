@@ -64,7 +64,11 @@ body {
     letter-spacing: 0;
     line-height: 48px;
 }
-
+#line-invi{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
 header{
     top: 0;
     left: 0;
