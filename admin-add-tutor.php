@@ -136,8 +136,13 @@
                                 <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
                             </div>
                         </div>
-            <div>
-                <button id="btn-save">Add</button>
+            <div class="row">
+                <div class="col-70">
+
+                </div>
+                <div class="col-30">
+                    <button id="btn-save">Add</button>
+                </div>
             </div>  
         </form>
     </div>
