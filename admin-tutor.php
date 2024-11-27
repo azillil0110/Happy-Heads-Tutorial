@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/admin/admin-tutor.css">
+<meta http-equiv="Cache-control" content="no-cache">
 <?php include_once 'includes/dbh.inc.php'?>
 <div class="righttop">
     <p class="righttoptext">Happy Heads Tutorial Center Tutors!</p>

@@ -55,6 +55,7 @@ body {
 }
 
 .rightbot {
+    display: flex;
     gap: 40px;
     height: max-content;
     width: 800px;

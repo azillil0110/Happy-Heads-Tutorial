@@ -1,4 +1,5 @@
 <?php include_once 'dbh.inc.php'?>
+<meta http-equiv="Cache-control" content="no-cache">
 
 <div class="leftside">
 
