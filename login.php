@@ -14,7 +14,7 @@
             <form id="login-form" action="includes/formhandler.inc.php" method="POST">
                 <a href="index.php" id="logo"><img  src="images/hpt_logo.png" alt="HPT Logo"></a>
                 <div>
-                    <label style="font-weight: bold;" for="username">Username2</label>
+                    <label style="font-weight: bold;" for="username">Username</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username" required>
                 </div>
                 <div>

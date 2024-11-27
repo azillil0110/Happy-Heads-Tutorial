@@ -1,7 +1,8 @@
-function on() {
-    document.getElementById('overlay').style.display = 'flex';
-}
-
-function off() {
-    document.getElementById('overlay').style.display = 'none';
+function toggleOverlay() {
+    const overlay = document.getElementById('studentOverlay');
+    if (overlay.style.display === 'none' || overlay.style.display === '') {
+        overlay.style.display = 'flex';
+    } else {
+        overlay.style.display = 'none';
+    }
 }

@@ -86,9 +86,6 @@ function getContent(section) {
             break;
         case 'myschedule':
             return `
-            <div class="col-100" id="overlay" onclick="off()">
-                <p class="ov-text" id="ov-title"> STUDENT LIST</p>
-            </div>
             <div class="righttop">
                 <p class="righttoptext">Your Schedule</p>
             </div>
@@ -98,9 +95,18 @@ function getContent(section) {
                 </div>
                 <div class="row">
                     <div class="col-16-tc">
-                        <p class="txt-mysched" onclick="on()">7:00-8:00</p>
+                        <p class="txt-mysched" onclick="toggleOverlay()">7:00-8:00</p>
                     </div>
-                </div>+
+                </div>
+            </div>
+            <div class="overlay" id="studentOverlay" onclick="toggleOverlay()">
+            <div class="overlay-content">
+                <h2>Student Details:</h2>
+                <p>Miyuki Ando</p>
+                <p>Daryl Cruz</p>
+                <p>Luther Dela Cruz</p>
+                <p>JR Eleazar</p>
+                <p>Miguel Eugenio</p>
             </div>
             `;
         case 'settings':

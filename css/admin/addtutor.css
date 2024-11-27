@@ -34,7 +34,7 @@ body {
     letter-spacing: 0;
     margin-bottom: 60px;
 }
-
+/**/
 .rightside {
     display: flex;
     flex-direction: column;
@@ -51,9 +51,10 @@ body {
     justify-content: center;
     width: 95%;
     height: 140px;
-    background-color: #E6E6E6;
+    background-color: #ff9b9b;
     border: none;
     margin: 40px;
+    border-radius: 10px;
 }
 
 .righttoptext {
@@ -176,6 +177,8 @@ h1 {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    justify-content: center;
+    align-content: center;
 }
 #field{
     width: 500px;
@@ -184,6 +187,7 @@ h1 {
 }
 .date-gender{
     display: flex;
+    justify-content: center;
 }
 .date-gender #gender{
     margin: 0px 20px;
@@ -196,12 +200,15 @@ h1 {
 }
 #login-security{
     margin: 20px 0px;
+    justify-self: center;
 }
 .email-phone{
     display: flex;
+    justify-content: center;
 }
 .usern-pass{
     display: flex;
+    justify-content: center;
 }
 .email-phone #phone, #email{
     margin: 0px 50px;
@@ -233,4 +240,61 @@ h1 {
     color: gray;
     cursor: pointer;
     margin-left: 5px;
+}
+/*FOR SCHEDULE*/
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    margin-right: 5px;
+}
+.rowcenter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-right: 5px;
+}
+.col-16{
+    width: 16%;
+    display: inline-block;  
+    margin-right: 5px;
+}
+
+.righttitletext{
+    font-size: 20px;
+    font-weight: bold;
+    color: #044c8c;
+}
+#schedtitle{
+    display: inline-block;
+    padding-top: 20px;
+}
+.labelday{
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.inputtime{
+    width: 100%;
+    font-size: 18px;
+    padding: 6px 6px;
+    margin-top: 10px;
+    color: #ff0000;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    resize: vertical;
+}
+#pfp-container{
+    height: 100px;width: 100px;
+    border: dotted gray 2px;
+}
+#form-1st-part{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#message{
+    width: 100%;
 }

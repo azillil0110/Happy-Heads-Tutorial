@@ -1,0 +1,135 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    height: max-content;
+}
+
+.main_body {
+    width: 100%;
+    height: 882px;
+    height: fit-content;
+    display: flex;
+}
+
+.square {
+   color:  white;
+}
+
+.square1 {
+    color: #9e2323;
+}
+
+.rightside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
+
+.righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 140px;
+    background-color: #ff9b9b;
+    border: none;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.righttoptext {
+    font-weight: 700;
+    color: #000000;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+
+.rightbot {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.firstrow {
+    display: flex;
+    gap: 40px;
+    height: max-content;
+    width: 800px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.secrow {
+    display: flex;
+    gap: 40px;
+}
+
+.box {
+    width: 120px;
+    height: 172px;
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #044c8c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.righttitle {
+    color: #044c8c;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 5px;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+.stpfp{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.overlay-content{
+    background: white;
+    border-radius: 10px;
+    padding: 180px 300px;
+    display: inline-block;
+    color: #000000;
+    max-width: 90%;
+}
