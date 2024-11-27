@@ -182,7 +182,7 @@
                    
                 </div>
                 <div class="col-20">
-                    <button class="btn" id="btn-save">Add More Schedule</button>
+                    <button class="btn" id="btn-save">Add Schedule</button>
                 </div>
                 <div class="col-30">
                     <button class="btn" id="btn-save">Add Tutor</button>
