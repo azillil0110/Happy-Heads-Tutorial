@@ -22,11 +22,21 @@
                         <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
                             <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
                         </a>
+                        <div class="hover-text">More Info</div>
                     </div>
                     <?php
                     $i++;
                 }
             }
         ?> 
+    </div>
+</div>
+<div class="overlay" id="scheduleOverlay">
+    <div class="overlay-content">
+    <h2>Tutor Schedule</h2>
+    <p>Monday: 9:00 AM - 5:00 PM</p>
+    <p>Wednesday: 1:00 PM - 6:00 PM</p>
+    <p>Friday: 10:00 AM - 3:00 PM</p>
+    <button class="close-btn" onclick="toggleOverlay()">Close</button>
     </div>
 </div>

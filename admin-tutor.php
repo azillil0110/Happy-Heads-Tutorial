@@ -20,7 +20,7 @@
                             style="background-image: url('./images/team/<?php echo $row['pfp_url']; ?>');">
                     </div>
                     <p class="righttitle"><?php echo $row['mod_fname']; echo" "; echo $row['mod_lname'];?></p>
-                    <div class="hover-text">View Schedule</div>
+                    <div class="hover-text tutor-image">View Schedule</div>
                 </div>
                 <?php
                 $i++;
