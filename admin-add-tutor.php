@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/admin/addtutor.css">
 
 <div class="righttop">
-<p class="righttoptext">Add a Tutor</p>
+<p class="righttoptext">Add a member</p>
 </div>
 <div class="contact-form">
     <h1>Personal Information</h1>
@@ -37,6 +37,14 @@
                         <option value="Prefer not to answer">Perfer not to Answer</option>
                     </select>
                 </div>
+                <div id="acc_type">
+                    <h5>Account Type</h5>
+                    <select name="gender" required>
+                        <option value="">Please select one…</option>
+                        <option value="female">Tutor</option>
+                        <option value="male">Admin</option>
+                    </select>
+                </div>
             </div>
         
             <div class="description">
@@ -57,6 +65,7 @@
                 </div>
             </div>
             <div class="usern-pass">
+<<<<<<< HEAD
                 <div id="usern">
                     <h5>Username</h5>
                     <input id="input" required placeholder="Enter username" type="text" name="usern">
@@ -226,6 +235,8 @@
                 <div class="col-20">
                     <button class="btn" id="btn-addsched">Add Schedule</button>
                 </div>
+=======
+>>>>>>> 9f15f3c39d62db2ec309a074d6590de8a9e35dd7
                 <div class="col-30">
                     <button class="btn" id="btn-save">Add Tutor</button>
                 </div>

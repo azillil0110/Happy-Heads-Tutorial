@@ -45,21 +45,13 @@
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Tutors</p>
     </div>
-    <div class="leftoptions" data-section="tutorschedule">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Tutor Schedule</p>
-    </div>
     <div class="leftoptions" data-section="addevent">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Add Event</p>
     </div>
     <div class="leftoptions" data-section="addtutor">
         <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Add Tutor</p>
-    </div>
-    <div class="leftoptions" data-section="addtutor">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Add Admin</p>
+        <p class="lefttext2">Add Member</p>
     </div>
     <div class="leftoptions" data-section="addtutor">
         <i class="fa-solid fa-square square"></i>
