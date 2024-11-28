@@ -52,7 +52,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addtutor.css';
                 break;
             case 'addstudents':
-                stylesheet.href = 'css/admin/addadmin.css';
+                stylesheet.href = 'css/admin/addstudent.css';
                 break;
             case 'settings':
                 stylesheet.href = 'css/admin/admin-settings.css';
@@ -110,7 +110,7 @@ function getContent(section) {
                 });
                 break;
         case 'addstudents':
-            fetch('admin-add-students.php')
+            fetch('./admin-add-students.php')
                 .then(response => response.text())
                 .then(html => {
                     document.querySelector('.rightside').innerHTML = html;
