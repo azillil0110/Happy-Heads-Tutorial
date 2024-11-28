@@ -65,6 +65,178 @@
                 </div>
             </div>
             <div class="usern-pass">
+<<<<<<< HEAD
+                <div id="usern">
+                    <h5>Username</h5>
+                    <input id="input" required placeholder="Enter username" type="text" name="usern">
+                </div>
+                <div id="pass">
+                    <h5>Password</h5>
+                    <input id="input" required placeholder="Enter password" type="password" name="pass">
+                    <p>change password</p>
+                </div>
+            </div>
+                <div class="rowcenter" id="textcenter">
+                            <h1> Schedule</h1>
+                        </div>
+                        <div class="row">
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="mon" value="monday">
+                            <label class="labelday" for="mon">MONDAY</label><br>                    
+                        </div>
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="tue" value="tuesday">
+                            <label class="labelday" for="tue">TUESDAY</label><br>   
+                        </div>
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="wed" value="wednesday">
+                            <label class="labelday" for="wed">WEDNESDAY</label><br>
+                        </div>
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="thu" value="thursday">
+                            <label class="labelday" for="thu">THURSDAY</label><br>
+                        </div>
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="fri" value="friday">
+                            <label class="labelday" for="fri">FRIDAY</label><br>
+                        </div>
+                        <div class="col-16">
+                            <input type="checkbox" id="student-schedday" name="sat" value="saturday">
+                            <label class="labelday" for="sat">SATURDAY</label><br>
+                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime1" name="mtime1"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime1" name="ttime1"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime1" name="wtime1"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime1" name="thtime1"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime1" name="ftime1"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime1" name="stime1"></br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime2" name="mtime2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime2" name="ttime2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime2" name="wtime2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime2" name="thtime2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime2" name="ftime2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
+                            </div>
+                        </div>
+                        <hr id="line-invi">
+                        <div class="row" id="">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime1-2" name="mtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime1-2" name="ttime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime1-2" name="wtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime1-2" name="thtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime1-2" name="ftime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime1-2" name="stime1-2"></br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime2-2" name="mtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime2-2" name="ttime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime2-2" name="wtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime2-2" name="thtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime2-2" name="ftime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime2-2" name="stime2-2"></br>
+                            </div>
+                        </div>
+
+                        <hr id="line-invi">
+                        <div class="row" id="">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime1-2" name="mtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime1-2" name="ttime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime1-2" name="wtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime1-2" name="thtime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime1-2" name="ftime1-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime1-2" name="stime1-2"></br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-mtime2-2" name="mtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ttime2-2" name="ttime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-wtime2-2" name="wtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-thtime2-2" name="thtime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-ftime2-2" name="ftime2-2"></br>
+                            </div>
+                            <div class="col-16">
+                                <input class="inputtime" type="time" id="student-stime2-2" name="stime2-2"></br>
+                            </div>
+                        </div>
+            <div class="row">
+                <div class="col-50">
+                   
+                </div>
+                <div class="col-20">
+                    <button class="btn" id="btn-addsched">Add Schedule</button>
+                </div>
+=======
+>>>>>>> 9f15f3c39d62db2ec309a074d6590de8a9e35dd7
                 <div class="col-30">
                     <button class="btn" id="btn-save">Add Tutor</button>
                 </div>
