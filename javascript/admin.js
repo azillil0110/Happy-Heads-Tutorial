@@ -42,8 +42,8 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'tutors':
                 stylesheet.href = 'css/admin/admin-tutor.css';
                 break;
-            case 'tutorschedule':
-                stylesheet.href = 'css/admin/.css';
+            case 'pending-students':
+                stylesheet.href = 'css/admin/admin-students.css';
                 break;
             case 'addevent':
                 stylesheet.href = 'css/admin/addevent.css';
@@ -51,7 +51,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'addtutor':
                 stylesheet.href = 'css/admin/addtutor.css';
                 break;
-            case 'addadmin':
+            case 'addstudents':
                 stylesheet.href = 'css/admin/addadmin.css';
                 break;
             case 'settings':
@@ -89,6 +89,16 @@ function getContent(section) {
                         document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                     });
                 break;
+        case 'pending-students':
+            fetch('./admin-pending-students.php')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.querySelector('.rightside').innerHTML = html;
+                    })
+                    .catch(err => {
+                        document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                    });
+                break;
         case 'tutors':
             fetch('./admin-tutor.php')
                 .then(response => response.text())
@@ -99,8 +109,8 @@ function getContent(section) {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
                 break;
-        case 'tutorschedule':
-            fetch('./admin-tutor-sched.php')
+        case 'addstudents':
+            fetch('./admin-add-students.php')
                 .then(response => response.text())
                 .then(html => {
                     document.querySelector('.rightside').innerHTML = html;

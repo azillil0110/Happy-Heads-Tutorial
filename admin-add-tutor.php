@@ -1,31 +1,31 @@
 <link rel="stylesheet" href="css/admin/addtutor.css">
 
 <div class="righttop">
-<p class="righttoptext">Add a member</p>
+<p class="righttoptext">Add a User</p>
 </div>
 <div class="contact-form">
     <h1>Personal Information</h1>
     <div class="top-container">
         
-        <form action="#" method="post">
+        <form action="includes/insert-user.php" method="POST">
             <div id="form-1st-part">
-                <div id="pfp-container">
+                <!-- <div id="pfp-container">
                     <img id="img-1" src="2X2 (1).jpg" alt="2x2 Img">
-                </div>
+                </div> -->
                 <div>
                     <input id="field" type="hidden" name="form-name" value="form 1">
                     <div class="contact-form-field">
-                        <input id="field" required placeholder="First Name" type="text" name="name" id="name">
+                        <input id="field" required placeholder="First Name" type="text" name="fname" id="fname">
                     </div>
                     <div class="contact-form-field">
-                        <input id="field" required placeholder="Last Name" type="text" name="name" id="name">
+                        <input id="field" required placeholder="Last Name" type="text" name="lname" id="lname">
                     </div>
                 </div>
             </div>
             <div class="date-gender">
                 <div id="date">
                     <h5>Birth Date</h5>
-                    <input type="date" id="date" required>
+                    <input type="date" id="date" required name="bdate">
                 </div>
                 <div id="gender">
                     <h5>Gender</h5>
@@ -39,7 +39,7 @@
                 </div>
                 <div id="acc_type">
                     <h5>Account Type</h5>
-                    <select name="gender" required>
+                    <select name="acctype" required>
                         <option value="">Please select one…</option>
                         <option value="female">Tutor</option>
                         <option value="male">Admin</option>

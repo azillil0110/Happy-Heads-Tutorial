@@ -41,19 +41,27 @@
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Students</p>
     </div>
+    <div class="leftoptions" data-section="pending-students">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Pending Students</p>
+    </div>
+    <div class="leftoptions" data-section="addstudents">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Add Students</p>
+    </div>
     <div class="leftoptions" data-section="tutors">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Tutors</p>
     </div>
+    <div class="leftoptions" data-section="addtutor">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Add User</p>
+    </div>
     <div class="leftoptions" data-section="addevent">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Add Event</p>
-    </div>
-    <div class="leftoptions" data-section="addtutor">
-        <i class="fa-solid fa-square square"></i>
-        <p class="lefttext2">Add Member</p>
-    </div>
-    <div class="leftoptions" data-section="addtutor">
+    </div>  
+    <div class="leftoptions" data-section="settings">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Settings</p>
     </div>
