@@ -13,20 +13,21 @@
             if($resultcheck > 0){
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)){ 
-
+                    $studentID = $row['stud_id']; // ID DITO RAGHHH
                     ?>
                     <div class="box">
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
-                        <p class="righttitle"><?php echo $row['stud_fname']; echo" "; echo $row['stud_lname'];?></p>
+                        <!-- Wrap the name in a clickable link -->
+                        <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                            <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
+                        </a>
                     </div>
-
                     <?php
                     $i++;
                 }
             }
         ?> 
-        
     </div>
 </div>
