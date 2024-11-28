@@ -22,12 +22,27 @@
                         <p class="righttitle"><?php echo $row['mod_fname']; echo" "; echo $row['mod_lname'];?></p>
                         <div class="hover-text">View Schedule</div>
                     </div>
-
-                    <?php
-                    $i++;
-                }
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            console.log('DOM fully loaded');
+                            const imageContainer = document.getElementById('stud-pic<?php echo $i; ?>');
+                            if (imageContainer) {
+                                imageContainer.style.backgroundImage = "url('./images/students/<?php echo $row['pfp_url']; ?>')";
+                                imageContainer.style.backgroundSize = 'cover';
+                                imageContainer.style.backgroundPosition = 'center';
+                                imageContainer.style.backgroundRepeat = 'no-repeat';
+                            }
+                        });
+                    </script>
+                    <a href="admin-tutorinfo.php?id=<?php echo $tutorID; ?>" class="righttitle"> 
+                        <?php echo $row['mod_fname'] . " " . $row['mod_lname']; ?>
+                    </a>
+                </div>
+                <?php
+                $i++;
             }
-        ?> 
+        }
+    ?> 
 </div>
 <div class="overlay" id="scheduleOverlay">
     <div class="overlay-content">
