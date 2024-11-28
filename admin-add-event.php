@@ -30,7 +30,7 @@
             <textarea rows="7" cols="90" id="descinp" placeholder="What is the event all about?" name="eventDescription" required></textarea>
         </div>
         <div class="bottomform">
-            <button type="submit" class="submit">Add Event</button>
+            <button type="submit" class="submit btn-save">Add Event</button>
         </div>
     </div>
 </form>

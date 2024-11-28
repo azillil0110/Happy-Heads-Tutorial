@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/enroll-form.css">
+    <link rel="stylesheet" href="css/olay.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <?php include_once 'includes/dbh.inc.php'?>
 </head>
 <body>
     <?php include('includes/header.php') ?>
@@ -19,32 +21,32 @@
         </div>
 
         <div id="body">
-            <form>
+            <form method="POST" action="enrollment-backend.php">
                 <div class="row">
                     <div class="col-70" id="subrow">
                         <div class="col-50">
                             <label class="textlabel" for="studentfname">FIRST NAME</label>
-                            <input type="text" id="studentfname" name="student-firstname" placeholder="Input student's First Name" class="inputtext">
+                            <input type="text" id="studentfname" name="student-firstname" placeholder="Input student's First Name" class="inputtext" required>
                         </div>
                         <div class="col-50">
                             <label class="textlabel" for="studentlname">LAST NAME</label>
-                            <input type="text" id="studentlname" name="student-lastname" placeholder="Input student's Last Name" class="inputtext">
+                            <input type="text" id="studentlname" name="student-lastname" placeholder="Input student's Last Name" class="inputtext" required>
                         </div>
                     </div>
                     <div class="col-30">
                         <label class="textlabel" for="student-nname">NICKNAME</label></br>
-                        <input class="inputtext" type="text" id="student-nname" name="student-nickname" placeholder="Enter nickname"></br>
+                        <input class="inputtext" type="text" id="student-nname" name="student-nickname" placeholder="Enter nickname" required></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-70" id="subrow">
                         <div class="col-50">
                             <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                            <input class="inputtext" type="date" id="student-bday" name="student-birthday"></br>
+                            <input class="inputtext" type="date" id="student-bday" name="student-birthday" required></br>
                         </div>
                         <div class="col-50">
                             <label class="textlabel" for="student-age">AGE</label></br>
-                            <input class="inputtext" type="number" id="student-age" name="student-age-" placeholder="Enter your age"></br>
+                            <input class="inputtext" type="number" id="student-age" name="student-age" placeholder="Enter your age" required></br>
                         </div>
                     </div>
                     <div class="col-30">
@@ -55,12 +57,15 @@
                             <input class="radiobtn" type="radio" id="female" name="gender" value="female">
                             <label class="btnlabel" for="female">Female</label>
                         </div>
+                        <script>
+                            document.getElementById('male').checked = true;
+                        </script>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-70">
                         <label class="textlabel" for="school">SCHOOL</label></br>
-                        <input class="inputtext" type="text" id="school" name="school" placeholder="Name of School"></br>
+                        <input class="inputtext" type="text" id="school" name="school" placeholder="Name of School" required></br>
                     </div>
                     <div class="col-30">
                         <label class="textlabel" for="level">GRADE LEVEL</label></br>
@@ -81,7 +86,7 @@
                 <div class="row">
                     <div class="col-100">
                         <label class="textlabel" for="homeadd">HOME ADDRESS</label></br>
-                        <input class="inputtext" type="text" id="homeadd" name="homeaddress" placeholder="Enter your Address"></br>
+                        <input class="inputtext" type="text" id="homeadd" name="homeaddress" placeholder="Enter your Address" required></br>
                     </div>
                 </div>
                 <hr id="line-enroll">
@@ -92,26 +97,26 @@
                     <div class="col-50" id="subrow">
                         <div class="col-50">
                             <label class="textlabel" for="parent-lname1">LAST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-lname1" name="students-parent-lname1" placeholder="Enter Last Name"></br>
+                            <input class="inputtext" type="text" id="parent-lname1" name="students-parent-lname1" placeholder="Enter Last Name" required></br>
                         </div>
                         <div class="col-50">
                             <label class="textlabel" for="parent-fname1">FIRST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-fname1" name="students-parent-fname1" placeholder="Enter First Name"></br>
+                            <input class="inputtext" type="text" id="parent-fname1" name="students-parent-fname1" placeholder="Enter First Name" required></br>
                         </div>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
-                        <input class="inputtext" type="text" id="sp-relationship1" name="parent-relationship1" placeholder="Enter Relationship"></br>
+                        <input class="inputtext" type="text" id="sp-relationship1" name="parent-relationship1" placeholder="Enter Relationship" required></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-50">
                         <label class="textlabel" for="sp-email1">E-MAIL</label></br>
-                        <input class="inputtext" type="email" id="sp-email1" name="parent-email1" placeholder="Enter E-mail Address"></br>
+                        <input class="inputtext" type="email" id="sp-email1" name="parent-email1" placeholder="Enter E-mail Address" required></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-connum1">CONTACT NUMBER</label></br>
-                        <input class="inputtext" type="text" id="sp-connum1" name="parent-connum1" placeholder="Enter Contact Number"></br>
+                        <input class="inputtext" type="text" id="sp-connum1" name="parent-connum1" placeholder="Enter Contact Number" required></br>
                     </div>
                 </div>
                 <hr id="line-invi">
@@ -149,28 +154,46 @@
                     <div class="col-30">
                         <div class="option" id="student-ques1-option">
                             <input class="radiobtn" type="radio" id="student-ques1" name="yesno" value="yes">
-                            <label class="btnlabel" for="yes">Yes</label><br>
-                            <input class="radiobtn" type="radio" id="student-ques1" name="yesno" value="no">
-                            <label class="btnlabel" for="no">No</label>
+                            <label class="btnlabel" for="student-ques1">Yes</label><br>
+                            <input class="radiobtn" type="radio" id="student-ques2" name="yesno" value="no">
+                            <label class="btnlabel" for="student-ques2">No</label>
                         </div></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-100">
-                        <input class="inputtext" type="text" id="student-ques1-blank" name="student-medicalblank" placeholder="Enter text"></br>
+                        <input class="inputtext" type="text" id="student-ques1-blank" name="student-medicalblank" placeholder="Enter text" disabled></br>
                     </div>
                 </div>
+                <script>
+                    const yesRadio = document.getElementById('student-ques1');
+                    const noRadio = document.getElementById('student-ques2');
+                    const medicalInput = document.getElementById('student-ques1-blank');
+
+                    yesRadio.addEventListener('change', function () {
+                        if (yesRadio.checked) {
+                            medicalInput.disabled = false;
+                        }
+                    });
+
+                    noRadio.addEventListener('change', function () {
+                        if (noRadio.checked) {
+                            medicalInput.disabled = true;
+                            medicalInput.value = '';
+                        }
+                    });
+                </script>
                 <div class="row">
                     <div class="col-70">
                         <label class="lightlabel" for="student-pic-consent">Can your child have his/her picture taken or displayed? &lpar;for promotional purposes of the center&rpar;</label></br>
                     </div>
                     <div class="col-30">
                         <div class="option" id="student-ques2-option">
-                            <input class="radiobtn" type="radio" id="student-pic-consent" name="yesno" value="yes">
-                            <label class="btnlabel" for="yes">Yes</label><br>
-                            <input class="radiobtn" type="radio" id="student-pic-consent" name="yesno" value="no">
-                            <label class="btnlabel" for="no">No</label>
-                        </div>    </br>                
+                            <input class="radiobtn1" type="radio" id="student-pic-consent" name="yesno_pic" value="yes">
+                            <label class="btnlabel1" for="yes">Yes</label><br>
+                            <input class="radiobtn1" type="radio" id="student-pic-consent" name="yesno_pic" value="no">
+                            <label class="btnlabel1" for="no">No</label>
+                        </div></br>                
                     </div>
                 </div>
                 <div class="row">
@@ -255,18 +278,18 @@
                     <div class="col-40" id="authorizeddiv">
                         <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                         <label class="lightlabel-small" for="authname-inst">The following individuals are hereby approved by the Parent to pick up the child.</label>
-                        <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname"></br>
+                        <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname" required></br>
                         <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname"></br>
                     </div>
                     <div class="col-60" id="subrow">
                         <div class="col-40">
                             <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
-                            <input class="inputtext" type="text" id="rel3" name="relationship" placeholder="Enter relationship"></br>
+                            <input class="inputtext" type="text" id="rel3" name="relationship" placeholder="Enter relationship" required></br>
                             <input class="inputtext" type="text" id="rel4" name="relationship" placeholder="Enter relationship"></br>
                         </div>
                         <div class="col-60">
                             <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
-                            <input class="inputtext" type="text" id="connum3" name="contactnumber" placeholder="Enter Contact Number"></br>
+                            <input class="inputtext" type="text" id="connum3" name="contactnumber" placeholder="Enter Contact Number" required></br>
                             <input class="inputtext" type="text" id="connum4" name="contactnumber" placeholder="Enter Contact Number"></br>
                         </div>
                     </div>
@@ -284,8 +307,18 @@
                 </div>
             </form>
         </div>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Registration Details Sent!</p>
+                <p class="modal-text2">Kindly wait for the confirmation.</p>
+            </div>
+        </div>
     </main>
+
+        </div>
+    </section>
 
     <?php include('includes/footer.php') ?>
 </body>
+<script src="javascript/overlay.js"></script>
 </html>
