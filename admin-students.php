@@ -13,31 +13,20 @@
             if($resultcheck > 0){
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)){ 
-
+                    $studentID = $row['stud_id']; // ID DITO RAGHHH
                     ?>
                     <div class="box" onclick="toggleOverlay()">
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
-                        <p class="righttitle"><?php echo $row['stud_fname']; echo" "; echo $row['stud_lname'];?></p>
-                        <div class="hover-text">More Info</div>
+                        <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                            <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
+                        </a>
                     </div>
-
                     <?php
                     $i++;
                 }
             }
         ?> 
-        
     </div>
 </div>
-<div class="overlay" id="scheduleOverlay">
-    <div class="overlay-content">
-    <h2>Student Information</h2>
-    <p>Monday: 9:00 AM - 5:00 PM</p>
-    <p>Wednesday: 1:00 PM - 6:00 PM</p>
-    <p>Friday: 10:00 AM - 3:00 PM</p>
-    <button class="close-btn" onclick="toggleOverlay()">Close</button>
-    </div>
-</div>
-<script src="javascript/admin.js"></script>
