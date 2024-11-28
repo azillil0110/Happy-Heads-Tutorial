@@ -15,11 +15,12 @@
                 while($row = mysqli_fetch_assoc($result)){ 
 
                     ?>
-                    <div class="box">
+                    <div class="box " onclick="toggleOverlay()">
                         <div id="tutor-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/team/<?php echo $row['pfp_url']; ?>');">
                         </div>
                         <p class="righttitle"><?php echo $row['mod_fname']; echo" "; echo $row['mod_lname'];?></p>
+                        <div class="hover-text">View Schedule</div>
                     </div>
 
                     <?php
@@ -27,5 +28,14 @@
                 }
             }
         ?> 
+</div>
+<div class="overlay" id="scheduleOverlay">
+    <div class="overlay-content">
+    <h2>Tutor Schedule</h2>
+    <p>Monday: 9:00 AM - 5:00 PM</p>
+    <p>Wednesday: 1:00 PM - 6:00 PM</p>
+    <p>Friday: 10:00 AM - 3:00 PM</p>
+    <button class="close-btn" onclick="toggleOverlay()">Close</button>
+    </div>
 </div>
 <script src="javascript/admin.js"></script>
