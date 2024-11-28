@@ -13,7 +13,7 @@
         if($resultcheck > 0){
             $i = 0;
             while($row = mysqli_fetch_assoc($result)){ 
-
+                $tutorID = $row['mod_id']; // DITO YUNG ID GUYS PALITAN NYO NALANG NAME DI KO ALAM EH
                 ?>
                 <div class="box">
                     <div id="stud-pic<?php echo $i; ?>" class="stpfp">
@@ -30,13 +30,14 @@
                             }
                         });
                     </script>
-                    <p class="righttitle"><?php echo $row['mod_fname']; echo" "; echo $row['mod_lname'];?></p>
+                    <a href="admin-tutorinfo.php?id=<?php echo $tutorID; ?>" class="righttitle"> 
+                        <?php echo $row['mod_fname'] . " " . $row['mod_lname']; ?>
+                    </a>
                 </div>
-
                 <?php
                 $i++;
             }
         }
-        ?> 
+    ?> 
 </div>
 <script src="javascript/admin.js"></script>
