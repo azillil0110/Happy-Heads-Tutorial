@@ -110,7 +110,7 @@ function getContent(section) {
                 });
                 break;
         case 'addstudents':
-            fetch('./admin-add-students.php')
+            fetch('.admin-add-students.php')
                 .then(response => response.text())
                 .then(html => {
                     document.querySelector('.rightside').innerHTML = html;
