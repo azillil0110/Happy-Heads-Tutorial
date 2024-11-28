@@ -137,4 +137,3 @@ if ($insert_student->execute()) {
 $conn->close();
 
 ?>
-
