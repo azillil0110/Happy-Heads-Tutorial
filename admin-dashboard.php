@@ -17,5 +17,6 @@
     </div>
 </body>
 <script src="javascript/admin.js"></script>
+<script src="javascript/admin-tutor-sched.js"></script>
 </html>
 

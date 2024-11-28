@@ -6,9 +6,9 @@
 </div>
 <div class="rightbot">
     <?php 
-        $sql = "SELECT * FROM `moderator`";
-        $result = mysqli_query($conn, $sql);
-        $resultcheck = mysqli_num_rows($result);
+            $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin'";
+            $result = mysqli_query($conn, $sql);
+            $resultcheck = mysqli_num_rows($result);
 
         if($resultcheck > 0){
             $i = 0;

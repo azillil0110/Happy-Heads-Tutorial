@@ -51,12 +51,21 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'addtutor':
                 stylesheet.href = 'css/admin/addtutor.css';
                 break;
+            case 'addadmin':
+                stylesheet.href = 'css/admin/addadmin.css';
+                break;
+            case 'settings':
+                stylesheet.href = 'css/admin/admin-settings.css';
+                break;
             default:
                 stylesheet.href = 'css/admin/admin-dashboard.css';
         }
         
     });
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
 
 function getContent(section) {
     switch (section) {
@@ -89,13 +98,19 @@ function getContent(section) {
                 .catch(err => {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
-        break;
+                break;
         case 'tutorschedule':
-            return `
-                
-            `;
+            fetch('./admin-tutor-sched.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+                break;
         case 'addevent':
-                fetch('./admin-add-event.php')
+                fetch(`./admin-add-event.php?username=${encodeURIComponent(username)}`)
                     .then(response => response.text())
                     .then(html => {
                         document.querySelector('.rightside').innerHTML = html;
@@ -113,6 +128,26 @@ function getContent(section) {
                 .catch(err => {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
+            break;
+        case 'addadmin':
+            fetch('./admin-add-admin.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+            break;
+        case 'addtutor':
+        fetch('./admin-settings.php')
+            .then(response => response.text())
+            .then(html => {
+                document.querySelector('.rightside').innerHTML = html;
+            })
+            .catch(err => {
+                document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+            });
             break;
         default:
             return `<p>Content not found.</p>`;
