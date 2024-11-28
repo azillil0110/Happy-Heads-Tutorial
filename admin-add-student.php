@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/admin/-addstudent.css">
+<div class="right">
 <div class="righttop">
     <p class="righttoptext">Add a Student</p>
 </div>
@@ -279,5 +281,6 @@
             </div>
         </form>
     </div>            
+</div>
 </div>
 <script src="javascript/admin.js"></script>

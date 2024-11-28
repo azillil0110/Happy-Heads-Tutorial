@@ -37,7 +37,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
-                stylesheet.href = './css/admin/-admin-students.css';
+                stylesheet.href = './css/admin/admin-students.css';
                 break;
             case 'tutors':
                 stylesheet.href = 'css/admin/admin-tutor.css';
@@ -52,7 +52,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addtutor.css';
                 break;
             case 'addstudents':
-                stylesheet.href = 'css/admin/addstudent.css';
+                stylesheet.href = 'css/admin/-addstudent.css';
                 break;
             case 'settings':
                 stylesheet.href = 'css/admin/admin-settings.css';

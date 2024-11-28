@@ -8,7 +8,11 @@ body {
 #subrow{
     display: flex;
 }
-
+.right{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
 .rightside {
     display: flex;
     flex-direction: column;
@@ -87,6 +91,25 @@ body {
     display: inline-block;  
     margin-right: 5px;
 }
+.righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 140px;
+    background-color: #ff9b9b;
+    border: none;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.righttoptext {
+    font-weight: 700;
+    color: #000000;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
 .option{
     display: flex;
     align-items: flex-end;
@@ -95,7 +118,7 @@ body {
 .righttitletext{
     font-size: 20px;
     font-weight: bold;
-    color: #044c8c;
+    color: #000000;
 }
 #schedtitle{
     display: inline-block;
@@ -103,7 +126,7 @@ body {
 }
 
 .rightbot {
-    width: 70%;
+    width: 90%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -204,7 +227,7 @@ body {
     resize: vertical;
 }
 #student-selectdate{
-    width: 300px;
+    width: 100%;
 }
 
 .radiobtn{
