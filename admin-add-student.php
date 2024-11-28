@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/admin/addstudent.css">
 <div class="rightside">
     <div class="rightbot">
         <div class="rowcenter" id="textcenter">
