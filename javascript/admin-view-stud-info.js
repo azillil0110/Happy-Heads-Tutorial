@@ -22,6 +22,6 @@ function showStudentDetails(box) {
     document.getElementById('scheduleOverlay').style.display = 'flex';
 }
 
-function toggleOverlay() {
+function closeOverlay() {
     document.getElementById('scheduleOverlay').style.display = 'none';
 }

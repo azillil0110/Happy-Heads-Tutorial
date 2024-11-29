@@ -1,10 +1,4 @@
 <link rel="stylesheet" href="css/admin/admin-students.css">
-<?php include_once 'includes/dbh.inc.php'?>
-<div class="righttop">
-    <p class="righttoptext">Happy Heads Tutorial Center Students!</p>
-</div>
-<div class="rightbot">
-    <div class="firstrow">
 <div class="overlay" id="scheduleOverlay">
     <div class="overlay-content">
         <h2>Student Information</h2>
@@ -172,7 +166,7 @@
                     </div>
                 </div>
                 <hr id="line-enroll">
-                <button class="close-btn" onclick="toggleOverlay()">Close</button>
+                <button class="close-btn" onclick="closeOverlay()">Close</button>
         </div>
     </div>
 </div>
