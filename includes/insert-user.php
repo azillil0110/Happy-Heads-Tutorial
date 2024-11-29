@@ -13,15 +13,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $useremail = $_POST['email'];
     $userphone = $_POST['phone'];
     $userdefaultpfp = 'default.jpg';
+    $useruid = $userfname;
+    $useruid = strtolower($userfname);
+    $userpassw = strtolower($userlname);
+    $userpassh = password_hash($userpassw , PASSWORD_DEFAULT);
 
-    echo "$userfname<br>";
-    echo "$userlname<br>";
-    echo "$userbdate<br>";
-    echo "$usergender<br>";
-    echo "$useracctype<br>";
-    echo "$userdesc<br>";
-    echo "$useremail<br>";
-    echo "$userphone<br>";
+    $cipher = "AES-128-CTR"; // Encryption method
+    $key = "your_encryption_key"; // Must be 16 bytes for AES-128
+    $options = 0;
+    $iv = random_bytes(openssl_cipher_iv_length($cipher)); // Initialization vector
+
+    $encrypted = openssl_encrypt($plaintext, $cipher, $key, $options, $iv);
+    echo "Encrypted: " . $encrypted;
+
+    // Decryption
+    $decrypted = openssl_decrypt($encrypted, $cipher, $key, $options, $iv);
 
     try {
         require_once 'inputdb-dbh.inc.php';
