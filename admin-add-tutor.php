@@ -41,8 +41,8 @@
                     <h5>Account Type</h5>
                     <select name="acctype" required>
                         <option value="">Please select one…</option>
-                        <option value="female">Tutor</option>
-                        <option value="male">Admin</option>
+                        <option value="Tutor">Tutor</option>
+                        <option value="Admin">Admin</option>
                     </select>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="css/admin/admin-students.css">
 <?php include_once 'includes/dbh.inc.php'?>
+
+
 <div class="righttop">
     <p class="righttoptext">Happy Heads Tutorial Center Students!</p>
 </div>
@@ -15,7 +17,7 @@
                 while($row = mysqli_fetch_assoc($result)){ 
                     $studentID = $row['stud_id']; // ID DITO RAGHHH
                     ?>
-                    <div class="box" onclick="toggleOverlay()">
+                    <div  class="box" onclick="toggleOverlay()">
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
@@ -31,6 +33,12 @@
         ?> 
     </div>
 </div>
+
+
+<?php if ($clickedStudentId): ?>
+    <p>You clicked on student ID: <?php echo htmlspecialchars($clickedStudentId); ?></p>
+<?php endif; ?>
+
 
 <div class="overlay" id="scheduleOverlay">
     <div class="overlay-content">

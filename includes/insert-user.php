@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $userlname = $_POST['lname'];
     $userbdate = $_POST['bdate'];
     $usergender = $_POST['gender'];
-    if($usergender === "Please select on..."){
+    if($usergender === "Please select one..."){
         $usergender = "none";
     }
     $useracctype = $_POST['acctype'];
@@ -39,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
         $stmt = $pdo->prepare($query);
 
-        $stmt->execute([$userfname, $userlname, $useremail, $userphone, $userbdate, $usergender, $userfname, $userlname,$useracctype,'active',$userdesc, $userdefaultpfp]);
+        $stmt->execute([$userfname, $userlname, $useremail, $userphone, $userbdate, $usergender, $userfname, $userpassh,$useracctype,'active',$userdesc, $userdefaultpfp]);
 
         $pdo = null;
         $stmt = null;
 
         // Ensure no output before this
-        header('Location: ../admin-dashboard.php?username=' . urlencode($username));
+        header('Location: ../admin-dashboard.php?page=adduser');
         die();
     } catch (PDOException $e) {
         die("Query Failed:" . $e->getMessage());

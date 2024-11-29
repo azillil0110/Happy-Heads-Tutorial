@@ -128,7 +128,7 @@ if ($insert_student->execute()) {
 
     $insert_schedule->close();
 
-    header("Location: admin-dashboard.php");
+    header("Location: admin-dashboard.php?page=addstudent");
     exit();
 } else {
     echo "Error: " . $conn->error;

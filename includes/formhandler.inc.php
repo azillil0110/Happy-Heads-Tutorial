@@ -16,20 +16,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if($resultcheck>0){
         while($row = mysqli_fetch_assoc($result)){
             $acc = $row['acc_type'];
-            if($password === $row['mod_pass']){
-                $_SESSION['username'] = $username;
-                if($acc == 'tutor'){
-                    header('location: ../tutor-dashboard.php?username='.$username);
+            $userid = (int)$row['mod_id'];
+            echo$userid;
+            if($userid > 7){
+                $passwordhash = $row['mod_pass'];
+                if(password_verify($password, $passwordhash)){
+                    $_SESSION['username'] = $username;
+                    if($acc == 'tutor'){
+                        header('location: ../tutor-dashboard.php?username='.$username);
+                    }
+                    else if ($acc === 'admin' || $acc === 'founder'){
+                        header('location: ../admin-dashboard.php?username='.$username);
+                    }
+                    
                 }
-                else if ($acc === 'admin' || $acc === 'founder'){
-                    header('location: ../admin-dashboard.php?username='.$username);
-                }
-                
             }
             else{
-                header('location: ../login.php?error=invalid_password&username='.$username);
-                exit();
+                if($password === $row['mod_pass']){
+                    $_SESSION['username'] = $username;
+                    if($acc == 'tutor'){
+                        header('location: ../tutor-dashboard.php?username='.$username);
+                    }
+                    else if ($acc === 'admin' || $acc === 'founder'){
+                        header('location: ../admin-dashboard.php?username='.$username);
+                    }
+                    
+                }
+                else{
+                    header('location: ../login.php?error=invalid_password&username='.$username);
+                    exit();
+                }
             }
+                
         }
     }
     else{
