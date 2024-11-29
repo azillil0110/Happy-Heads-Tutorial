@@ -78,9 +78,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-100">
+                    <div class="col-70">
                         <label class="textlabel" for="homeadd">HOME ADDRESS</label></br>
                         <input class="inputtext" type="text" id="homeadd" name="homeaddress" readonly></br>
+                    </div>
+                    <div class="col-30">
+                        <label class="textlabel" for="level">TUTOR</label></br>
+                        <select name="Grade" id="grade">
+                          <option value="tutor">Tutor</option>
+                          <option value="anne-erica">Ann Erica</option>
+                          <option value="catherine">Catherine</option>
+                          <option value="carlin">Carlin</option>
+                          <option value="bless">Bless</option>
+                          <option value="jillen">Jillen</option>
+                        </select> </br>
                     </div>
                 </div>
                 <hr id="line-enroll">
