@@ -8,6 +8,10 @@ function showStudentDetails(box) {
     const school = box.getAttribute('school-name');
     const address = box.getAttribute('stud-address');
     const grade = box.getAttribute('grade-level');
+    const name = box.getAttribute('grdn-name');
+    const relationship = box.getAttribute('relationship');
+    const email = box.getAttribute('grdn-email');
+    const phone = box.getAttribute('grdn-phone');
     
     document.getElementById('studentfname').value = fname;
     document.getElementById('studentlname').value = lname;
@@ -18,6 +22,10 @@ function showStudentDetails(box) {
     document.getElementById('school').value = school;
     document.getElementById('homeadd').value = address;
     document.getElementById('grade-level').value = grade;
+    document.getElementById('parent-name').value = name;
+    document.getElementById('sp-relationship1').value = relationship;
+    document.getElementById('sp-email1').value = email;
+    document.getElementById('sp-connum1').value = phone;
 
     document.getElementById('scheduleOverlay').style.display = 'flex';
 }

@@ -64,14 +64,10 @@
                 <hr id="line-enroll">
                 <h2>Parent/Guardian Information</h2>
                 <div class="row">
-                    <div class="col-50" id="subrow">
-                        <div class="col-50">
-                            <label class="textlabel" for="parent-lname1">LAST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-lname1" name="students-parent-lname1" readonly></br>
-                        </div>
-                        <div class="col-50">
-                            <label class="textlabel" for="parent-fname1">FIRST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-fname1" name="students-parent-fname1" readonly></br>
+                    <div class="col-50">
+                        <div class="col-100">
+                            <label class="textlabel" for="parent-name">FULL NAME</label></br>
+                            <input class="inputtext" type="text" id="parent-name" name="students-parent-name" readonly></br>
                         </div>
                     </div>
                     <div class="col-50">
