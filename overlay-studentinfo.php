@@ -11,6 +11,12 @@
         <div class="overlay-content">
             <h2>Student Information</h2>
             <div class="row">
+                <div class="col-100">
+                    <label class="textlabel" for="stud_id">STUDENT ID</label>
+                    <input type="text" id="studentid" name="studentid" class="inputtext" disabled>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-70" id="subrow">
                     <div class="col-50">
                         <label class="textlabel" for="studentfname">FIRST NAME</label>
@@ -123,22 +129,22 @@
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1" readonly></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ttime1" name="ttime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-ttime1" name="ttime1" readonly></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-wtime1" name="wtime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-wtime1" name="wtime1" readonly></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-thtime1" name="thtime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-thtime1" name="thtime1" readonly></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ftime1" name="ftime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-ftime1" name="ftime1" readonly></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-stime1" name="stime1" disabled></br>
+                    <input class="inputtime" type="time" id="student-stime1" name="stime1" readonly></br>
                 </div>
             </div>
             <hr id="line-enroll">

@@ -1,4 +1,5 @@
 function showStudentDetails(box) {
+    const studid = box.getAttribute('stud-id');
     const fname = box.getAttribute('stud-fname');
     const lname = box.getAttribute('stud-lname');
     const nickname = box.getAttribute('stud-nname');
@@ -12,7 +13,8 @@ function showStudentDetails(box) {
     const relationship = box.getAttribute('relationship');
     const email = box.getAttribute('grdn-email');
     const phone = box.getAttribute('grdn-phone');
-    
+
+    document.getElementById('studentid').value = studid;
     document.getElementById('studentfname').value = fname;
     document.getElementById('studentlname').value = lname;
     document.getElementById('student-nname').value = nickname;
