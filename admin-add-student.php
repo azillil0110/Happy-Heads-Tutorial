@@ -80,7 +80,7 @@
             </div>
             <hr id="line-enroll">
             <div class="row">
-                <p class="subtitle" id="parentinfo-title">PARENT/ GUARDIAN INFORMATION</p>
+                <p class="textlabel" id="parentinfo-title" > PARENT/ GUARDIAN INFORMATION </p>
             </div>
             <div class="row">
                 <div class="col-50" id="subrow">
