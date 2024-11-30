@@ -39,7 +39,7 @@
             if($resultcheck > 0){
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)){ 
-                    $studentID = $row['stud_id']; // ID DITO RAGHHH
+                    $studentID = $row['stud_id']; // ID DITO RAGHHHdddfdf
                     ?>
                     <div class="box" onclick="showStudentDetails(this)" 
                         stud-fname="<?php echo $row['stud_fname']; ?>"
