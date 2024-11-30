@@ -90,27 +90,27 @@
                     <div class="row">
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="mon" value="monday">
-                        <label class="labelday" for="mon">MONDAY</label><br>                    
+                        <label class="labelday" id="day" for="mon">MONDAY</label><br>                    
                     </div>
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="tue" value="tuesday">
-                        <label class="labelday" for="tue">TUESDAY</label><br>   
+                        <label class="labelday" id="day" for="tue">TUESDAY</label><br>   
                     </div>
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="wed" value="wednesday">
-                        <label class="labelday" for="wed">WEDNESDAY</label><br>
+                        <label class="labelday" id="day" for="wed">WEDNESDAY</label><br>
                     </div>
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="thu" value="thursday">
-                        <label class="labelday" for="thu">THURSDAY</label><br>
+                        <label class="labelday" id="day" for="thu">THURSDAY</label><br>
                     </div>
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="fri" value="friday">
-                        <label class="labelday" for="fri">FRIDAY</label><br>
+                        <label class="labelday" id="day" for="fri">FRIDAY</label><br>
                     </div>
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="sat" value="saturday">
-                        <label class="labelday" for="sat">SATURDAY</label><br>
+                        <label class="labelday" id="day" for="sat">SATURDAY</label><br>
                     </div>
                 </div>
                 <div class="row">
@@ -162,7 +162,10 @@
                     </div>
                 </div>
                 <hr id="line-enroll">
+                <div class="btn">
+                <button class="save-btn">Save Changes</button>
                 <button class="close-btn" onclick="closeOverlay()">Close</button>
+                </div>
         </div>
     </div>
 </div>
