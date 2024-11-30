@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/admin/addtutor.css">
+<link rel="stylesheet" href="css/admin/-addtutor-.css">
 
 <div class="righttop">
 <p class="righttoptext">Add a User</p>
@@ -12,21 +12,21 @@
                 <div>
                     <input id="field" type="hidden" name="form-name" value="form 1">
                     <div class="contact-form-field">
-                        <input required placeholder="First Name" type="text" name="fname" id="modfname">
+                        <input required placeholder="First Name" type="text" name="fname" id="fname">
                     </div>
                     <div class="contact-form-field">
-                        <input required placeholder="Last Name" type="text" name="lname" id="modlname">
+                        <input required placeholder="Last Name" type="text" name="lname" id="lname">
                     </div>
                 </div>
             </div>
             <div class="date-gender">
                 <div id="date">
                     <h5>Birth Date</h5>
-                    <input type="date" id="mod-date" required name="bdate">
+                    <input type="date" id="date" required name="bdate">
                 </div>
                 <div id="gender">
                     <h5>Gender</h5>
-                    <select name="gender" id="mod-gender" required>
+                    <select name="gender" id="gender" required>
                         <option value="">Please select one…</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
@@ -36,7 +36,7 @@
                 </div>
                 <div id="acc_type">
                     <h5>Account Type</h5>
-                    <select name="acctype" id="acc-type" required>
+                    <select name="acctype" id="acctype" required>
                         <option value="">Please select one…</option>
                         <option value="Tutor">Tutor</option>
                         <option value="Admin">Admin</option>
@@ -52,13 +52,13 @@
                 <h1 id="login-security">Login & Security</h1>
             </div>
             <div class="email-phone">
-                <div id="email">
+                <div id="modemail">
                     <h5>Email</h5>
-                    <input id="mod-email" required placeholder="Enter email" type="text" name="email">
+                    <input id="email" required placeholder="Enter email" type="text" name="email">
                 </div>
-                <div id="phone">
+                <div id="modphone">
                     <h5>Phone</h5>
-                    <input id="mode-phone" required placeholder="Enter 11 digit phone number" type="tel" name="phone">
+                    <input id="phone" required placeholder="Enter 11 digit phone number" type="tel" name="phone">
                 </div>
             </div>
             <div class="usern-pass">

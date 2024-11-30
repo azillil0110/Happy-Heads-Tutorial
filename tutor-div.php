@@ -7,25 +7,25 @@
                 <div>
                     <input id="field" type="hidden" name="form-name" value="form 1">
                     <div class="contact-form-field">
-                        <input type="text" name="fname" id="modfname" readonly>
+                        <input type="text" name="fname" id="fname" readonly>
                     </div>
                     <div class="contact-form-field">
-                        <input type="text" name="lname" id="modlname" readonly>
+                        <input type="text" name="lname" id="lname" readonly>
                     </div>
                 </div>
             </div>
             <div class="date-gender">
                 <div id="date">
                     <h5>Birth Date</h5>
-                    <input type="text" id="mod-date" name="bdate" readonly>
+                    <input type="text" id="date" name="bdate" readonly>
                 </div>
                 <div id="gender">
                     <h5>Gender</h5>
-                    <input type="text" id="mod-gender" name="gender" readonly>
+                    <input type="text" id="gender" name="gender" readonly>
                 </div>
                 <div id="acc_type">
                     <h5>Account Type</h5>
-                    <input name="acctype" type="text" id="acc-type" readonly>
+                    <input name="acctype" type="text" id="acctype" readonly>
                 </div>
             </div>
         
@@ -37,13 +37,13 @@
                 <h1 id="login-security">Login & Security</h1>
             </div>
             <div class="email-phone">
-                <div id="email">
+                <div id="modemail">
                     <h5>Email</h5>
-                    <input id="mod-email" type="text" name="email" readonly>
+                    <input id="email" type="text" name="email" readonly>
                 </div>
-                <div id="phone">
+                <div id="modphone">
                     <h5>Phone</h5>
-                    <input id="mod-phone" type="tect" name="phone" readonly>
+                    <input id="phone" type="tect" name="phone" readonly>
                 </div>
             </div>
             <hr id="line-enroll">

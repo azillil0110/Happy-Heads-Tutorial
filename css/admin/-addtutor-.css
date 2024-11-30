@@ -189,12 +189,12 @@ h1 {
     height: 30px;
     margin-bottom: 10px;
 }
-#modfname{
+#fname{
     width: 500px;
     height: 30px;
     margin-bottom: 10px;
 }
-#modlname{
+#lname{
     width: 500px;
     height: 30px;
     margin-bottom: 10px;
@@ -224,7 +224,7 @@ h1 {
     display: flex;
     justify-content: center;
 }
-.email-phone #phone, #email{
+.email-phone #modphone, #modemail{
     margin: 0px 50px;
 }
 .usern-pass #usern, #pass{
@@ -248,11 +248,11 @@ h1 {
     color: black;
     font-style: bold;
 }
-#mod-email{
+#email{
     width: 220px;
     height: 30px;
 }
-#mod-phone{
+#phone{
     width: 220px;
     height: 30px;
 }
