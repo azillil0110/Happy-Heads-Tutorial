@@ -222,6 +222,11 @@ body {
     display: inline-block;  
     margin-right: 5px;
 }
+.col-30 #nname{
+    width: 30%; 
+    margin-right: 5px;
+    margin-bottom: -20px;
+}
 .col-80{
     width: 80%;
     display: inline-block;  
@@ -265,7 +270,8 @@ body {
 .textlabel{
     font-weight: bold;
     margin-top: 14px;
-    display:inline-block;
+    display: flex;
+    justify-content: flex-start;
     font-size: 16PX;
 }
 .inputtext{
@@ -278,6 +284,7 @@ body {
     border-radius: 4px; 
     box-sizing: border-box; 
     resize: vertical;
+    top: 0;
 }
 .radiobtn{
     margin-right: 10px;

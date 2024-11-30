@@ -69,5 +69,5 @@
             }
         ?>
     </div>
-    <?php include_once 'trylang.php'?>
+    <?php include_once 'overlay-studentinfo.php'?>
 </div>

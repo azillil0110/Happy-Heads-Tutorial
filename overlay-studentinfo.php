@@ -14,43 +14,43 @@
                         </div>
                     </div>
                     <div class="col-30">
-                        <label class="textlabel" for="student-nname">NICKNAME</label></br>
+                        <label class="textlabel" id="nname" for="student-nname">NICKNAME</label></br>
                         <input class="inputtext" type="text" id="student-nname" name="student-nickname" readonly></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-70" id="subrow">
                         <div class="col-50">
-                            <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
+                            <label class="textlabel" for="student-bday">DATE OF BIRTH</label>
                             <input class="inputtext" type="text" id="student-bday" name="student-birthday" readonly></br>
                         </div>
                         <div class="col-50">
-                            <label class="textlabel" for="student-age">AGE</label></br>
+                            <label class="textlabel" for="student-age">AGE</label>
                             <input class="inputtext" type="text" id="student-age" name="student-age" readonly><br>
                         </div>
                     </div>
                     <div class="col-30">
-                        <label class="textlabel" for="gender">GENDER</label></br>
+                        <label class="textlabel" for="gender">GENDER</label>
                         <input class="inputtext" type="text" id="male" name="gender" readonly></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-70">
-                        <label class="textlabel" for="school">SCHOOL</label></br>
+                        <label class="textlabel" for="school">SCHOOL</label>
                         <input class="inputtext" type="text" id="school" name="school" readonly></br>
                     </div>
                     <div class="col-30">
-                        <label class="textlabel" for="level">GRADE LEVEL</label></br>
+                        <label class="textlabel" for="level">GRADE LEVEL</label>
                         <input class="inputtext" type="text" id="grade-level" name="greade-level" readonly></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-70">
-                        <label class="textlabel" for="homeadd">HOME ADDRESS</label></br>
+                        <label class="textlabel" for="homeadd">HOME ADDRESS</label>
                         <input class="inputtext" type="text" id="homeadd" name="homeaddress" readonly></br>
                     </div>
                     <div class="col-30">
-                        <label class="textlabel" for="level">TUTOR</label></br>
+                        <label class="textlabel" for="level">TUTOR</label>
                         <select name="Grade" id="grade">
                           <option value="tutor">Tutor</option>
                           <option value="anne-erica">Ann Erica</option>
@@ -66,22 +66,22 @@
                 <div class="row">
                     <div class="col-50">
                         <div class="col-100">
-                            <label class="textlabel" for="parent-name">FULL NAME</label></br>
+                            <label class="textlabel" for="parent-name">FULL NAME</label>
                             <input class="inputtext" type="text" id="parent-name" name="students-parent-name" readonly></br>
                         </div>
                     </div>
                     <div class="col-50">
-                        <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
+                        <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label>
                         <input class="inputtext" type="text" id="sp-relationship1" name="parent-relationship1" readonly></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-50">
-                        <label class="textlabel" for="sp-email1">E-MAIL</label></br>
+                        <label class="textlabel" for="sp-email1">E-MAIL</label>
                         <input class="inputtext" type="email" id="sp-email1" name="parent-email1" readonly></br>
                     </div>
                     <div class="col-50">
-                        <label class="textlabel" for="sp-connum1">CONTACT NUMBER</label></br>
+                        <label class="textlabel" for="sp-connum1">CONTACT NUMBER</label>
                         <input class="inputtext" type="text" id="sp-connum1" name="parent-connum1" readonly></br>
                     </div>
                 </div>
