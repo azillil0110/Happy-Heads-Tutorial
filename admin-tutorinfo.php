@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Student Information</title>
-    <link rel="stylesheet" href="css/studentinfo.css">
+    <title>Tutor Information</title>
+    <link rel="stylesheet" href="css/admin-tutorinfo.css">
     <script>
         function toggleEditMode() {
             const fields = document.querySelectorAll('.read-only');
@@ -75,7 +75,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
+    </div> 
 </body>
 </html>

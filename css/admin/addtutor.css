@@ -189,6 +189,16 @@ h1 {
     height: 30px;
     margin-bottom: 10px;
 }
+#modfname{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+#modlname{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 .date-gender{
     display: flex;
     justify-content: center;
@@ -238,7 +248,11 @@ h1 {
     color: black;
     font-style: bold;
 }
-#input{
+#mod-email{
+    width: 220px;
+    height: 30px;
+}
+#mod-phone{
     width: 220px;
     height: 30px;
 }
