@@ -17,14 +17,14 @@
                 $mod_id = $row['mod_id'];
                 ?>
                 <div class="box " onclick="showModDetails(this)"
-                mod-fname="<?php echo $row['mod_fname']; ?>"
-                mod-lname="<?php echo $row['mod_lname']; ?>"
-                mod-bdate="<?php echo $row['mod_bdate']; ?>"
-                mod-gender="<?php echo $row['mod_gender']; ?>"
-                acc_type="<?php echo $row['acc_type']; ?>"
-                mod_description="<?php echo $row['mod_description']; ?>"
-                mod-email="<?php echo $row['mod_email']; ?>"
-                mod-phone="<?php echo $row['mod_phone']; ?>"
+                    mod-fname="<?php echo $row['mod_fname']; ?>"
+                    mod-lname="<?php echo $row['mod_lname']; ?>"
+                    mod-bdate="<?php echo $row['mod_bdate']; ?>"
+                    mod-gender="<?php echo $row['mod_gender']; ?>"
+                    acc-type="<?php echo $row['acc_type']; ?>"
+                    mod-description="<?php echo $row['mod_description']; ?>"
+                    mod-email="<?php echo $row['mod_email']; ?>"
+                    mod-phone="<?php echo $row['mod_phone']; ?>"
                 >
                     <div id="tutor-pic<?php echo $i; ?>" class="stpfp" 
                             style="background-image: url('./images/team/<?php echo $row['pfp_url']; ?>');">
