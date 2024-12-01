@@ -54,6 +54,5 @@
 <script src="javascript/admin.js"></script>
 <script src="javascript/admin-tutor-sched.js"></script>
 <script src="javascript/admin-view-stud-info.js"></script>
-<script src="javascript/admin-view-tutor.js"></script>
 </html>
 

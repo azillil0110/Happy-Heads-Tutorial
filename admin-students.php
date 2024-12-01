@@ -42,6 +42,7 @@
                     $studentID = $row['stud_id']; // ID DITO RAGHHHdddfdf
                     ?>
                     <div class="box" onclick="showStudentDetails(this)" 
+                        stud-id =  "<?php echo $row['stud_id']; ?>"
                         stud-fname="<?php echo $row['stud_fname']; ?>"
                         stud-lname="<?php echo $row['stud_lname']; ?>"
                         stud-nname="<?php echo $row['stud_nname']; ?>"
