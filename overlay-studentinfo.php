@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="overlay" id="scheduleOverlay">
-        <div class="overlay-content">
+        <form action="#" class="overlay-content">
             <h2>Student Information</h2>
             <div class="row">
                 <div class="col-100">
@@ -153,9 +153,11 @@
                 <button class="save-btn">Save Changes</button>
                 <button class="close-btn" onclick="closeOverlay()">Close</button>
             </div>
-        </div>
+        </form><!-- end of the div can be form-->
     </div>
 
     <script src="javascript/toggleread.js"></script>
 </body>
 </html>
+
+
