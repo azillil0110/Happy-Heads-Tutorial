@@ -64,7 +64,7 @@ body {
     justify-content: center;
     text-align: center;
     margin-right: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .col-100{
     width: 100%;
@@ -141,7 +141,8 @@ body {
 }
 .timetext{
     font-size: small;
-}
+    text-align: center;
+    margin-top: 10px;
 .schedule-table {
     display: flex;
 }
@@ -158,4 +159,8 @@ body {
     min-width: 120px;
     background-color: #f9f9f9;
     word-wrap: break-word;
+}
+.content{
+    display: flex;
+    width: 100%;
 }
