@@ -14,6 +14,7 @@
 
 <body>
     <?php include('includes/header.php') ?>
+    <script src="javascript/sched.js"></script>
 
     <main>
 
@@ -139,30 +140,30 @@
                         <div class="col-50">
                             <label class="textlabel" for="parent-lname2">LAST NAME</label></br>
                             <input class="inputtext" type="text" id="parent-lname2" name="students-parent-lname2"
-                                placeholder="Enter Last Name" required></br>
+                                placeholder="Enter Last Name"></br>
                         </div>
                         <div class="col-50">
                             <label class="textlabel" for="parent-fname2">FIRST NAME</label></br>
                             <input class="inputtext" type="text" id="parent-fname2" name="students-parent-fname2"
-                                placeholder="Enter First Name" required></br>
+                                placeholder="Enter First Name"></br>
                         </div>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-relationship2">RELATIONSHIP</label></br>
                         <input class="inputtext" type="text" id="sp-relationship2" name="parent-relationship2"
-                            placeholder="Enter Relationship" required></br>
+                            placeholder="Enter Relationship"></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-50">
                         <label class="textlabel" for="sp-email2">E-MAIL</label></br>
                         <input class="inputtext" type="email2" id="sp-email" name="parent-email2"
-                            placeholder="Enter E-mail Address" required></br>
+                            placeholder="Enter E-mail Address"></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-connum2">CONTACT NUMBER</label></br>
                         <input class="inputtext" type="text" id="sp-connum2" name="parent-connum2"
-                            placeholder="Enter Contact Number" required></br>
+                            placeholder="Enter Contact Number"></br>
                     </div>
                 </div>
                 <hr id="line-invi">
@@ -260,42 +261,42 @@
                 </div>
                 <div class="row">
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime1" name="mtime1"></br>
+                        <input class="inputtime" type="time" id="student-mtime1" name="mtime1" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime1" name="ttime1"></br>
+                        <input class="inputtime" type="time" id="student-ttime1" name="ttime1" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime1" name="wtime1"></br>
+                        <input class="inputtime" type="time" id="student-wtime1" name="wtime1" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime1" name="thtime1"></br>
+                        <input class="inputtime" type="time" id="student-thtime1" name="thtime1" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime1" name="ftime1"></br>
+                        <input class="inputtime" type="time" id="student-ftime1" name="ftime1" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime1" name="stime1"></br>
+                        <input class="inputtime" type="time" id="student-stime1" name="stime1" disabled></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime2" name="mtime2"></br>
+                        <input class="inputtime" type="time" id="student-mtime2" name="mtime2" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime2" name="ttime2"></br>
+                        <input class="inputtime" type="time" id="student-ttime2" name="ttime2" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime2" name="wtime2"></br>
+                        <input class="inputtime" type="time" id="student-wtime2" name="wtime2" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime2" name="thtime2"></br>
+                        <input class="inputtime" type="time" id="student-thtime2" name="thtime2" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime2" name="ftime2"></br>
+                        <input class="inputtime" type="time" id="student-ftime2" name="ftime2" disabled></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
+                        <input class="inputtime" type="time" id="student-stime2" name="stime2" disabled></br>
                     </div>
                 </div>
                 <div class="row">
@@ -303,24 +304,23 @@
                         <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                         <label class="lightlabel-small" for="authname-inst">The following individuals are hereby
                             approved by the Parent to pick up the child.</label>
-                        <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname"
-                            required></br>
-                        <input class="inputtext" type="text" id="authindiv2" name="authindiv"
+                        <input class="inputtext" type="text" id="authindiv1" name="authindiv1" placeholder="Fullname"></br>
+                        <input class="inputtext" type="text" id="authindiv2" name="authindiv2"
                             placeholder="Fullname"></br>
                     </div>
                     <div class="col-60" id="subrow">
                         <div class="col-40">
                             <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
-                            <input class="inputtext" type="text" id="rel3" name="relationship"
-                                placeholder="Enter relationship" required></br>
-                            <input class="inputtext" type="text" id="rel4" name="relationship"
+                            <input class="inputtext" type="text" id="rel3" name="relationship1"
+                                placeholder="Enter relationship"></br>
+                            <input class="inputtext" type="text" id="rel4" name="relationship2"
                                 placeholder="Enter relationship"></br>
                         </div>
                         <div class="col-60">
                             <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
-                            <input class="inputtext" type="text" id="connum3" name="contactnumber"
-                                placeholder="Enter Contact Number" required></br>
-                            <input class="inputtext" type="text" id="connum4" name="contactnumber"
+                            <input class="inputtext" type="text" id="connum3" name="contactnumber1"
+                                placeholder="Enter Contact Number"></br>
+                            <input class="inputtext" type="text" id="connum4" name="contactnumber2"
                                 placeholder="Enter Contact Number"></br>
                         </div>
                     </div>
@@ -352,5 +352,6 @@
     <?php include('includes/footer.php') ?>
 </body>
 <script src="javascript/overlay.js"></script>
+<script src="javascript/sched.js"></script>
 
 </html>

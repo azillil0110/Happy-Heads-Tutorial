@@ -21,28 +21,28 @@ $grdn1_email = htmlspecialchars($_POST['parent-email1']);
 $grdn1_phone = htmlspecialchars($_POST['parent-connum1']);
 
 $grdn2_name = isset($_POST['students-parent-fname2']) && isset($_POST['students-parent-lname2']) 
-    ? htmlspecialchars($_POST['students-parent-fname2'] . " " . $_POST['students-parent-lname2']) 
-    : null;
+? htmlspecialchars($_POST['students-parent-fname2'] . " " . $_POST['students-parent-lname2']) 
+: null;
 
 $grdn2_relationship = isset($_POST['parent-relationship2']) 
-    ? htmlspecialchars($_POST['parent-relationship2']) 
-    : null;
+? htmlspecialchars($_POST['parent-relationship2']) 
+: null;
 
 $grdn2_email = isset($_POST['parent-email2']) 
-    ? htmlspecialchars($_POST['parent-email2']) 
-    : null;
+? htmlspecialchars($_POST['parent-email2']) 
+: null;
 
 $grdn2_phone = isset($_POST['parent-connum2']) 
-    ? htmlspecialchars($_POST['parent-connum2']) 
-    : null;
+? htmlspecialchars($_POST['parent-connum2']) 
+: null;
 
-$fetcher1_name = htmlspecialchars($_POST['authindiv']);
-$fetcher1_relationship = htmlspecialchars($_POST['relationship']);
-$fetcher1_phone = htmlspecialchars($_POST['contactnumber']);
+$fetcher1_name = isset($_POST['authindiv1']) ? htmlspecialchars($_POST['authindiv1']) : null;
+$fetcher1_relationship = isset($_POST['relationship1']) ? htmlspecialchars($_POST['relationship1']) : null;
+$fetcher1_phone = isset($_POST['contactnumber1']) ? htmlspecialchars($_POST['contactnumber1']) : null;
 
-$fetcher2_name = isset($_POST['authindiv']) ? htmlspecialchars($_POST['authindiv']) : null;
-$fetcher2_relationship = isset($_POST['relationship']) ? htmlspecialchars($_POST['relationship']) : null;
-$fetcher2_phone = isset($_POST['contactnumber']) ? htmlspecialchars($_POST['contactnumber']) : null;
+$fetcher2_name = isset($_POST['authindiv2']) ? htmlspecialchars($_POST['authindiv2']) : null;
+$fetcher2_relationship = isset($_POST['relationship2']) ? htmlspecialchars($_POST['relationship2']) : null;
+$fetcher2_phone = isset($_POST['contactnumber2']) ? htmlspecialchars($_POST['contactnumber2']) : null;
 
 $on_meds = !empty($_POST['student-medicalblank']) ? htmlspecialchars($_POST['student-medicalblank']) : 'None';
 $yesno = isset($_POST['yesno_pic']) ? $_POST['yesno_pic'] : 'No';
@@ -73,26 +73,39 @@ if ($insert_student->execute()) {
     $insert_guardian1->bind_param("ssssi", $grdn1_name, $grdn1_relationship, $grdn1_email, $grdn1_phone, $student_id);
     $insert_guardian1->execute();
 
+    if ($grdn2_name !== '' && $grdn2_name !== null && 
+    $grdn2_relationship !== '' && $grdn2_relationship !== null &&
+    $grdn2_email !== '' && $grdn2_email !== null && 
+    $grdn2_phone !== '' && $grdn2_phone !== null) {
     $insert_guardian2 = $conn->prepare("
         INSERT INTO guardian (grdn_name, relationship, grdn_email, grdn_phone, studID)
         VALUES (?, ?, ?, ?, ?)
     ");
     $insert_guardian2->bind_param("ssssi", $grdn2_name, $grdn2_relationship, $grdn2_email, $grdn2_phone, $student_id);
     $insert_guardian2->execute();
+    }
 
+    if ($fetcher1_name !== '' && $fetcher1_name !== null && 
+    $fetcher1_relationship !== '' && $fetcher1_relationship !== null &&
+    $fetcher1_phone !== '' && $fetcher1_phone !== null) {
     $insert_fetcher1 = $conn->prepare("
         INSERT INTO authorized_fetcher (fetcher_name, relationship, grdn_phone, studID)
         VALUES (?, ?, ?, ?)
     ");
     $insert_fetcher1->bind_param("sssi", $fetcher1_name, $fetcher1_relationship, $fetcher1_phone, $student_id);
     $insert_fetcher1->execute();
+    }
 
+    if ($fetcher2_name !== '' && $fetcher2_name !== null && 
+    $fetcher2_relationship !== '' && $fetcher2_relationship !== null &&
+    $fetcher2_phone !== '' && $fetcher2_phone !== null) {
     $insert_fetcher2 = $conn->prepare("
         INSERT INTO authorized_fetcher (fetcher_name, relationship, grdn_phone, studID)
         VALUES (?, ?, ?, ?)
     ");
     $insert_fetcher2->bind_param("sssi", $fetcher2_name, $fetcher2_relationship, $fetcher2_phone, $student_id);
     $insert_fetcher2->execute();
+    }
 
     $days_selected = [];
     
@@ -137,5 +150,7 @@ if ($insert_student->execute()) {
 }
 
 $conn->close();
+
+
 
 ?>
