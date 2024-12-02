@@ -1,9 +1,5 @@
 <?php
-$username = isset($_GET['username']) ? $_GET['username'] : null;
-
-if (!$username) {
-    die("Username is missing in the URL!");
-}
+$username = $_SESSION['username'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $file = $_FILES['eventImage'];
@@ -32,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             die("Error uploading your file");
         }
     } else {
-        die("File type not accepted");
+        $filename ="default.jpg";
     }
 
     try {
@@ -51,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $stmt = null;
 
         // Ensure no output before this
-        header('Location: ../admin-dashboard.php?username=' . urlencode($username));
+        header('Location: ../admin-dashboard.php?page=addevent');
         die();
     } catch (PDOException $e) {
         die("Query Failed:" . $e->getMessage());

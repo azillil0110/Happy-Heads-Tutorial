@@ -85,7 +85,7 @@ header{
     margin-right: auto;
 }
 .tutor h2{
-    color: #044D8C;
+    color: #011424;
 }
 img{
     width: 40px;
@@ -189,6 +189,16 @@ h1 {
     height: 30px;
     margin-bottom: 10px;
 }
+#fname{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+#lname{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
 .date-gender{
     display: flex;
     justify-content: center;
@@ -214,7 +224,7 @@ h1 {
     display: flex;
     justify-content: center;
 }
-.email-phone #phone, #email{
+.email-phone #modphone, #modemail{
     margin: 0px 50px;
 }
 .usern-pass #usern, #pass{
@@ -238,7 +248,11 @@ h1 {
     color: black;
     font-style: bold;
 }
-#input{
+#email{
+    width: 220px;
+    height: 30px;
+}
+#phone{
     width: 220px;
     height: 30px;
 }

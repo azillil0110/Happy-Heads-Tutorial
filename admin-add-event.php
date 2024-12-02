@@ -1,9 +1,7 @@
-<link rel="stylesheet" href="/css/admin/addevent.css">
-<?php $username = $_GET['username']; ?>
 <div class="righttop">
     <p class="righttoptext">Add an Event</p>
 </div>
-<form class="rightbot" action="includes/insert-event.php?username=<?php echo $username; ?> " method="POST" enctype="multipart/form-data">
+<form class="rightbot" action="includes/insert-event.php" method="POST" enctype="multipart/form-data">
     <div class="bottop">
         <div class="leftbottop">   
             <div class="uploadbox">

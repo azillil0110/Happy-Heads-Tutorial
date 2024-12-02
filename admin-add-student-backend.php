@@ -44,7 +44,7 @@ $fetcher2_name = isset($_POST['authindiv']) ? htmlspecialchars($_POST['authindiv
 $fetcher2_relationship = isset($_POST['relationship']) ? htmlspecialchars($_POST['relationship']) : null;
 $fetcher2_phone = isset($_POST['contactnumber']) ? htmlspecialchars($_POST['contactnumber']) : null;
 
-$on_meds = !empty($_POST['student-medicalblank']) ? htmlspecialchars($_POST['student-medicalblank']) : 'None';
+$on_meds = isset($_POST['student-medicalblank']) ? htmlspecialchars($_POST['student-medicalblank']) : 'None';
 $yesno = isset($_POST['yesno_pic']) ? $_POST['yesno_pic'] : 'No';
 $comment = !empty($_POST['childinformation']) ? htmlspecialchars($_POST['childinformation']) : 'nothing';
 
@@ -128,7 +128,7 @@ if ($insert_student->execute()) {
 
     $insert_schedule->close();
 
-    header("Location: enroll-form.php?success=true");
+    header("Location: admin-dashboard.php?page=addstudent");
     exit();
 } else {
     echo "Error: " . $conn->error;

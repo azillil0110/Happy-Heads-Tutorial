@@ -92,3 +92,10 @@ body {
 main {
     width: 100%;
 }
+
+#map-container{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}

@@ -37,10 +37,10 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/admin-dashboard.css';
                 break;
             case 'students':
-                stylesheet.href = './css/admin/admin-students.css';
+                stylesheet.href = 'css/admin/admin-students.css';
                 break;
             case 'tutors':
-                stylesheet.href = 'css/admin/admin-tutor.css';
+                stylesheet.href = 'css/admin/-admin-tutor.css';
                 break;
             case 'pending-students':
                 stylesheet.href = 'css/admin/admin-students.css';
@@ -49,13 +49,13 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addevent.css';
                 break;
             case 'addtutor':
-                stylesheet.href = 'css/admin/addtutor.css';
+                stylesheet.href = 'css/admin/-addtutor-.css';
                 break;
             case 'addstudents':
-                stylesheet.href = 'css/admin/addadmin.css';
+                stylesheet.href = 'css/admin/addstudent.css';
                 break;
             case 'settings':
-                stylesheet.href = 'css/admin/admin-settings.css';
+                stylesheet.href = 'css/admin/-admin-settings.css';
                 break;
             default:
                 stylesheet.href = 'css/admin/admin-dashboard.css';
@@ -110,7 +110,7 @@ function getContent(section) {
                 });
                 break;
         case 'addstudents':
-            fetch('./admin-add-students.php')
+            fetch('./admin-add-student.php')
                 .then(response => response.text())
                 .then(html => {
                     document.querySelector('.rightside').innerHTML = html;
@@ -149,15 +149,15 @@ function getContent(section) {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
             break;
-        case 'addtutor':
-        fetch('./admin-settings.php')
-            .then(response => response.text())
-            .then(html => {
-                document.querySelector('.rightside').innerHTML = html;
-            })
-            .catch(err => {
-                document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
-            });
+        case 'settings':
+            fetch('./admin-settings.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
             break;
         default:
             return `<p>Content not found.</p>`;

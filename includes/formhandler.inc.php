@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
+<<<<<<< HEAD
         if($password === $row['mod_pass']) {
             $_SESSION['username'] = $username;
             $_SESSION['acc_type'] = $row['acc_type'];
@@ -61,6 +62,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             header('Location: ../login.php?error=invalid_password&username=' . urlencode($username));
             exit();
+=======
+    if($resultcheck>0){
+        while($row = mysqli_fetch_assoc($result)){
+            $acc = $row['acc_type'];
+            $userid = (int)$row['mod_id'];
+            echo$userid;
+            if($userid > 7){
+                $passwordhash = $row['mod_pass'];
+                if(password_verify($password, $passwordhash)){
+                    $_SESSION['username'] = $username;
+                    if($acc == 'tutor'){
+                        header('location: ../tutor-dashboard.php?username='.$username);
+                    }
+                    else if ($acc === 'admin' || $acc === 'founder'){
+                        header('location: ../admin-dashboard.php?username='.$username);
+                    }
+                    
+                }
+            }
+            else{
+                if($password === $row['mod_pass']){
+                    $_SESSION['username'] = $username;
+                    if($acc == 'tutor'){
+                        header('location: ../tutor-dashboard.php?username='.$username);
+                    }
+                    else if ($acc === 'admin' || $acc === 'founder'){
+                        header('location: ../admin-dashboard.php?username='.$username);
+                    }
+                    
+                }
+                else{
+                    header('location: ../login.php?error=invalid_password&username='.$username);
+                    exit();
+                }
+            }
+                
+>>>>>>> 58a4e3b2de21b2cf50c90c71b867a97afb5d53c8
         }
     } else {
         header('Location: ../login.php?error=no_account');

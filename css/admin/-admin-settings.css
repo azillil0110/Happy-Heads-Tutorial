@@ -49,6 +49,12 @@ body {
     margin-bottom: 60px;
 }
 
+
+
+
+
+
+
 .rightside {
     display: flex;
     flex-direction: column;
@@ -65,9 +71,10 @@ body {
     justify-content: center;
     width: 95%;
     height: 140px;
-    background-color: #C1DDF6;
+    background-color: #ff9b9b;
     border: none;
     margin: 40px;
+    border-radius: 10px;
 }
 
 .righttoptext {
@@ -191,7 +198,12 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-#field{
+#fname{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+#lname{
     width: 500px;
     height: 30px;
     margin-bottom: 10px;

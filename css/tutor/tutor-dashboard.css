@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     width: 80%;
     height: auto;
+    
 }
 
 .righttop {
@@ -37,6 +38,7 @@ body {
     background-color: #C1DDF6;
     border: none;
     margin: 40px;
+    border-radius: 10px;
 }
 
 .righttoptext {
