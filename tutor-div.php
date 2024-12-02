@@ -1,6 +1,15 @@
 <link rel="stylesheet" href="css/admin/-admin-tutor.css">
 <div class="overlay" id="tutorinfo-overlay">
-    <form action="" class="overlay-content">
+    <div class="overlay-content">
+        <div class="row">
+                <div class="col-80">
+
+                </div>
+                <div class="col-20">
+                <button class="sched-btn" onclick="OpenSched()">Schedule →</button>
+                </div>
+        </div>
+    <form action="" class="tutorform">     
     <h1>Personal Information</h1>
     <div class="top-container">
             <div id="form-1st-part">
@@ -54,4 +63,5 @@
                 </div>
         </div>
     </form>
+    </div>
 </div>

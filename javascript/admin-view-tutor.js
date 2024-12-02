@@ -22,4 +22,5 @@ function showModDetails(box){
 }
 function closeModDetails() {
     document.getElementById('tutorinfo-overlay').style.display = 'none';
+    
 }
