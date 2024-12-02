@@ -138,3 +138,6 @@ body {
     display:inline-block;
     font-size: 16PX;
 }
+.timetext{
+    font-size: small;
+}
