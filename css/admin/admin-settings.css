@@ -182,9 +182,7 @@ h1 {
 .settings-container h1{
     text-align: center;
 }
-#img-1{
-    width: 120px;
-}
+
 .top-container{
     display: flex;
 }
@@ -199,17 +197,18 @@ h1 {
     border-radius: 8px;
 }
 #fname{
-    width: 500px;
+    width: 350px;
     height: 30px;
     margin-bottom: 10px;
 }
 #lname{
-    width: 500px;
+    width: 350px;
     height: 30px;
     margin-bottom: 10px;
 }
 .date-gender{
     display: flex;
+    justify-content: center;
 }
 .date-gender #gender{
     margin: 0px 20px;
@@ -218,7 +217,7 @@ h1 {
     margin-bottom: 10px;
 }
 .description{
-    margin-left: 20px;
+    width: max-content;
 }
 #login-security{
     margin: 20px 0px;
@@ -259,4 +258,23 @@ h1 {
     color: gray;
     cursor: pointer;
     margin-left: 5px;
+}
+#pfp-name{
+    margin-top: 20px;
+    height: max-content;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}
+#img-1{
+    width: 100px;
+    height: 80px;
+    border: solid black 1px;
+}
+#fullname{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    justify-items: center;
 }
