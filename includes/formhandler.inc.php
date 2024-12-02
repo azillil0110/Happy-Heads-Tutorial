@@ -37,12 +37,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host       = 'smtp.gmail.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'your email';
-                $mail->Password   = 'your password';
+                $mail->Username   = 'miyukiando.0119@gmail.com';
+                $mail->Password   = 'oeun vdrr uhmp ngjs';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port       = 587;
 
-                $mail->setFrom('your email', 'Happy Heads Tutorial Center');
+                $mail->setFrom('miyukiando.0119@gmail.com', 'Happy Heads Tutorial Center');
                 $mail->addAddress($_SESSION['email']);
 
                 $mail->isHTML(true);
