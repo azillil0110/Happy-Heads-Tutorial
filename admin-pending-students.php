@@ -6,7 +6,7 @@
 <div class="rightbot">
     <div class="firstrow">
     <?php 
-            $sql = "SELECT * FROM `students` WHERE modID = 2";
+            $sql = "SELECT * FROM `students` WHERE modID = 1";
             $result = mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);
 
