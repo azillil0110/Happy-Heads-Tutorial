@@ -55,7 +55,7 @@ $comment = !empty($_POST['childinformation']) ? htmlspecialchars($_POST['childin
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
 
-    $defaultmodID = 0;
+    $defaultmodID = 1;
     $defaultpic = "default.jpg";
 
     $insert_student->bind_param("ssssissssssssi", $stud_fname, $stud_lname, $stud_nname, $stud_bdate, $stud_age, $stud_gender, $school_name, $stud_address, $stud_grade_level, $on_meds, $yesno, $comment, $defaultpic, $defaultmodID);
