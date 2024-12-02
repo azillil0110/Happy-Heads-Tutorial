@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="overlay" id="scheduleOverlay">
-        <form action="#" class="overlay-content">
+        <form action="admin-edit-student.php" class="overlay-content" method="POST">
             <h2>Student Information</h2>
             <div class="row">
                 <div class="col-100">
                     <label class="textlabel" for="stud_id">STUDENT ID</label>
-                    <input type="text" id="studentid" name="studentid" class="inputtext" disabled>
+                    <input type="text" id="studentid" name="studentid" class="inputtext" readonly>
                 </div>
             </div>
             <div class="row">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="level">TUTOR</label>
-                    <select name="Grade" id="grade" disabled>
+                    <select name="tutor" id="tutor" disabled>
                         <option value="tutor">Tutor</option>
                         <option value="anne-erica">Ann Erica</option>
                         <option value="catherine">Catherine</option>
@@ -149,9 +149,9 @@
             </div>
             <hr id="line-enroll">
             <div class="btn">
-                <button class="edit-btn" onclick="toggleEdit()">Edit</button>
-                <button class="save-btn">Save Changes</button>
-                <button class="close-btn" onclick="closeOverlay()">Close</button>
+                <button type="button"class="edit-btn" onclick="toggleEdit()">Edit</button>
+                <button type="submit"class="save-btn">Save Changes</button>
+                <button type="button" class="close-btn" onclick="closeOverlay()">Close</button>
             </div>
         </form><!-- end of the div can be form-->
     </div>
@@ -159,5 +159,3 @@
     <script src="javascript/toggleread.js"></script>
 </body>
 </html>
-
-

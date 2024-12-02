@@ -7,32 +7,43 @@
 </div>
 <div class="rightbot">
     <div class="firstrow">
-    <?php 
-            $sql = "SELECT
-                s.stud_id, 
-                s.stud_fname,
-                s.stud_lname,
-                s.stud_nname,
-                s.stud_bdate,
-                s.stud_age,
-                s.stud_gender,
-                s.school_name,
-                s.stud_address,
-                s.stud_grade_level,
-                s.pfp_url,
-                g.grdn_name,
-                g.relationship,
-                g.grdn_email,
-                g.grdn_phone,
-                sch.sched_day,
-                sch.sched_starttime,
-                sch.sched_endtime
-            FROM 
-                students s
-            LEFT JOIN 
-                guardian g ON s.stud_id = g.studID
-            LEFT JOIN 
-                schedule sch ON s.stud_id = sch.stud_ID;";
+        <?php 
+            $sql = "SELECT 
+                    s.stud_id, 
+                    s.stud_fname, 
+                    s.stud_lname, 
+                    s.stud_nname, 
+                    s.stud_bdate, 
+                    s.stud_age, 
+                    s.stud_gender, 
+                    s.school_name, 
+                    s.stud_address, 
+                    s.stud_grade_level, 
+                    s.pfp_url, 
+                    GROUP_CONCAT(DISTINCT g.grdn_name SEPARATOR ', ') AS grdn_name, 
+                    GROUP_CONCAT(DISTINCT g.relationship SEPARATOR ', ') AS relationship, 
+                    GROUP_CONCAT(DISTINCT g.grdn_email SEPARATOR ', ') AS grdn_email, 
+                    GROUP_CONCAT(DISTINCT g.grdn_phone SEPARATOR ', ') AS grdn_phone, 
+                    GROUP_CONCAT(DISTINCT sch.sched_day SEPARATOR ', ') AS schedule_days, 
+                    GROUP_CONCAT(DISTINCT CONCAT(sch.sched_starttime, '-', sch.sched_endtime) SEPARATOR ', ') AS schedule_times
+                FROM 
+                    students s
+                LEFT JOIN 
+                    guardian g ON s.stud_id = g.studID
+                LEFT JOIN 
+                    schedule sch ON s.stud_id = sch.stud_ID
+                GROUP BY 
+                    s.stud_id, 
+                    s.stud_fname, 
+                    s.stud_lname, 
+                    s.stud_nname, 
+                    s.stud_bdate, 
+                    s.stud_age, 
+                    s.stud_gender, 
+                    s.school_name, 
+                    s.stud_address, 
+                    s.stud_grade_level, 
+                    s.pfp_url;";
             $result = mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);
 
@@ -63,7 +74,7 @@
                             <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
                         </a>
                         <div class="hover-text">More Info</div>
-                </div>
+                    </div>
                     <?php
                     $i++;
                 }
