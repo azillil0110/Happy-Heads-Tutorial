@@ -6,7 +6,7 @@
     </div>
     <div class="longrectangle">
         <div>
-            <a href="#" class="logout">| Log out</a>
+            <a href="includes/logout.php" class="logout" action="logout.php">| Log out</a>
         </div>
         <div class="longright">
 
