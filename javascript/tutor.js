@@ -40,7 +40,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/tutor/students.css';
                 break;
             case 'myschedule':
-                stylesheet.href = 'css/tutor/my_sched.css';
+                stylesheet.href = 'css/schedule.css';
                 break;
             case 'settings':
                 stylesheet.href = 'css/tutor/settings.css';
