@@ -21,8 +21,18 @@
         while ($row = mysqli_fetch_assoc($result)) {
             $schedID = $row["sched_id"];
             ?>
-            <div class="box" onclick="ShowMySched(this)">
-                sched-id = "<?php echo $row['sched_id']"
+            <div class="box"
+                sched-id =  "<?php echo $row['sched_id']; ?>"
+                stud-id = "<?php echo $row['stud_id']; ?>"
+                mod-id = "<?php echo $row['mod_id']; ?>"
+                sched-day = "<?php echo $row['sched_day']; ?>"
+                starttime = "<?php echo $row['sched_starttime']; ?>"
+                endtime = "<?php echo $row['sched_endtime']; ?>">
+                <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                    <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
+                </a>
+                <div class="hover-text">More Info</div>
+            </div>
             </div>
             }
         }
