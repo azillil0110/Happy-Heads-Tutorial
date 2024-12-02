@@ -37,6 +37,17 @@
                     include('admin-tutor.php');
                 } else if ($page === 'settings') {
                     include('admin-settings.php');
+                }else if ($page === 'students') {
+                    include('admin-students.php');
+                    ?>
+                    <script>
+                        stylesheet.href = 'css/admin/admin-students.css';
+                        btn.classList.remove('leftoptions1');
+                        btn.classList.add('leftoptions');
+                        icon.classList.remove('square');
+                        icon.classList.add('square1');
+                    </script>
+                    <?php
                 }
             }
             else{
