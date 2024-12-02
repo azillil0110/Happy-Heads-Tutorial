@@ -2,9 +2,9 @@
 session_start();
 
 require_once 'dbh.inc.php';
-require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
+require_once 'D:\XAMPP\htdocs\sendemail\phpmailer\src\PHPMailer.php';
+require_once 'D:\XAMPP\htdocs\sendemail\phpmailer\src\Exception.php';
+require_once 'D:\XAMPP\htdocs\sendemail\phpmailer\src\SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->isSMTP();
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
-                    $mail->Username   = '';
-                    $mail->Password   = 'ewhs vkjs uqcj hmjb';
+                    $mail->Username   = 'EMAIL';
+                    $mail->Password   = 'PASSWORD';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
-                    $mail->setFrom('', 'Happy Heads Tutorial Center');
+                    $mail->setFrom('EMAIL', 'Happy Heads Tutorial Center');
                     $mail->addAddress($_SESSION['email']);
                     $mail->isHTML(true);
                     $mail->Subject = 'Your Two-Factor Authentication Code';
@@ -92,7 +92,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
         }
+    } else {
+        header('Location: ../login.php?error=no_account');
+        exit();
     }
-
 }
 ?>
