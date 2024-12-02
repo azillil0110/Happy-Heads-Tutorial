@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    background-color: #013220;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    flex-direction: column; 
+}
+
+#logo {
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.verif-box {
+    width: 500px;
+    height: auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.verif-box img {
+    width: auto;
+    height: auto;
+}
+
+#labelel {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    padding-top: 15px;
+    text-align: start;
+    font-weight: 600;
+}
+
+.disclaimer {
+    font-size: 8px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(158, 158, 158);
+}
+
+.verif-box input {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.verif-box button {
+    width: 100px;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #044D8C;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.verif-box button:hover {
+    background-color: #033a6e;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    background-size: cover;
+    
+}
+
+.error-placeholder::placeholder{
+    color: red;
+}
+
+.errormess {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(255, 58, 58, 0.836);
+}
+
+.resend {
+    font-size: 8px;
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.disclaimer1 {
+    font-size: 8px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: rgb(158, 158, 158);
+
+}
+
+.disclaimer2 {
+    font-size: 9px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: rgba(129, 129, 129, 0.877);
+
+}
