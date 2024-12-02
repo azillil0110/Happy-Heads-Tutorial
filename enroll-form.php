@@ -139,30 +139,30 @@
                         <div class="col-50">
                             <label class="textlabel" for="parent-lname2">LAST NAME</label></br>
                             <input class="inputtext" type="text" id="parent-lname2" name="students-parent-lname2"
-                                placeholder="Enter Last Name"></br>
+                                placeholder="Enter Last Name" required></br>
                         </div>
                         <div class="col-50">
                             <label class="textlabel" for="parent-fname2">FIRST NAME</label></br>
                             <input class="inputtext" type="text" id="parent-fname2" name="students-parent-fname2"
-                                placeholder="Enter First Name"></br>
+                                placeholder="Enter First Name" required></br>
                         </div>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-relationship2">RELATIONSHIP</label></br>
                         <input class="inputtext" type="text" id="sp-relationship2" name="parent-relationship2"
-                            placeholder="Enter Relationship"></br>
+                            placeholder="Enter Relationship" required></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-50">
                         <label class="textlabel" for="sp-email2">E-MAIL</label></br>
                         <input class="inputtext" type="email2" id="sp-email" name="parent-email2"
-                            placeholder="Enter E-mail Address"></br>
+                            placeholder="Enter E-mail Address" required></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="sp-connum2">CONTACT NUMBER</label></br>
                         <input class="inputtext" type="text" id="sp-connum2" name="parent-connum2"
-                            placeholder="Enter Contact Number"></br>
+                            placeholder="Enter Contact Number" required></br>
                     </div>
                 </div>
                 <hr id="line-invi">
@@ -244,7 +244,7 @@
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="wed" value="wednesday">
                         <label class="labelday" for="wed">WEDNESDAY</label><br>
-                    </div>
+                    </div> 
                     <div class="col-16">
                         <input type="checkbox" id="student-schedday" name="thu" value="thursday">
                         <label class="labelday" for="thu">THURSDAY</label><br>

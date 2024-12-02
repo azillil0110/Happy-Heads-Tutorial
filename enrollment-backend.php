@@ -122,8 +122,10 @@ if ($insert_student->execute()) {
     foreach ($days_selected as $day) {
         $start_time = $times[$day]['start'];
         $end_time = $times[$day]['end'];
-
+    
         $insert_schedule->bind_param("ssssii", $stud_grade_level, $day, $start_time, $end_time, $latest_stud_id, $defaultmodID);
+
+        $insert_schedule->execute();
     }
 
     $insert_schedule->close();
