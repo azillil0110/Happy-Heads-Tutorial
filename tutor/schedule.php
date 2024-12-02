@@ -77,10 +77,12 @@
     // Table Header for Days of the Week
     echo '<div class="rowcenter">';
     foreach ($daysOfWeek as $day) {
-        echo "<div class='col-16'>$day</div>";
+        echo "<div class='col-16'>
+        <h3>$day</h3>
+        </div>";
     }
     echo '</div>';
-    echo '<div class="row">';
+    echo '<div class="rowcenter">';
     foreach ($groupedSchedules as $day => $schedules) {
         // Merge overlapping schedules for the current day
         $mergedSchedules = mergeSchedulesForDay($schedules);
@@ -91,7 +93,6 @@
         // Loop through the merged schedules for the current day and display them
         foreach ($mergedSchedules as $schedule) {
             // Display the merged time slot as a single entry
-            
             echo "<div class='timetext'>{$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
         }
     
