@@ -19,24 +19,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $username = htmlspecialchars($_POST['usern']);
     $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
-        
-    $update = "UPDATE moderator 
-               SET mod_fname = ?, mod_lname = ?, mod_bdate = ?, mod_gender = ?, 
-                   mod_description = ?, mod_email = ?, mod_phone = ?, mod_usern = ?, mod_pass = ?
-               WHERE mod_usern = ?";
 
-    $stmt = $conn->prepare($update);
+    $query = "UPDATE moderator 
+               SET 
+                mod_fname = '$fname', 
+                mod_lname = '$lname', 
+                mod_bdate = '$bdate', 
+                mod_gender = '$gender', 
+                mod_description = '$description', 
+                mod_email = '$email', 
+                mod_phone = '$phone', 
+                mod_usern = '$username', 
+                mod_pass = '$password'
+               WHERE mod_usern = '$currentUser'";
 
-    if ($password !== null) {
-        $stmt->bind_param("sssssssssi", $fname, $lname, $bdate, $gender, $description, $email, $phone, $username, $password, $currentUser);
-    }
-
-    if ($stmt->execute()) {
-        echo "Profile updated successfully.";
+    if (mysqli_query($conn, $query)) {
+        header('Location: admin-dashboard.php?page=settings');
     } else {
-        echo "Error updating profile: " . $stmt->error;
+        echo "Error: " . mysqli_error($conn);
     }
-
-    $stmt->close();
 }
 ?>
