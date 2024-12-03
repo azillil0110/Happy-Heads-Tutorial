@@ -64,7 +64,10 @@ body {
     justify-content: center;
     text-align: center;
     margin-right: 5px;
-    margin-top: 20px;
+}
+#day{
+    font-weight: bold;
+    display: inline-flex;
 }
 .col-100{
     width: 100%;
@@ -139,9 +142,17 @@ body {
     display:inline-block;
     font-size: 16PX;
 }
+#textlabel{
+    font-weight: 500px;
+    margin-top: 14px;
+    display:inline-block;
+    font-size: 30px;
+}
 .timetext{
     font-size: small;
-}
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 18px;
 .schedule-table {
     display: flex;
 }
@@ -158,4 +169,8 @@ body {
     min-width: 120px;
     background-color: #f9f9f9;
     word-wrap: break-word;
+}
+.content{
+    display: flex;
+    width: 100%;
 }

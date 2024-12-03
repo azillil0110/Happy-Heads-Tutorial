@@ -7,20 +7,23 @@
     include_once '../includes/dbh.inc.php';
     session_start();
 
-    // Set the current user mod_id to 8
-    $currentUser = 8;
+    $currentUser = $_SESSION['username'];
+    echo "<div>
+        <h3>$currentUser 's sched</h3>
+        </div>";  
 
     // Fetch schedules for the current tutor (mod_ID = 8)
     $sql = "SELECT 
-                sched_id, 
-                sched_day, 
-                sched_starttime, 
-                sched_endtime, 
-                stud_ID, 
-                mod_ID 
-            FROM schedule 
-            WHERE mod_ID = '$currentUser'
-            ORDER BY sched_day, sched_starttime";
+            sched_id, 
+            sched_day, 
+            sched_starttime, 
+            sched_endtime, 
+            stud_ID, 
+            sched.mod_ID 
+        FROM schedule sched
+        INNER JOIN moderator m ON sched.mod_ID = m.mod_ID
+        WHERE m.mod_usern = '$currentUser'
+        ORDER BY sched.sched_day, sched.sched_starttime";
     
     $result = mysqli_query($conn, $sql);
     $schedules = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -39,16 +42,22 @@
             $startTime = strtotime($schedule['sched_starttime']);
             $endTime = strtotime($schedule['sched_endtime']);
 
-            // If no current schedule or the current schedule ends before the new one starts, add current schedule to the result
-            if (!$currentSchedule || $currentSchedule['sched_endtime'] <= $schedule['sched_starttime']) {
-                if ($currentSchedule) {
-                    $mergedSchedules[] = $currentSchedule;
-                }
+            if (!$currentSchedule) {
+                // First schedule, start a new merged block
                 $currentSchedule = $schedule;
             } else {
-                // Merge if overlapping
-                if ($endTime > strtotime($currentSchedule['sched_endtime'])) {
-                    $currentSchedule['sched_endtime'] = date('H:i', $endTime);
+                // Check if the current schedule overlaps or is adjacent to the new one
+                $currentEndTime = strtotime($currentSchedule['sched_endtime']);
+                
+                if ($startTime <= $currentEndTime) {
+                    // Merge if overlapping or adjacent (extend the end time if needed)
+                    if ($endTime > $currentEndTime) {
+                        $currentSchedule['sched_endtime'] = $schedule['sched_endtime'];
+                    }
+                } else {
+                    // No overlap, finalize the current schedule and start a new one
+                    $mergedSchedules[] = $currentSchedule;
+                    $currentSchedule = $schedule;
                 }
             }
         }
@@ -68,47 +77,29 @@
         $groupedSchedules[$schedule['sched_day']][] = $schedule;
     }
 
-    // Display the schedule table
-
     // Table Header for Days of the Week
     echo '<div class="rowcenter">';
     foreach ($daysOfWeek as $day) {
-        echo "<div class='col-16'>$day</div>";
+        echo "<div class='col-16'>
+        <h3>$day</h3>
+        </div>";
     }
     echo '</div>';
-
-    // Define possible time slots (modify as needed)
-    $timeSlots = ['09:00 - 11:00', '11:00 - 13:00', '13:00 - 15:00', '15:00 - 17:00'];
-
-    // Loop through the time slots to create rows
-    foreach ($timeSlots as $timeSlot) {
-        echo '<div class="rowcenter">';
-        foreach ($groupedSchedules as $day => $schedules) {
-            $mergedSchedules = mergeSchedulesForDay($schedules);
-
-            $found = false;
-            foreach ($mergedSchedules as $schedule) {
-                // Check if this schedule fits within the current time slot
-                $scheduleStart = strtotime($schedule['sched_starttime']);
-                $scheduleEnd = strtotime($schedule['sched_endtime']);
-                $slotStart = strtotime(explode(' - ', $timeSlot)[0]);
-                $slotEnd = strtotime(explode(' - ', $timeSlot)[1]);
-
-                // If the schedule's time overlaps with the current time slot, display it
-                if (($scheduleStart >= $slotStart && $scheduleStart < $slotEnd) || ($scheduleEnd > $slotStart && $scheduleEnd <= $slotEnd)) {
-                    // Display the merged schedule without the student ID
-                    echo "<div class='col-16'>{$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
-                    $found = true;
-                    break;
-                }
-            }
-
-            if (!$found) {
-                echo "<div class='col-16'></div>"; // Empty cell if no schedule matches the time slot
-            }
+    echo '<div class="rowcenter">';
+    foreach ($groupedSchedules as $day => $schedules) {
+        // Merge overlapping schedules for the current day
+        $mergedSchedules = mergeSchedulesForDay($schedules);
+    
+        // Start a new row for each day
+        echo '<div class="col-16">';
+    
+        // Loop through the merged schedules for the current day and display them
+        foreach ($mergedSchedules as $schedule) {
+            // Display the merged time slot as a single entry
+            echo "<div class='timetext'>{$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
         }
-        echo '</div>';
+    
+        echo "</div>"; // Close the row for the current day
     }
-
 ?>
 </div>
