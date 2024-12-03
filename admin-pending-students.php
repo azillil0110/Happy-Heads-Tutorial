@@ -47,7 +47,8 @@
 
         if($resultcheck > 0){
             $i = 1;
-            while($row = mysqli_fetch_assoc($result)){ 
+            while($row = mysqli_fetch_assoc($result)){
+                $studentID = $row['stud_id']; 
                 ?>
                 <div class="box" onclick="showStudentDetails(this)"
                     stud-id="<?php echo $row['stud_id']; ?>"
@@ -60,23 +61,20 @@
                     stud-school="<?php echo $row['school_name']; ?>"
                     stud-grade-level="<?php echo $row['stud_grade_level']; ?>"
                     stud-address="<?php echo $row['stud_address']; ?>"
-                    full-name="<?php echo $row['guardian_names']; ?>"
-                    relationship="<?php echo $row['guardian_relationships']; ?>"
-                    email="<?php echo $row['guardian_emails']; ?>"
-                    phone="<?php echo $row['guardian_phones']; ?>"
-                    fetcher-name="<?php echo $row['fetcher_names']; ?>"
-                    fetcher-relationship="<?php echo $row['fetcher_relationships']; ?>"
-                    fetcher-phone="<?php echo $row['fetcher_phones']; ?>"
+                    full-name="<?php echo $row['guardian_name']; ?>"
+                    relationship="<?php echo $row['guardian_relationship']; ?>"
+                    email="<?php echo $row['guardian_email']; ?>"
+                    phone="<?php echo $row['guardian_phone']; ?>"
                     pic-perm="<?php echo $row['pic_perm']; ?>"
                     on-meds="<?php echo $row['on_meds']; ?> "
                     stud-comment="<?php echo $row['stud_comment']; ?>"
-                    day="<?php echo $row['sched_days']; ?>"
-                    starttime="<?php echo $row['sched_starttimes']; ?>"
-                    endtime="<?php echo $row['sched_endtimes']; ?>">
+                    day="<?php echo $row['sched_day']; ?>"
+                    starttime="<?php echo $row['sched_starttime']; ?>"
+                    endtime="<?php echo $row['sched_endtime']; ?>">
                     <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                          style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                     </div>
-                    <p class="righttitle"><?php echo $row['stud_fname'] . " " . $row['stud_lname'];?></p>
+                    <p href="admin-overlay-pending-student.php?id=<?php echo $studentID; ?>" class="righttitle"><?php echo $row['stud_fname'] . " " . $row['stud_lname'];?></p>
                     <div class="hover-text">More Info</div>
                 </div>
                 <?php

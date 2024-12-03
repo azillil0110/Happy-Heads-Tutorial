@@ -1,4 +1,5 @@
 function showStudentDetails(box) {
+
     const studid = box.getAttribute('stud-id');
     const fname = box.getAttribute('stud-fname');
     const lname = box.getAttribute('stud-lname');
