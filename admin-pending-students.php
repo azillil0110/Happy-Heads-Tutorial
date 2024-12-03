@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/admin/-addstudent.css">
+<link rel="stylesheet" href="css/admin/admin-pending-students.css">
 <?php include_once 'includes/dbh.inc.php'?>
 <div class="righttop">
     <p class="righttoptext">Happy Heads Tutorial Center Students!</p>
@@ -40,7 +40,7 @@
             LEFT JOIN 
                 schedule ON students.stud_id = schedule.stud_ID
             WHERE 
-                students.modID = 4";
+                students.modID = 0";
                 
             $result = mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);
