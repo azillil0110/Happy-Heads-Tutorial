@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/admin/--admin-tutor.css">
+<link rel="stylesheet" href="css/admin/-admin-tutor.css">
 <meta http-equiv="Cache-control" content="no-cache">
 <?php include_once 'includes/dbh.inc.php'?>
 

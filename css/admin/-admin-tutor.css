@@ -336,3 +336,13 @@ h5{
 #bdate,#mgender,#acctype{
     width: 100%;
 }
+.overlay-content2{
+    background: white;
+    border-radius: 10px;
+    display: inline-block;
+    color: #000000;
+    width: 70%;
+    height: 110%;
+    overflow-x: hidden;
+    position: relative;
+}

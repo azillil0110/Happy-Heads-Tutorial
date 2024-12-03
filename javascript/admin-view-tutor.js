@@ -30,3 +30,14 @@ function closeModDetails() {
     document.getElementById('tutorinfo-overlay').style.display = 'none';
     
 }
+
+function showTutorSchedule(){
+    console.log('Schedule button clicked');
+    document.getElementById('overlay-content').style.display = 'none';
+    document.getElementById('overlay-content2').style.display = 'flex';
+}
+
+function BackButton(){
+    document.getElementById('overlay-content2').style.display = 'none';
+    document.getElementById('overlay-content').style.display = 'flex';
+}
