@@ -68,5 +68,6 @@
 <script src="javascript/toggleread.js"></script>
 <script src="javascript/admin-view-tutor.js"></script>
 <script src="javascript/tutor-info-edit.js"></script>
+<script src="javascript/admin-pending-student.js"></script>
 </html>
 
