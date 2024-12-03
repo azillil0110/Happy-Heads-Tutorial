@@ -96,10 +96,12 @@
         // Loop through the merged schedules for the current day and display them
         foreach ($mergedSchedules as $schedule) {
             // Display the merged time slot as a single entry
-            echo "<div class='timetext'>{$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
+            echo "<div class='timetext' onclick='showStudents({$schedule['sched_id']}, \"{$schedule['sched_starttime']}\", \"{$schedule['sched_endtime']}\")'>           
+            {$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
         }
     
         echo "</div>"; // Close the row for the current day
     }
+    include_once 'overlay-schedule-studentlist.php'
 ?>
 </div>

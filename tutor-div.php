@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/admin/-admin-tutor.css">
+<link rel="stylesheet" href="css/admin/--admin-tutor.css">
 <div class="overlay" id="tutorinfo-overlay">
     <div class="overlay-content">
         <div class="row">
