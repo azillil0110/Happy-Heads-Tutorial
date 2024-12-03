@@ -7,16 +7,16 @@
 </div>
 <div class="rightbot">
     <?php 
-        $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin'";
+        $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin'AND acc_status = 'active'";
         $result = mysqli_query($conn, $sql);
         $resultcheck = mysqli_num_rows($result);
 
         if($resultcheck > 0){
             $q = 1;
             while($row = mysqli_fetch_assoc($result)){ 
-                $mod_id = $row['mod_id'];
                 ?>
                 <div class="box " onclick="showModDetails(this)"
+                    mod-id="<?php echo $row['mod_id']; ?>"
                     mod-fname="<?php echo $row['mod_fname']; ?>"
                     mod-lname="<?php echo $row['mod_lname']; ?>"
                     mod-bdate="<?php echo $row['mod_bdate']; ?>"

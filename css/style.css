@@ -72,10 +72,10 @@ nav{
 }
 #home-banner{
     width: 100%;
-    height:700px;
+    height:100vh;
     display: block;
-    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
-    background-size: 100%;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
     align-content: center;
     justify-items: center;
     color: white;
@@ -344,8 +344,10 @@ nav{
     display: block;
     text-align: center;
     align-content: center;
-    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    background-image: url('../images/banner.jpg');
     color: white;
+    background-size: cover;
+    background-position-y: 40%;
 }
 
 #tutor-container{

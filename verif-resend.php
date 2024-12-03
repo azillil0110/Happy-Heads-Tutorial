@@ -13,8 +13,8 @@
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'awdadIL';
-        $mail->Password   = 'PASSWORD';
+        $mail->Username   = '';
+        $mail->Password   = 'ewhs vkjs uqcj hmjb';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
@@ -32,5 +32,7 @@
         header('Location: /Happy-Heads-Tutorial/email-verif.php?email-resent=true');
         exit();
     } catch (Exception $e) {
+        
     }
+
 ?>

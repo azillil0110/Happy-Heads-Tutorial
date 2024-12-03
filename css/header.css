@@ -52,8 +52,10 @@ nav{
     display: block;
     text-align: center;
     align-content: center;
-    background-image: url(https://cdn.zmescience.com/wp-content/uploads/2018/09/Staples_High_School2C_Westport2C_CT.jpg);
+    background-image: url('../images/banner.jpg');
     color: white;
+    background-size: cover;
+    background-position-y: 40%;
 }
 .current-page{
     color: rgb(3, 3, 143);
