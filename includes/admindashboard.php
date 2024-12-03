@@ -60,7 +60,11 @@
     <div class="leftoptions" data-section="addevent">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Add Event</p>
-    </div>  
+    </div>
+    <div class="leftoptions" data-section="reports">
+        <i class="fa-solid fa-square square"></i>
+        <p class="lefttext2">Reports</p>
+    </div>
     <div class="leftoptions" data-section="settings">
         <i class="fa-solid fa-square square"></i>
         <p class="lefttext2">Settings</p>

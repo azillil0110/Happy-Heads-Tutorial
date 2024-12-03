@@ -195,12 +195,14 @@
                     yesRadio.addEventListener('change', function () {
                         if (yesRadio.checked) {
                             medicalInput.disabled = false;
+                            medicalInput.required = true;
                         }
                     });
 
                     noRadio.addEventListener('change', function () {
                         if (noRadio.checked) {
                             medicalInput.disabled = true;
+                            medicalInput.required = false;
                             medicalInput.value = '';
                         }
                     });

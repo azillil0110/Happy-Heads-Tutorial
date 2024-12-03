@@ -1,6 +1,7 @@
 <?php
 
-require_once 'includes\redirectfunction.php';
+require_once __DIR__ . '/includes/redirectfunction.php';
+require_once __DIR__ . '/includes/dbh.inc.php';
 
 session_start();
 
@@ -19,10 +20,30 @@ if (isset($_POST['verifcode'])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userInputCode = trim($_POST["verifcode"]);
+    
     if (isset($_SESSION['verification_code']) && (int)$userInputCode === (int)$_SESSION['verification_code']) {
         $username = $_SESSION['username'];
         $acc_type = $_SESSION['acc_type'];
-        redirectBasedOnAccType($acc_type, $username);
+
+        $stmt = $conn->prepare("SELECT mod_id FROM moderator WHERE mod_usern = ?");
+        if ($stmt) {
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $stmt->bind_result($mod_id);
+            $stmt->fetch();
+            $stmt->close();
+
+            if (!empty($mod_id)) {
+                $_SESSION ['mod_id'] = $mod_id;
+                createAuditRecords($conn, $mod_id, $acc_type, $username);
+            } else {
+                header("Location: email-verif.php?error=mod_id_not_found");
+                exit();
+            }
+        } else {
+            header("Location: email-verif.php?error=db_query_failed");
+            exit();
+        }
     } else {
         header("Location: email-verif.php?error=invalid_code");
         exit();
