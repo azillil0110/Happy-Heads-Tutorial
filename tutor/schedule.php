@@ -7,8 +7,7 @@
     include_once '../includes/dbh.inc.php';
     session_start();
 
-    // Set the current user mod_id to 8
-    $currentUser = 8;
+    $currentUser = $_SESSION['username'];
 
     // Fetch schedules for the current tutor (mod_ID = 8)
     $sql = "SELECT 
@@ -19,7 +18,7 @@
                 stud_ID, 
                 mod_ID 
             FROM schedule 
-            WHERE mod_ID = '$currentUser'
+            WHERE mod_usern = '$currentUser'
             ORDER BY sched_day, sched_starttime";
     
     $result = mysqli_query($conn, $sql);
