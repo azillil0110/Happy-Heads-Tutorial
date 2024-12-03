@@ -8,18 +8,22 @@
     session_start();
 
     $currentUser = $_SESSION['username'];
+    echo "<div>
+        <h3>$currentUser 's sched</h3>
+        </div>";  
 
     // Fetch schedules for the current tutor (mod_ID = 8)
     $sql = "SELECT 
-                sched_id, 
-                sched_day, 
-                sched_starttime, 
-                sched_endtime, 
-                stud_ID, 
-                mod_ID 
-            FROM schedule 
-            WHERE mod_usern = '$currentUser'
-            ORDER BY sched_day, sched_starttime";
+            sched_id, 
+            sched_day, 
+            sched_starttime, 
+            sched_endtime, 
+            stud_ID, 
+            sched.mod_ID 
+        FROM schedule sched
+        INNER JOIN moderator m ON sched.mod_ID = m.mod_ID
+        WHERE m.mod_usern = '$currentUser'
+        ORDER BY sched.sched_day, sched.sched_starttime";
     
     $result = mysqli_query($conn, $sql);
     $schedules = mysqli_fetch_all($result, MYSQLI_ASSOC);
