@@ -290,22 +290,23 @@
                     <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                     <label class="lightlabel-small" for="authname-inst">The following individuals are hereby
                         approved by the Parent to pick up the child.</label>
-                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname"
-                        required></br>
-                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname"></br>
+                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname">
+                    </br>
+                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname">
+                    </br>
                 </div>
                 <div class="col-60" id="subrow">
                     <div class="col-40">
                         <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
                         <input class="inputtext" type="text" id="rel3" name="relationship"
-                            placeholder="Enter relationship" required></br>
+                            placeholder="Enter relationship"></br>
                         <input class="inputtext" type="text" id="rel4" name="relationship"
                             placeholder="Enter relationship"></br>
                     </div>
                     <div class="col-60">
                         <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
                         <input class="inputtext" type="text" id="connum3" name="contactnumber"
-                            placeholder="Enter Contact Number" required></br>
+                            placeholder="Enter Contact Number"></br>
                         <input class="inputtext" type="text" id="connum4" name="contactnumber"
                             placeholder="Enter Contact Number"></br>
                     </div>

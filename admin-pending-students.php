@@ -40,8 +40,8 @@
             LEFT JOIN 
                 schedule ON students.stud_id = schedule.stud_ID
             WHERE 
-                students.modID = 3";
-
+                students.modID = 4";
+                
             $result = mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);
 
@@ -51,7 +51,6 @@
                     $studentID = $row['stud_id'];
                     ?>
                     <div class="box" onclick="showStudentDetails(this)"
-                        stud-id="<?php echo $row['stud_id']; ?>"
                         stud-fname="<?php echo $row['stud_fname']; ?>"
                         stud-lname="<?php echo $row['stud_lname']; ?>"
                         stud-nname="<?php echo $row['stud_nname']; ?>"
