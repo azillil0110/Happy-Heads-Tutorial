@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/schedule.css">
+<link rel="stylesheet" href="css/-schedule.css">
 <div class="righttop">
     <p class="righttoptext">Happy Heads Tutorial Center Students!</p>
 </div>
@@ -8,9 +8,6 @@
     session_start();
 
     $currentUser = $_SESSION['username'];
-    echo "<div>
-        <h3>$currentUser 's sched</h3>
-        </div>";  
 
     // Fetch schedules for the current tutor (mod_ID = 8)
     $sql = "SELECT 
@@ -89,15 +86,15 @@
     foreach ($groupedSchedules as $day => $schedules) {
         // Merge overlapping schedules for the current day
         $mergedSchedules = mergeSchedulesForDay($schedules);
+        
     
         // Start a new row for each day
         echo '<div class="col-16">';
     
         // Loop through the merged schedules for the current day and display them
         foreach ($mergedSchedules as $schedule) {
-            // Display the merged time slot as a single entry
-            echo "<div class='timetext' onclick='showStudents({$schedule['sched_id']}, \"{$schedule['sched_starttime']}\", \"{$schedule['sched_endtime']}\")'>           
-            {$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
+            echo "<div class='timetext' onclick='showStudents({$schedule['mod_ID']}, \"{$schedule['sched_day']}\", \"{$schedule['sched_starttime']}\", \"{$schedule['sched_endtime']}\")'>           
+                {$schedule['sched_starttime']} - {$schedule['sched_endtime']}</div>";
         }
     
         echo "</div>"; // Close the row for the current day
