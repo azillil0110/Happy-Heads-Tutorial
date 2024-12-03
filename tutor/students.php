@@ -24,6 +24,7 @@
                         <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
                             <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
                         </a>
+                        <div class="hover-text">More Info</div>
                 </div>
                     <?php
                     $i++;
