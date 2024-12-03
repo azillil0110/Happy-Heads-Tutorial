@@ -54,6 +54,9 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
             case 'addstudents':
                 stylesheet.href = 'css/admin/addstudent.css';
                 break;
+            case 'reports':
+                stylesheet.href = 'css/admin/reports.css';
+                break;
             case 'settings':
                 stylesheet.href = 'css/admin/admin-settings.css';
                 break;
@@ -141,6 +144,16 @@ function getContent(section) {
             break;
         case 'addadmin':
             fetch('./admin-add-admin.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+            break;
+        case 'reports':
+            fetch('./admin-reports.php')
                 .then(response => response.text())
                 .then(html => {
                     document.querySelector('.rightside').innerHTML = html;
