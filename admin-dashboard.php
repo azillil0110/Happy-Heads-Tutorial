@@ -41,7 +41,7 @@
                     include('admin-students.php');
                     ?>
                     <script>
-                        stylesheet.href = 'css/admin/admin-students.css';
+                        document.stylesheet.href = 'css/admin/admin-students.css';
                         btn.classList.remove('leftoptions1');
                         btn.classList.add('leftoptions');
                         icon.classList.remove('square');
