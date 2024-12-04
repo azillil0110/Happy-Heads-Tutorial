@@ -34,13 +34,13 @@ if (isset($_GET['currentUrl'])) {
                             <option value="playgroup">Playgroup</option>
                             <option value="pre_nursery">Pre-nursery</option>
                             <option value="kindergarten">Kindergarten</option>
-                            <option value="grade_1">Grade 1</option>
-                            <option value="grade_2">Grade 2</option>
-                            <option value="grade_3">Grade 3</option>
-                            <option value="grade_4">Grade 4</option>
-                            <option value="grade_5">Grade 5</option>
-                            <option value="grade_6">Grade 6</option>
-                            <option value="junior_high">Junior High School</option>
+                            <option value="grade 1">Grade 1</option>
+                            <option value="grade 2">Grade 2</option>
+                            <option value="grade 3">Grade 3</option>
+                            <option value="grade 4">Grade 4</option>
+                            <option value="grade 5">Grade 5</option>
+                            <option value="grade 6">Grade 6</option>
+                            <option value="Junior Highschool">Junior High School</option>
                         </select>
                         <button class="backbtn" onclick="applyStudentFilter()">Apply Filter</button>
                         <table id="studentTable">
