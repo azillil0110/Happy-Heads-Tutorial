@@ -196,11 +196,13 @@ body {
     border-radius: 10px;
     display: inline-block;
     color: #000000;
-    width: 70%;
-    height: 110%;
+    width: 40%;
+    height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
+    padding: 0px 270px;
+    padding-bottom: 30px;
 }
 .close-btn{
     padding: 10px 40px;
@@ -210,4 +212,23 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
+.listcontent{
+    height: 80%;
+    width: 100%;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.col-80{
+    width: 80%;
+    display: inline-block;  
+}
+.col-10{
+    width: 10%;
+    display: inline-block;  
+}
+li{
+    padding: 10px 10px;
 }
