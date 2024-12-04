@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/-schedule.css">
 <div class="righttop">
-    <p class="righttoptext">Happy Heads Tutorial Center Students!</p>
+    <p class="righttoptext">My Schedule</p>
 </div>
 <div class="rightbot">
 <?php

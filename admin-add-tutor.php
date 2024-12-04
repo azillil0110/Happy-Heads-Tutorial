@@ -68,6 +68,13 @@
             </div>  
         </form>
     </div>
+    <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Adding User Successful</p>
+                <p class="modal-text2">username and password are default</p>
+            </div>
+        </div>
+    <script src="javascript/overlay.js"></script>
 </div>
        
 <script src="javascript/admin.js"></script>

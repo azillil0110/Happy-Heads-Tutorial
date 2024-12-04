@@ -274,7 +274,24 @@ h1 {
 #fullname{
     display: flex;
     flex-direction: column;
+    padding: 0px 20px;
 }
 form{
     justify-items: center;
+}
+
+#uploadbox1 {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#uploadbox1:hover {
+    border-color: #007bff; /* Hover border color */
+    opacity: 50%;
 }
