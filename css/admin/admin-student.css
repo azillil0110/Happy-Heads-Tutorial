@@ -54,7 +54,7 @@ body {
 }
 
 .rightbot {
-    width: 95%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -347,7 +347,7 @@ body {
 }
 
 .rightbot {
-    width: 95%;
+    width: 90%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -377,20 +377,32 @@ body {
     font-size: 16px;
 }
 
-
-.uploadbox {
-    justify-self: end;
-    margin-right: 50px;
-    width: 160px;
-    height: 200px;
-    background-color: #C8C8C8;
-    border: 1px solid;
-    border-color: #000000;
+#pfpup {
+    justify-content: center;
+    margin-bottom: 25px;
     display: flex;
-    flex-direction: column;
+}
+
+#filename {
+    border: none;
+    background: none;
+    text-align: center;
+}
+
+
+#uploadbox {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+}
+
+#uploadbox:hover {
+    border-color: #007bff; /* Hover border color */
 }
 
 
@@ -509,3 +521,4 @@ select{
     display: inline-block;
     width: 100%;
 }
+

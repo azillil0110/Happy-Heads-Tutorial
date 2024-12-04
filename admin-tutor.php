@@ -40,4 +40,5 @@
         }
     ?> 
     <?php include_once 'tutor-div.php'?>
+    <?php include_once 'admin-tutor-schedule.php'?>
 </div>

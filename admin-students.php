@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/admin/admin-students.css">
-<?php include_once 'includes/dbh.inc.php'?>
+<?php include_once 'includes/dbh.inc.php' ?>
 
 
 <div class="righttop">
@@ -7,8 +7,8 @@
 </div>
 <div class="rightbot">
     <div class="firstrow">
-        <?php 
-            $sql = "SELECT 
+        <?php
+        $sql = "SELECT 
             students.stud_id,
             students.stud_fname,
             students.stud_lname,
@@ -23,14 +23,17 @@
             students.on_meds,
             students.stud_comment,
             students.pfp_url,
+            students.modID,
             guardian.grdn_name AS guardian_name,
             guardian.relationship AS guardian_relationship,
             guardian.grdn_email AS guardian_email,
             guardian.grdn_phone AS guardian_phone,
+            guardian.grdn_id AS guardian_id,
             authorized_fetcher.fetcher_name AS fetcher_name,
             authorized_fetcher.relationship AS fetcher_relationship,
             authorized_fetcher.fetcher_phone AS fetcher_phone,
             schedule.sched_day,
+            schedule.sched_id,
             schedule.sched_starttime,
             schedule.sched_endtime
             FROM 
@@ -40,10 +43,14 @@
             LEFT JOIN 
                 authorized_fetcher ON students.stud_id = authorized_fetcher.studID
             LEFT JOIN 
-                schedule ON students.stud_id = schedule.stud_ID";
+                schedule ON students.stud_id = schedule.stud_ID
+            WHERE
+                students.modID != 1
+            GROUP BY 
+                students.stud_id";
 
-            $result = mysqli_query($conn, $sql);
-            $resultcheck = mysqli_num_rows($result);
+        $result = mysqli_query($conn, $sql);
+        $resultcheck = mysqli_num_rows($result);
 
             if($resultcheck > 0){
                 $i = 1;
@@ -88,5 +95,13 @@
             }
         ?>
     </div>
-    <?php include_once 'overlay-studentinfo.php'?>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p class="modal-text">Edit Student Details Successful</p>
+            <p class="modal-text2">Happy Heads Tutorial Center</p>
+        </div>
+    </div>
+    <script src="javascript/overlay.js"></script>
+    <?php include_once 'overlay-studentinfo.php' ?>
+   
 </div>

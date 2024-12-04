@@ -10,6 +10,32 @@ if (!isset($_SESSION['username'])) {
 $currentUser = $_SESSION['username'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $file = $_FILES['userImage'];
+    $filename = $_FILES['userImage']['name'];
+    $fileTMPname = $_FILES['userImage']['tmp_name'];
+    $fileSize = $_FILES['userImage']['size'];
+    $fileError = $_FILES['userImage']['error'];
+    $fileType = $_FILES['userImage']['type'];
+    $fileExt = explode('.', $filename);
+    $fileActualExt = strtolower(end($fileExt));
+    $allowed = array('jpg', 'jpeg', 'png');
+    if (in_array($fileActualExt, $allowed)) {
+        if ($fileError === 0) {
+            if ($fileSize < 5000000) {
+                $fileNameNew = $filename;
+                $filedestination = 'images/Team/' . $fileNameNew;
+                move_uploaded_file($fileTMPname, $filedestination);
+            } else {
+                die("File size too big!");
+            }
+        } else {
+            die("Error uploading your file");
+        }
+    } else {
+        $filename ="new.jpg";
+    }
+
     $fname = htmlspecialchars($_POST['fname']);
     $lname = htmlspecialchars($_POST['lname']);
     $bdate = $_POST['bdate'];
@@ -30,7 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 mod_email = '$email', 
                 mod_phone = '$phone', 
                 mod_usern = '$username', 
-                mod_pass = '$password'
+                mod_pass = '$password',
+                pfp_url = '$filename'
                WHERE mod_usern = '$currentUser'";
 
     if (mysqli_query($conn, $query)) {

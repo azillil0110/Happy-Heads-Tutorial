@@ -1,4 +1,5 @@
-<link rel="stylesheet" href="css/admin/-addstudent.css">
+<link rel="stylesheet" href="css/admin/addstudent.css">
+
 <div class="right">
     <div class="righttop">
         <p class="righttoptext">Add a Student</p>
@@ -61,13 +62,13 @@
                         <option value="playgroup">Playgroup</option>
                         <option value="prenursery">Pre-nursery</option>
                         <option value="kinder">Kindergarten</option>
-                        <option value="g1">Grade 1</option>
-                        <option value="g2">Grade 2</option>
-                        <option value="g3">Grade 3</option>
-                        <option value="g4">Grade 4</option>
-                        <option value="g5">Grade 5</option>
-                        <option value="g6">Grade 6</option>
-                        <option value="hs">Junior Highschool</option>
+                        <option value="Grade 1">Grade 1</option>
+                        <option value="Grade 2">Grade 2</option>
+                        <option value="Grade 3">Grade 3</option>
+                        <option value="Grade 4">Grade 4</option>
+                        <option value="Grade 5">Grade 5</option>
+                        <option value="Grade 6">Grade 6</option>
+                        <option value="High School">Junior Highschool</option>
                     </select> </br>
                 </div>
             </div>
@@ -317,5 +318,13 @@
             </div>
         </form>
     </div>
+    <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Adding Student Successful</p>
+                <p class="modal-text2">Kindly proceed to pending student</p>
+            </div>
+        </div>
+    <script src="javascript/overlay.js"></script>
 </div>
+
 <script src="javascript/admin.js"></script>

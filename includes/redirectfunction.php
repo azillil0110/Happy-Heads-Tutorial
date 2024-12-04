@@ -16,6 +16,7 @@ function createAuditRecords($conn, $mod_id, $acc_type, $username) {
     }
     exit();
 }
+//this is a sample comment
 
 function redirectBasedOnAccType($acc_type, $username) {
     if ($acc_type == 'tutor') {

@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="overlay" id="studentInfo">
-        <form action="students.php" class="overlay-content" method="POST">
+        <form action="tutor-edit-student.php" class="overlay-content" method="POST">
             <h2>Student Information</h2>
             <div class="row">
                 <div class="col-100">

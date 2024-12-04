@@ -73,7 +73,7 @@ const username = urlParams.get('username');
 function getContent(section) {
     switch (section) {
         case 'dashboard':
-                fetch('./admin-right-dashboard.php')
+                fetch('./admin-right-dashboard.php?page=dashboard')
                     .then(response => response.text())
                     .then(html => {
                         document.querySelector('.rightside').innerHTML = html;
@@ -83,7 +83,7 @@ function getContent(section) {
                     });
                 break;
         case 'students':
-            fetch('./admin-students.php')
+            fetch('./admin-students.php?page=students')
                     .then(response => response.text())
                     .then(html => {
                         document.querySelector('.rightside').innerHTML = html;
