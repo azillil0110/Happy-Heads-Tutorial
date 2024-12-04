@@ -37,7 +37,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/tutor/tutor-dashboard.css';
                 break;
             case 'students':
-                stylesheet.href = 'css/tutor/students.css';
+                stylesheet.href = 'css/tutor/student.css';
                 break;
             case 'myschedule':
                 stylesheet.href = 'css/-schedule.css';
