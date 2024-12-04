@@ -1,3 +1,78 @@
+<?php
+require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
+require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
+require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Database credentials
+$host = 'localhost';
+$dbname = 'happy_heads';
+$username = 'root';
+$password = '';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['username'];
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format.";
+    } else {
+        try {
+            // Connect to the database
+            $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // Check if the email exists in the database
+            $stmt = $pdo->prepare("SELECT * FROM moderator WHERE mod_email = :email");
+            $stmt->execute([':email' => $email]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($user) {
+                $otp = rand(100000, 999999); // Generate OTP
+
+                // Save OTP in session
+                session_start();
+                $_SESSION['otp'] = $otp;
+                $_SESSION['otp_email'] = $email;
+
+                // Configure PHPMailer
+                $mail = new PHPMailer(true);
+                try {
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com'; 
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'migueleugenio102@gmail.com'; 
+                    $mail->Password = 'mruu wsty kmeg qvxq';
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = 587;
+
+                    // Email details
+                    $mail->setFrom('migueleugenio102@gmail.com', 'Happy Heads Tutorial Center');
+                    $mail->addAddress($email);
+                    $mail->Subject = 'Forgot Password';
+                    $mail->Body = "Your OTP code is $otp";
+
+                    $mail->send();
+                    $success = "OTP sent to your email. Please check your inbox.";
+                    
+                    header("Location: verify-otp.php"); 
+                    exit(); 
+
+                } catch (Exception $e) {
+                    $error = "Error sending email: " . $mail->ErrorInfo;
+                }
+            } else {
+                $error = "Email not found in our records.";
+            }
+        } catch (PDOException $e) {
+            $error = "Database error: " . $e->getMessage();
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +86,15 @@
 
     <main>
         <div class="login-box">
-            <form>
+            <form method="POST" action="forgot-password.php">
                 <p style="font-weight: bold;">Forgot Password</p>
+                <?php if (isset($success)) { echo "<p style='color:green;'>$success</p>"; } ?>
+                <?php if (isset($error)) { echo "<p style='color:red;'>$error</p>"; } ?>
                 <div>
                     <label style="font-weight: bold;" for="username">Email</label>
                     <input type="text" id="username" name="username" placeholder="Enter your email" required>
                 </div>
-                <div>
-                    <label style="font-weight: bold;" for="password">Code</label>
-                    <input type="password" id="password" name="password" placeholder="Enter one time code" required>
-                </div>
-                <a href="#">Resend Code</a>
-                <a href="new-pass.php"> <button type="submit">Submit</button> </a>
+                <button type="submit">Send Code</button>
             </form>
         </div>
     </main>
