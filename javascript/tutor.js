@@ -43,7 +43,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/-schedule.css';
                 break;
             case 'settings':
-                stylesheet.href = 'css/tutor/settings.css';
+                stylesheet.href = 'css/tutor/setting.css';
                 break;
             default:
                 stylesheet.href = 'css/tutor/tutor-dashboard.css';

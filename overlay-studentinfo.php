@@ -21,35 +21,35 @@
                     <div class="col-50">
                         <label class="textlabel" for="studentfname">FIRST NAME</label>
                         <input type="text" id="studentfname" name="student-firstname"
-                            placeholder="Input student's First Name" class="inputtext" required>
+                            placeholder="Input student's First Name" class="inputtext" readonly>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="studentlname">LAST NAME</label>
                         <input type="text" id="studentlname" name="student-lastname"
-                            placeholder="Input student's Last Name" class="inputtext" required>
+                            placeholder="Input student's Last Name" class="inputtext" readonly>
                     </div>
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="student-nname">NICKNAME</label></br>
                     <input class="inputtext" type="text" id="student-nname" name="student-nickname"
-                        placeholder="Enter nickname" required></br>
+                        placeholder="Enter nickname" readonly></br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-70" id="subrow">
                     <div class="col-50">
                         <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" required></br>
+                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" readonly></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="student-age">AGE</label></br>
                         <input class="inputtext" type="number" id="student-age" name="student-age"
-                            placeholder="Enter your age" required></br>
+                            placeholder="Enter your age" readonly></br>
                     </div>
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="gender">GENDER</label></br>
-                    <select name="gender" id="student-gender" required>
+                    <select name="gender" id="student-gender" disabled>
                         <option disabled value="">Please select one…</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
@@ -62,11 +62,11 @@
                 <div class="col-70">
                     <label class="textlabel" for="school">SCHOOL</label></br>
                     <input class="inputtext" type="text" id="school" name="school" placeholder="Name of School"
-                        required></br>
+                        readonly></br>
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="level">GRADE LEVEL</label></br>
-                    <select name="Grade" id="grade">
+                    <select name="Grade" id="grade" disabled>
                         <option disabled value="">Please select one…</option>
                         <option value="Playgroup">Playgroup</option>
                         <option value="Pre-Nursery">Pre-Nursery</option>
@@ -85,7 +85,7 @@
                 <div class="col-70">
                     <label class="textlabel" for="homeadd">HOME ADDRESS</label></br>
                     <input class="inputtext" type="text" id="homeadd" name="homeaddress"
-                        placeholder="Enter your Address" required></br>
+                        placeholder="Enter your Address" readonly></br>
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="tutor">TUTOR</label></br>
@@ -109,25 +109,25 @@
                     <div class="col-100">
                     <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
                         <input class="inputtext" type="text" id="parent_fullname1" name="students-full-name"
-                        placeholder="Enter Full Name" required></br>
+                        placeholder="Enter Full Name" readonly></br>
                 </div>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
                     <input class="inputtext" type="text" id="sp-relationship1" name="parent-relationship1"
-                        placeholder="Enter Relationship" required></br>
+                        placeholder="Enter Relationship" readonly></br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-50">
                     <label class="textlabel" for="sp-email1">E-MAIL</label></br>
                     <input class="inputtext" type="email" id="sp-email1" name="parent-email1"
-                        placeholder="Enter E-mail Address" required></br>
+                        placeholder="Enter E-mail Address" readonly></br>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-connum1">CONTACT NUMBER</label></br>
                     <input class="inputtext" type="text" id="sp-connum1" name="parent-connum1"
-                        placeholder="Enter Contact Number" required></br>
+                        placeholder="Enter Contact Number" readonly></br>
                 </div>
             </div>
             <hr id="line-invi">
@@ -136,7 +136,7 @@
                     <div class="col-100">
                         <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
                         <input class="inputtext" type="text" id="parent_fullname2" name="students-full-name"
-                            placeholder="Enter Full Name" required></br>
+                            placeholder="Enter Full Name" readonly></br>
                     </div>
                 </div>
                 <div class="col-50">
@@ -149,12 +149,12 @@
                 <div class="col-50">
                     <label class="textlabel" for="sp-email2">E-MAIL</label></br>
                     <input class="inputtext" type="email2" id="sp-email2" name="parent-email2"
-                        placeholder="Enter E-mail Address"></br>
+                        placeholder="Enter E-mail Address" readonly></br>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-connum2">CONTACT NUMBER</label></br>
                     <input class="inputtext" type="text" id="sp-connum2" name="parent-connum2"
-                        placeholder="Enter Contact Number"></br>
+                        placeholder="Enter Contact Number" readonly></br>
                 </div>
             </div>
             <hr id="line-invi">
@@ -165,9 +165,9 @@
                 </div>
                 <div class="col-30">
                 <div class="option" id="student-ques1-option">
-                        <input class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
+                        <input disabled class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
                         <label class="btnlabel1" for="yes">Yes</label><br>
-                        <input class="radiobtn1" type="radio" id="meds2" name="yesno_meds">
+                        <input disabled class="radiobtn1" type="radio" id="meds2" name="yesno_meds">
                         <label class="btnlabel1" for="no">No</label>
                     </div></br>
                 </div>
@@ -175,7 +175,7 @@
             <div class="row">
                 <div class="col-100">
                     <input class="inputtext" type="text" id="student-ques1-blank" name="student-medicalblank"
-                        placeholder="Enter text"></br>
+                        placeholder="Enter text" readonly></br>
                 </div>
             </div>
             <script>
@@ -203,9 +203,9 @@
                 </div>
                 <div class="col-30">
                     <div class="option" id="student-ques2-option">
-                        <input class="radiobtn2" type="radio" id="student-pic-consent1" name="yesno_pic" value="yes">
+                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent1" name="yesno_pic" value="yes">
                         <label class="btnlabel2" for="yes">Yes</label><br>
-                        <input class="radiobtn2" type="radio" id="student-pic-consent2" name="yesno_pic" value="no">
+                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent2" name="yesno_pic" value="no">
                         <label class="btnlabel2" for="no">No</label>
                     </div></br>
                 </div>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-602">
                     <input class="inputtext" type="text" id="childinfo" name="childinformation"
-                        placeholder="Enter Text"></br>
+                        placeholder="Enter Text" readonly></br>
                 </div>
             </div>
             <hr id="line-enroll">
@@ -226,68 +226,68 @@
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input type="checkbox" id="monday" name="mon" value="monday">
+                    <input type="checkbox" id="monday" name="mon" value="monday" disabled>
                     <label class="labelday" for="mon">MONDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input type="checkbox" id="tuesday" name="tue" value="tuesday">
+                    <input type="checkbox" id="tuesday" name="tue" value="tuesday" disabled>
                     <label class="labelday" for="tue">TUESDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input type="checkbox" id="wednesday" name="wed" value="wednesday">
+                    <input type="checkbox" id="wednesday" name="wed" value="wednesday" disabled>
                     <label class="labelday" for="wed">WEDNESDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input type="checkbox" id="thursday" name="thu" value="thursday">
+                    <input type="checkbox" id="thursday" name="thu" value="thursday" disabled>
                     <label class="labelday" for="thu">THURSDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input type="checkbox" id="friday" name="fri" value="friday">
+                    <input type="checkbox" id="friday" name="fri" value="friday" disabled>
                     <label class="labelday" for="fri">FRIDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input type="checkbox" id="saturday" name="sat" value="saturday">
+                    <input type="checkbox" id="saturday" name="sat" value="saturday" disabled>
                     <label class="labelday" for="sat">SATURDAY</label><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1"></br>
+                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ttime1" name="ttime1"></br>
+                    <input class="inputtime" type="time" id="student-ttime1" name="ttime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-wtime1" name="wtime1"></br>
+                    <input class="inputtime" type="time" id="student-wtime1" name="wtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-thtime1" name="thtime1"></br>
+                    <input class="inputtime" type="time" id="student-thtime1" name="thtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ftime1" name="ftime1"></br>
+                    <input class="inputtime" type="time" id="student-ftime1" name="ftime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-stime1" name="stime1"></br>
+                    <input class="inputtime" type="time" id="student-stime1" name="stime1" disabled></br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2"></br>
+                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ttime2" name="ttime2"></br>
+                    <input class="inputtime" type="time" id="student-ttime2" name="ttime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-wtime2" name="wtime2"></br>
+                    <input class="inputtime" type="time" id="student-wtime2" name="wtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-thtime2" name="thtime2"></br>
+                    <input class="inputtime" type="time" id="student-thtime2" name="thtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-ftime2" name="ftime2"></br>
+                    <input class="inputtime" type="time" id="student-ftime2" name="ftime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
+                    <input class="inputtime" type="time" id="student-stime2" name="stime2" disabled></br>
                 </div>
             </div>
             <div class="row">
@@ -295,25 +295,25 @@
                     <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                     <label class="lightlabel-small" for="authname-inst">The following individuals are hereby
                         approved by the Parent to pick up the child.</label>
-                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname" readonly>
                     </br>
-                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname" readonly>
                     </br>
                 </div>
                 <div class="col-60" id="subrow">
                     <div class="col-40">
                         <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
                         <input class="inputtext" type="text" id="rel3" name="relationship"
-                            placeholder="Enter relationship"></br>
+                            placeholder="Enter relationship" readonly></br>
                         <input class="inputtext" type="text" id="rel4" name="relationship"
-                            placeholder="Enter relationship"></br>
+                            placeholder="Enter relationship" readonly></br>
                     </div>
                     <div class="col-60">
                         <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
                         <input class="inputtext" type="text" id="connum3" name="contactnumber"
-                            placeholder="Enter Contact Number"></br>
+                            placeholder="Enter Contact Number" readonly></br>
                         <input class="inputtext" type="text" id="connum4" name="contactnumber"
-                            placeholder="Enter Contact Number"></br>
+                            placeholder="Enter Contact Number" readonly></br>
                     </div>
                 </div>
             </div>
@@ -324,7 +324,7 @@
                     <div class="col-60">
                     </div>
             <div class="btn">
-                <button type="button"class="edit-btn" onclick="toggleEdit()">Edit</button>
+                <button type="button"class="edit-btn" onclick="editToggle()">Edit</button>
                 <button type="submit"class="save-btn">Save Changes</button>
                 <button type="button" class="close-btn" onclick="closePopUp()">Close</button>
             </div>

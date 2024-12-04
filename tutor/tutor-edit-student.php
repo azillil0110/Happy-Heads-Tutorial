@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     WHERE studID = $studID;";
 
     if (mysqli_query($conn, $query2) && $flag=1) {
-        header('Location: admin-dashboard.php?page=students');   
+        header('Location: tutor-dashboard.php?page=students');   
     } else {
         echo "Error: " . mysqli_error($conn);
     }
@@ -76,8 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "Error: " . mysqli_error($conn);
     }
-
-
 
 
     // Close the connection
