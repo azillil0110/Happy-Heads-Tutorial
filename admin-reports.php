@@ -57,7 +57,6 @@ if (isset($_GET['currentUrl'])) {
                             <option value="none">None</option>
                             <option value="asc_name">Ascending in Name</option>
                             <option value="desc_name">Descending in Name</option>
-                            <option value="all_grades">All Grades</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
