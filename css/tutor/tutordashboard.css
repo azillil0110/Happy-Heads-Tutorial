@@ -1,6 +1,6 @@
 .leftside {
     width: 20%;
-    height: auto;
+    height: 100vh;
     background-color: #044c8c;
     display: flex;
     flex-direction: column;

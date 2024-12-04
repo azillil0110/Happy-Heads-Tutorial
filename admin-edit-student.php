@@ -56,6 +56,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $parentemail = $_POST['parent-email1'];
     $parentcontact = $_POST['parent-connum1'];
 
+    $fetchername = $_POST['authindiv'];
+    $fetcherrelationship = $_POST['relationship'];
+    $fetchernumber = $_POST['contactnumber'];
+
     $parentname2 = $_POST['parent-full-name2'];
     $relationship2 = $_POST['parent-relationship2'];
     $parentemail2 = $_POST['parent-email2'];
@@ -85,7 +89,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $authcont = $_POST['authcontact1'];
     $authcont2 = $_POST['authcontact2'];
-
     
     $age = (int)$studentage;
     $studID = (int)$studentid;
@@ -131,20 +134,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $query3 = "UPDATE authorized_fetcher
-                SET fetcher_name = '$auth1',
-                    fetcher_phone = '$authcont',
-                    relationship = '$authrel1'
-                    WHERE studID = $studID";
+                SET fetcher_name = '$fetchername',
+                    relationship = '$fetcherrelationship',
+                    fetcher_phone = '$fetchernumber'
+                    WHERE studID = $studID;";
 
     if (mysqli_query($conn, $query3)) {
-        header('Location: admin-dashboard.php?page=students&success=true');   
+        header('Location: admin-dashboard.php?page=students&success=true');
     } else {
         echo "Error: " . mysqli_error($conn);
     }
 
-
-
     // Close the connection
     mysqli_close($conn);
-}
 ?>
