@@ -3,7 +3,6 @@ session_start();
 
 require_once 'dbh.inc.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
 
@@ -40,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'migueleugenio102@gmail.com';
-                    $mail->Password   = 'mruu wsty kmeg qvxq';
+                    $mail->Password   = 'zual spmh kjcw kmpy';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
@@ -74,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->Host       = 'smtp.gmail.com';
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'migueleugenio102@gmail.com';
-                    $mail->Password   = 'mruu wsty kmeg qvxq';
+                    $mail->Password   = 'zual spmh kjcw kmpy';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
