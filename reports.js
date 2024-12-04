@@ -49,7 +49,7 @@ function populateTable(tableId, data) {
     if (tableId === 'studentTable') {
         headerRow.innerHTML = '<th>Name</th><th>Age</th><th>Grade</th>';
     } else if (tableId === 'tutorTable') {
-        headerRow.innerHTML = '<th>Name</th><th>Gender</th><th>Grade</th>';
+        headerRow.innerHTML = '<th>Name</th><th>Gender</th><th>Email</th><th>Phone</th><th>Birthdate</th>';
     } else if (tableId === 'auditLogTable') {
         headerRow.innerHTML = '<th>Name</th><th>Login Time</th><th>Logout Time</th>';
     }
@@ -60,8 +60,16 @@ function populateTable(tableId, data) {
         if (tableId === 'studentTable') {
             tr.innerHTML = `<td>${row.stud_fname} ${row.stud_lname}</td><td>${row.stud_age}</td><td>${row.stud_grade_level}</td>`;
         } else if (tableId === 'tutorTable') {
-            tr.innerHTML = `<td>${row.mod_fname} ${row.mod_lname}</td><td>${row.mod_gender}</td><td>${row.stud_grade_level}</td>`;
-        } else if (tableId === 'auditLogTable') {
+            const formattedDate = new Date(row.mod_bdate).toISOString().split('T')[0]; // Extract date (YYYY-MM-DD)
+            tr.innerHTML = `
+                <td>${row.mod_fname} ${row.mod_lname}</td>
+                <td>${row.mod_gender}</td>
+                <td>${row.mod_email}</td>
+                <td>${row.mod_phone}</td>
+                <td>${formattedDate}</td>
+            `;
+        }
+         else if (tableId === 'auditLogTable') {
             tr.innerHTML = `<td>${row.mod_fname} ${row.mod_lname}</td><td>${row.log_in_time}</td><td>${row.log_out_time}</td>`;
         }
         table.appendChild(tr);

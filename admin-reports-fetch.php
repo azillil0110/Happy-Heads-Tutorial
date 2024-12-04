@@ -24,7 +24,7 @@ switch ($report) {
         break;
 
     case 'tutors':
-        $query = "SELECT * FROM moderator JOIN students ON students.modID = moderator.mod_id WHERE moderator.mod_id != 1";
+        $query = "SELECT * FROM moderator WHERE mod_id != 1";
         if ($filter == 'asc_name') {
             $query .= " ORDER BY moderator.mod_fname ASC";
         } elseif ($filter == 'desc_name') {
