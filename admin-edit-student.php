@@ -4,6 +4,7 @@ include('includes/dbh.inc.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitize input
 
+    $oldfile = $_POST['oldfilename'];
     $file = $_FILES['studImage'];
     $filename = $_FILES['studImage']['name'];
     $fileTMPname = $_FILES['studImage']['tmp_name'];
@@ -26,7 +27,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Error uploading your file");
         }
     } else {
-        $filename ="new.jpg";
+        $filename = $oldfile;
+    }
+
+    if($filename === ""){
+        $filename = $oldfile;
     }
 
     $studentid = $_POST['studentid'];

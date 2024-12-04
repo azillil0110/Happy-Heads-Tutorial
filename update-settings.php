@@ -11,6 +11,7 @@ $currentUser = $_SESSION['username'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    $oldfile = $_POST['pfp_url'];
     $file = $_FILES['userImage'];
     $filename = $_FILES['userImage']['name'];
     $fileTMPname = $_FILES['userImage']['tmp_name'];
@@ -33,14 +34,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             die("Error uploading your file");
         }
     } else {
-        $filename ="new.jpg";
+        $filename = $oldfile;
+    }
+
+    if($filename === ""){
+        $filename = $oldfile;
     }
 
     $fname = htmlspecialchars($_POST['fname']);
     $lname = htmlspecialchars($_POST['lname']);
     $bdate = $_POST['bdate'];
     $gender = $_POST['gender'];
-    $description = htmlspecialchars($_POST['description']);
+    $description = $_POST['description'];
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $phone = $_POST['phone'];
     $username = htmlspecialchars($_POST['usern']);
@@ -61,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                WHERE mod_usern = '$currentUser'";
 
     if (mysqli_query($conn, $query)) {
-        header('Location: admin-dashboard.php?page=settings');
+       header('Location: admin-dashboard.php?page=settings');
     } else {
         echo "Error: " . mysqli_error($conn);
     }

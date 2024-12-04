@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt = $conn->prepare("SELECT mod_id FROM moderator WHERE mod_usern = ?");
         if ($stmt) {
+
             $stmt->bind_param("s", $username);
             $stmt->execute();
             $stmt->bind_result($mod_id);

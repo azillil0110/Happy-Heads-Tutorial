@@ -37,12 +37,12 @@
         <form action="update-settings.php" method="POST" enctype="multipart/form-data">
             <div id="pfp-name">
                 <div id="uploadbox1" style="background-image: url('images/Team/<?php echo $pfpurl ?>')">
-                    <label for="fileInput">
+                    <label for="fileInput1">
                         <p class="uploadtext">Change Profile</p>
                     </label>
                     <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput1" name="userImage"
                         style="display:none">
-                    <input type="text" id="filename" name="filename" value="file_name_here" style="display: none;">
+                    <input type="text" id="oldfilename" name="oldfilename" value="<?php echo $pfpurl ?>" style="display: none;">
                 </div>
                  <script>
                     document.addEventListener('DOMContentLoaded', () => {
@@ -78,8 +78,7 @@
                         });
                     });
                 </script>
-                <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput" name="studImage"
-                    style="display:none">
+
                 <div id="fullname">
                     <input id="field" type="hidden" name="form-name" value="form 1">
                     <input id="fname" required placeholder="Enter your First Name" type="text" name="fname"
@@ -114,7 +113,7 @@
             <div class="description">
                 <h5>Description</h5>
                 <textarea required="" cols="77" rows="6" placeholder="Short description" name="description"
-                    id="description" value="<?php echo $descrip ?>"></textarea>
+                    id="description" ><?php echo $descrip ?></textarea>
             </div>
             <div>
                 <h1 id="login-security">Login & Security</h1>

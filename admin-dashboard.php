@@ -36,7 +36,17 @@
                 } else if ($page === 'tutors') {
                     include('admin-tutor.php');
                 } else if ($page === 'settings') {
-                    
+                    ?>
+                    <script>
+                        window.onload = function() {
+                            const urlParams = new URLSearchParams(window.location.search);
+                            if(urlParams.has('settings')){
+                                const stylesheet = document.getElementById('rightsidestyle');
+                                stylesheet.href = 'css/admin/admin-settings.css';
+                            }
+                        };
+                    </script>
+                    <?php
                     include('admin-settings.php');
                 }else if ($page === 'students') {
                     include('admin-students.php');
