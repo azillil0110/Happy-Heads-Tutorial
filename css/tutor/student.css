@@ -23,7 +23,7 @@ body {
 }
 
 .square1 {
-    color: #044c8c;
+    color: #9e2323;
 }
 
 .rightside {
@@ -39,7 +39,7 @@ body {
     justify-content: center;
     width: 95%;
     height: 140px;
-    background-color: #C1DDF6;
+    background-color: #ff9b9b;
     border: none;
     margin: 40px;
     border-radius: 10px;
@@ -54,7 +54,7 @@ body {
 }
 
 .rightbot {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -128,7 +128,7 @@ body {
 .overlay-content{
     background: white;
     border-radius: 10px;
-    padding: 50px 100px;
+    padding: 50px 150px;
     display: inline-block;
     color: #000000;
     max-width: 90%;
@@ -181,7 +181,7 @@ body {
 .close-btn{
     margin-top: 40px;
     padding: 10px 20px;
-    background-color: #044c8c;
+    background-color: crimson;
     color: white;
     font-size: 18px;
     border: none;
@@ -192,7 +192,7 @@ body {
     margin-right: 10px;
     margin-top: 40px;
     padding: 0px 40px;
-    background-color: #044c8c;
+    background-color: crimson;
     color: white;
     font-size: 18px;
     border: none;
@@ -203,7 +203,7 @@ body {
     margin-right: 10px;
     margin-top: 40px;
     padding: 10px 20px;
-    background-color: #044c8c;
+    background-color: crimson;
     color: white;
     font-size: 18px;
     border: none;
@@ -211,11 +211,45 @@ body {
     border-radius: 5px;
 }
 
-/* form */
+/*form*/
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main_body {
+    width: 100%;
+    height: 882px;
+    height: fit-content;
+    display: flex;
+}
+#subrow{
+    display: flex;
+}
+.right{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.rightside {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+}
 .row {
     display: flex;
     width: 100%;
     justify-content: left;
+    margin-right: 5px;
+}
+.rowcenter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
     margin-right: 5px;
 }
 .col-100{
@@ -230,11 +264,6 @@ body {
 }
 .col-30{
     width: 30%;
-    display: inline-block;  
-    margin-right: 5px;
-}
-.col-80{
-    width: 80%;
     display: inline-block;  
     margin-right: 5px;
 }
@@ -263,8 +292,13 @@ body {
     display: inline-block;  
     margin-right: 5px;
 }
-.col-90{
-    width: 90%;
+.col-80{
+    width: 80%;
+    display: inline-block;  
+    margin-right: 5px;
+}
+.col-20{
+    width: 20%;
     display: inline-block;  
     margin-right: 5px;
 }
@@ -273,11 +307,145 @@ body {
     display: inline-block;  
     margin-right: 5px;
 }
+.col-90{
+    width: 90%;
+    display: inline-block;  
+    margin-right: 5px;
+}
+.righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 140px;
+    background-color: #ff9b9b;
+    border: none;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.righttoptext {
+    font-weight: 700;
+    color: #000000;
+    font-size: 37px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+.option{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 12px;
+}
+.righttitletext{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+#schedtitle{
+    display: inline-block;
+    padding-top: 20px;
+}
+
+.rightbot {
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    justify-content: center;
+    align-content: center;
+}
+.rightbotbot{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottop {
+    display: flex;
+}
+
+
+.leftbottop {
+    width: 600px;
+    height: 220px;
+    font-size: 16px;
+}
+
+#pfpup {
+    justify-content: center;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+#filename {
+    border: none;
+    background: none;
+    text-align: center;
+}
+
+
+#uploadbox {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#uploadbox:hover {
+    border-color: #007bff; /* Hover border color */
+}
+
+.uploadicon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+
+.uploadtext {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.rightbottop {
+    width: 800px;
+    height: 220px;
+    margin-right: 50px;
+}
+.textevent {
+    width: 600px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: #ffffff;
+    margin: 10px;
+}
+.botform{
+    width: 100%;
+}
+.labelday{
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
 .textlabel{
     font-weight: bold;
     margin-top: 14px;
     display:inline-block;
     font-size: 16PX;
+    color: #3c364f;
 }
 .inputtext{
     width: 100%;
@@ -290,26 +458,20 @@ body {
     box-sizing: border-box; 
     resize: vertical;
 }
+#student-selectdate{
+    width: 100%;
+}
+
 .radiobtn{
     margin-right: 10px;
     margin-left: 16px;
 }
-.radiobtn1{
-    margin-right: 10px;
-    margin-left: 16px;
-}
+
 #student-malelabel{
     margin-right: 16px;
     margin-left: 0px;
 }
-.option{
-    display: flex;
-    align-items: flex-end;
-    margin-top: 12px;
-}
-#subrow{
-    display: flex;
-}
+
 select{
     width: 99%;
     font-size: 18px;
@@ -322,9 +484,19 @@ select{
     box-sizing: border-box; 
     resize: vertical;
 }
-.subtitle{
-    font-size: 20px;
-    font-weight: bold;
+#line-invi{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+.lightlabel{
+    font-size: 13px;
+    margin-top: 16px;
+    display:inline-block;
+}
+.lightlabel-small{
+    font-size: 8px;
+    display:inline-block;
 }
 .inputtime{
     width: 100%;
@@ -337,39 +509,15 @@ select{
     box-sizing: border-box; 
     resize: vertical;
 }
-.lightlabel2{
-    font-size: 10px;
-    font-weight: lighter;
-    margin-top: 14px;
-    display:inline-block;
-}
-.lightlabel{
-    font-size: 13px;
-    margin-top: 14px;
-    display:inline-block;
-}
-.lightlabel-small{
-    font-size: 8px;
-    display:inline-block;
-}
-.labelday{
-    font-size: 14px;
-    margin-top: 10px;
+.btnSUBMIT{
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.719);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    margin-top: 16px;
     display: inline-block;
+    width: 100%;
 }
-#line-enroll{
-    margin-top: 26px;
-    margin-bottom: 14px;
-    border: 2px solid #878787;
-}
-#line-invi{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 0, 0, 0);
-}
-#blank1{
-    margin-top: 0px;
-}
-a{
-    text-decoration: none;
-}
+

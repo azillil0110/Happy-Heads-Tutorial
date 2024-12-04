@@ -40,7 +40,11 @@
         LEFT JOIN 
             authorized_fetcher ON students.stud_id = authorized_fetcher.studID
         LEFT JOIN 
-            schedule ON students.stud_id = schedule.stud_ID";
+            schedule ON students.stud_id = schedule.stud_ID
+        WHERE
+            students.modID != 1
+        GROUP BY 
+            students.stud_id";
             
         $result = mysqli_query($conn, $sql);
         $resultcheck = mysqli_num_rows($result);
@@ -51,7 +55,6 @@
                     $studentID = $row['stud_id']; // ID DITO RAGHHH
                     ?>
                     <div  class="box" onclick="tutor(this)"
-                    stud-id="<?php echo $row['stud_id']; ?>"
                         stud-id="<?php echo $row['stud_id']; ?>"
                         stud-fname="<?php echo $row['stud_fname']; ?>"
                         stud-lname="<?php echo $row['stud_lname']; ?>"
@@ -78,7 +81,7 @@
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
-                        <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                        <a href="tutor-students.php?id=<?php echo $studentID; ?>" class="righttitle">
                             <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
                         </a>
                         <div class="hover-text">More Info</div>
@@ -89,5 +92,12 @@
             }
         ?> 
     </div>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p class="modal-text">Edit Student Details Successful</p>
+            <p class="modal-text2">Happy Heads Tutorial Center</p>
+        </div>
+    </div>
+    <script src="javascript/overlay.js"></script>
     <?php include_once 'tutor-students.php'; ?>
 </div>
