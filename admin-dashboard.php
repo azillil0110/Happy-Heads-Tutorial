@@ -36,6 +36,7 @@
                 } else if ($page === 'tutors') {
                     include('admin-tutor.php');
                 } else if ($page === 'settings') {
+                    
                     include('admin-settings.php');
                 }else if ($page === 'students') {
                     include('admin-students.php');

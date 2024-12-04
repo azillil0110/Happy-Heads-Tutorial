@@ -10,6 +10,7 @@ function showDetails(box) {
     const school = box.getAttribute('stud-school');
     const address = box.getAttribute('stud-address');
     const grade = box.getAttribute('stud-grade-level');
+    const pfp = box.getAttribute('stud-pfp');
     const name = box.getAttribute('full-name');
     const relationship = box.getAttribute('relationship');
     const email = box.getAttribute('email');
@@ -34,6 +35,12 @@ function showDetails(box) {
     document.getElementById('school').value = school;
     document.getElementById('homeadd').value = address;
     document.getElementById('grade').value = grade;
+
+    $pfpimage = document.getElementById('uploadbox');
+    if ($pfpimage) {
+        $pfpimage.style.backgroundImage = "url('images/students/" + pfp + "')";
+    }
+
     document.getElementById('parent_fullname1').value = name;
     document.getElementById('sp-relationship1').value = relationship;
     document.getElementById('sp-email1').value = email;

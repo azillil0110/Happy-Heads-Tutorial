@@ -30,6 +30,13 @@
         <div class="bottomform">
             <button id="btn-save" type="submit" class="submit">Add Event</button>
         </div>
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Adding Event Successful</p>
+                <p class="modal-text2">It is now visible on event page</p>
+            </div>
+        </div>
+        <script src="javascript/overlay.js"></script>
     </div>
 </form>
 

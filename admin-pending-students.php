@@ -40,7 +40,9 @@
             LEFT JOIN 
                 schedule ON students.stud_id = schedule.stud_ID
             WHERE 
-                students.modID = 4";
+                students.modID = 1
+            GROUP BY
+                students.stud_id";
                 
             $result = mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/admin/admin-students.css">
-<?php include_once 'includes/dbh.inc.php'?>
+<?php include_once 'includes/dbh.inc.php' ?>
 
 
 <div class="righttop">
@@ -7,8 +7,8 @@
 </div>
 <div class="rightbot">
     <div class="firstrow">
-        <?php 
-            $sql = "SELECT 
+        <?php
+        $sql = "SELECT 
             students.stud_id,
             students.stud_fname,
             students.stud_lname,
@@ -23,14 +23,17 @@
             students.on_meds,
             students.stud_comment,
             students.pfp_url,
+            students.modID,
             guardian.grdn_name AS guardian_name,
             guardian.relationship AS guardian_relationship,
             guardian.grdn_email AS guardian_email,
             guardian.grdn_phone AS guardian_phone,
+            guardian.grdn_id AS guardian_id,
             authorized_fetcher.fetcher_name AS fetcher_name,
             authorized_fetcher.relationship AS fetcher_relationship,
             authorized_fetcher.fetcher_phone AS fetcher_phone,
             schedule.sched_day,
+            schedule.sched_id,
             schedule.sched_starttime,
             schedule.sched_endtime
             FROM 
@@ -40,53 +43,55 @@
             LEFT JOIN 
                 authorized_fetcher ON students.stud_id = authorized_fetcher.studID
             LEFT JOIN 
-                schedule ON students.stud_id = schedule.stud_ID";
+                schedule ON students.stud_id = schedule.stud_ID
+            WHERE
+                students.modID != 1
+            GROUP BY 
+                students.stud_id";
 
-            $result = mysqli_query($conn, $sql);
-            $resultcheck = mysqli_num_rows($result);
+        $result = mysqli_query($conn, $sql);
+        $resultcheck = mysqli_num_rows($result);
 
-            if($resultcheck > 0){
-                $i = 1;
-                while($row = mysqli_fetch_assoc($result)){ 
-                    $studentID = $row['stud_id']; // ID DITO RAGHHHdddfdf
-                    ?>
-                    <div class="box" onclick="showDetails(this)"
-                        stud-id="<?php echo $row['stud_id']; ?>"
-                        stud-fname="<?php echo $row['stud_fname']; ?>"
-                        stud-lname="<?php echo $row['stud_lname']; ?>"
-                        stud-nname="<?php echo $row['stud_nname']; ?>"
-                        stud-bdate="<?php echo $row['stud_bdate']; ?>"
-                        stud-age="<?php echo $row['stud_age']; ?>"
-                        stud-gender="<?php echo $row['stud_gender']; ?>"
-                        stud-school="<?php echo $row['school_name']; ?>"
-                        stud-grade-level="<?php echo $row['stud_grade_level']; ?>"
-                        stud-address="<?php echo $row['stud_address']; ?>"
-                        full-name="<?php echo $row['guardian_name']; ?>"
-                        relationship="<?php echo $row['guardian_relationship']; ?>"
-                        email="<?php echo $row['guardian_email']; ?>"
-                        phone="<?php echo $row['guardian_phone']; ?>"
-                        fetcher-name="<?php echo $row['fetcher_name']; ?>"
-                        fetcher-relationship="<?php echo $row['fetcher_relationship']; ?>"
-                        fetcher-phone="<?php echo $row['fetcher_phone']; ?>"
-                        pic-perm="<?php echo $row['pic_perm']; ?>"
-                        on-meds="<?php echo $row['on_meds']; ?> "
-                        stud-comment="<?php echo $row['stud_comment']; ?>"
-                        day="<?php echo $row['sched_day']; ?>"
-                        starttime="<?php echo $row['sched_starttime']; ?>"
-                        endtime="<?php echo $row['sched_endtime']; ?>">
-                        <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
-                             style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
-                        </div>
-                        <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
-                            <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
-                        </a>
-                        <div class="hover-text">More Info</div>
+        if ($resultcheck > 0) {
+            $i = 1;
+            while ($row = mysqli_fetch_assoc($result)) {
+                $studentID = $row['stud_id']; // ID DITO RAGHHHdddfdf
+                ?>
+                <div class="box" onclick="showDetails(this)" stud-id="<?php echo $row['stud_id']; ?>"
+                    stud-fname="<?php echo $row['stud_fname']; ?>" stud-lname="<?php echo $row['stud_lname']; ?>"
+                    stud-nname="<?php echo $row['stud_nname']; ?>" stud-bdate="<?php echo $row['stud_bdate']; ?>"
+                    stud-age="<?php echo $row['stud_age']; ?>" stud-gender="<?php echo $row['stud_gender']; ?>"
+                    stud-school="<?php echo $row['school_name']; ?>" stud-grade-level="<?php echo $row['stud_grade_level']; ?>"
+                    stud-address="<?php echo $row['stud_address']; ?>" 
+                    stud-pfp = "<?php echo $row['pfp_url']; ?>" full-name="<?php echo $row['guardian_name']; ?>"
+                    relationship="<?php echo $row['guardian_relationship']; ?>" email="<?php echo $row['guardian_email']; ?>"
+                    phone="<?php echo $row['guardian_phone']; ?>" fetcher-name="<?php echo $row['fetcher_name']; ?>"
+                    fetcher-relationship="<?php echo $row['fetcher_relationship']; ?>"
+                    fetcher-phone="<?php echo $row['fetcher_phone']; ?>" pic-perm="<?php echo $row['pic_perm']; ?>"
+                    on-meds="<?php echo $row['on_meds']; ?> " stud-comment="<?php echo $row['stud_comment']; ?>"
+                    day="<?php echo $row['sched_day']; ?>" starttime="<?php echo $row['sched_starttime']; ?>"
+                    endtime="<?php echo $row['sched_endtime']; ?>">
+                    <div id="stud-pic<?php echo $i; ?>" class="stpfp"
+                        style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                     </div>
-                    <?php
-                    $i++;
-                }
+                    <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                        <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
+                    </a>
+                    <div class="hover-text">More Info</div>
+                </div>
+                <?php
+                $i++;
             }
+        }
         ?>
     </div>
-    <?php include_once 'overlay-studentinfo.php'?>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p class="modal-text">Edit Student Details Successful</p>
+            <p class="modal-text2">Happy Heads Tutorial Center</p>
+        </div>
+    </div>
+    <script src="javascript/overlay.js"></script>
+    <?php include_once 'overlay-studentinfo.php' ?>
+   
 </div>

@@ -44,7 +44,7 @@ body {
 .rightbot {
     display: flex;
     gap: 35px;
-    margin-left: 40px;
+    margin-left: 50px;
     flex-wrap: wrap;
 }
 

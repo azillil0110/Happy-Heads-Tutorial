@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
         $stmt = null;
 
         // Ensure no output before this
-        header('Location: ../admin-dashboard.php?page=adduser');
+        header('Location: ../admin-dashboard.php?page=adduser&success=true');
         die();
     } catch (PDOException $e) {
         die("Query Failed:" . $e->getMessage());

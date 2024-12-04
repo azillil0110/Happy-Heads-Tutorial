@@ -1,20 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/admin/admin-student.css">
     <title>Student Information</title>
 </head>
+
 <body>
     <div class="overlay" id="scheduleOverlay">
-        <form action="admin-edit-student.php" class="overlay-content" method="POST">
+        <form action="admin-edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
             <h2>Student Information</h2>
-            <div class="row">
-                <div class="col-100">
+            <div class="row" id="pfpup">
+                <div id="pfpup">
+                    <div id="uploadbox">
+                        <label for="fileInput">
+                            <p class="uploadtext">Change Profile</p>
+                        </label>
+                        <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput" name="studImage"
+                            style="display:none">
+                        <input type="text" id="filename" name="filename" value="file_name_here" style="display: none;">
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const fileInput = document.getElementById('fileInput');
+                        const filenameInput = document.getElementById('filename');
+                        const uploadBox = document.getElementById('uploadbox');
+
+                        fileInput.addEventListener('change', function (event) {
+                            const file = event.target.files[0];
+
+                            if (file) {
+                                // Update filename in the hidden input
+                                filenameInput.value = file.name;
+
+                                // Optional: Display the filename in the console for debugging
+                                console.log('File name:', file.name);
+
+                                // Display the image as background (if needed)
+                                const reader = new FileReader();
+                                reader.onload = function (e) {
+                                    uploadBox.style.backgroundImage = `url('${e.target.result}')`;
+                                    uploadBox.style.backgroundSize = 'cover';
+                                    uploadBox.style.backgroundPosition = 'center';
+
+                                    // Optional: Hide the text once the image is loaded
+                                    const uploadText = uploadBox.querySelector('.uploadtext');
+                                    if (uploadText) uploadText.style.display = 'none';
+                                };
+                                reader.readAsDataURL(file);
+                            } else {
+                                console.warn('No file selected');
+                            }
+                        });
+                    });
+                </script>
+
+
+                <div class="col-100" style="display: none;">
                     <label class="textlabel" for="stud_id">STUDENT ID</label>
                     <input type="text" id="studentid" name="studentid" class="inputtext" readonly>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col-70" id="subrow">
@@ -39,7 +88,8 @@
                 <div class="col-70" id="subrow">
                     <div class="col-50">
                         <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" required></br>
+                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday"
+                            required></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="student-age">AGE</label></br>
@@ -102,15 +152,15 @@
             </div>
             <hr id="line-enroll">
             <div class="row">
-                <p class="textlabel" id="parentinfo-title" > PARENT/ GUARDIAN INFORMATION </p>
+                <p class="textlabel" id="parentinfo-title"> PARENT/ GUARDIAN INFORMATION </p>
             </div>
             <div class="row">
                 <div class="col-50" id="subrow">
                     <div class="col-100">
-                    <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
-                        <input class="inputtext" type="text" id="parent_fullname1" name="students-full-name"
-                        placeholder="Enter Full Name" required></br>
-                </div>
+                        <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
+                        <input class="inputtext" type="text" id="parent_fullname1" name="parent-full-name"
+                            placeholder="Enter Full Name" required></br>
+                    </div>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
@@ -132,10 +182,10 @@
             </div>
             <hr id="line-invi">
             <div class="row">
-            <div class="col-50" id="subrow">
+                <div class="col-50" id="subrow">
                     <div class="col-100">
                         <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
-                        <input class="inputtext" type="text" id="parent_fullname2" name="students-full-name"
+                        <input class="inputtext" type="text" id="parent_fullname2" name="parent-full-name2"
                             placeholder="Enter Full Name" required></br>
                     </div>
                 </div>
@@ -164,8 +214,8 @@
                         medical issues that we should know about? like allergies?</label></br>
                 </div>
                 <div class="col-30">
-                <div class="option" id="student-ques1-option">
-                        <input class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
+                    <div class="option" id="student-ques1-option">
+                        <input class="radiobtn1" type="radio" id="meds1" name="yes_meds">
                         <label class="btnlabel1" for="yes">Yes</label><br>
                         <input class="radiobtn1" type="radio" id="meds2" name="yesno_meds">
                         <label class="btnlabel1" for="no">No</label>
@@ -295,24 +345,24 @@
                     <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                     <label class="lightlabel-small" for="authname-inst">The following individuals are hereby
                         approved by the Parent to pick up the child.</label>
-                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv1" name="authindiv1" placeholder="Fullname">
                     </br>
-                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv2" name="authindiv2" placeholder="Fullname">
                     </br>
                 </div>
                 <div class="col-60" id="subrow">
                     <div class="col-40">
                         <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
-                        <input class="inputtext" type="text" id="rel3" name="relationship"
+                        <input class="inputtext" type="text" id="rel3" name="authrelationship1"
                             placeholder="Enter relationship"></br>
-                        <input class="inputtext" type="text" id="rel4" name="relationship"
+                        <input class="inputtext" type="text" id="rel4" name="authrelationship2"
                             placeholder="Enter relationship"></br>
                     </div>
                     <div class="col-60">
                         <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
-                        <input class="inputtext" type="text" id="connum3" name="contactnumber"
+                        <input class="inputtext" type="text" id="connum3" name="authcontact1"
                             placeholder="Enter Contact Number"></br>
-                        <input class="inputtext" type="text" id="connum4" name="contactnumber"
+                        <input class="inputtext" type="text" id="connum4" name="authcontact2"
                             placeholder="Enter Contact Number"></br>
                     </div>
                 </div>
@@ -323,14 +373,22 @@
                 <div class="col-60" id="subrow">
                     <div class="col-60">
                     </div>
-            <div class="btn">
-                <button type="button"class="edit-btn" onclick="toggleEdit()">Edit</button>
-                <button type="submit"class="save-btn">Save Changes</button>
-                <button type="button" class="close-btn" onclick="closePopUp()">Close</button>
-            </div>
+                    <div class="btn">
+                        <button type="button" class="edit-btn" onclick="toggleEdit()">Edit</button>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                        <button type="button" class="close-btn" onclick="closePopUp()">Close</button>
+                    </div>
         </form><!-- end of the div can be form-->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Adding User Successful</p>
+                <p class="modal-text2">username and password are default</p>
+            </div>
+        </div>
+        <script src="javascript/overlay.js"></script>
     </div>
 
     <script src="javascript/toggleread.js"></script>
 </body>
+
 </html>
