@@ -6,7 +6,6 @@ require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Database credentials
 $host = 'localhost';
 $dbname = 'happy_heads';
 $username = 'root';
@@ -15,12 +14,10 @@ $password = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['username'];
 
-    // Validate email format
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $error = "Invalid email format.";
     } else {
         try {
-            // Connect to the database
             $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -30,14 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                $otp = rand(100000, 999999); // Generate OTP
+                $otp = rand(100000, 999999); 
 
-                // Save OTP in session
                 session_start();
                 $_SESSION['otp'] = $otp;
                 $_SESSION['otp_email'] = $email;
 
-                // Configure PHPMailer
                 $mail = new PHPMailer(true);
                 try {
                     $mail->isSMTP();
@@ -48,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
-                    // Email details
                     $mail->setFrom('migueleugenio102@gmail.com', 'Happy Heads Tutorial Center');
                     $mail->addAddress($email);
                     $mail->Subject = 'Forgot Password';
@@ -56,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $mail->send();
                     $success = "OTP sent to your email. Please check your inbox.";
-                    
+
                     header("Location: verify-otp.php"); 
                     exit(); 
 
