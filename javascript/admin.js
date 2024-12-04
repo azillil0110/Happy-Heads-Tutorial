@@ -152,16 +152,6 @@ function getContent(section) {
                     document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
                 });
             break;
-        case 'reports':
-            fetch('./admin-reports.php')
-                .then(response => response.text())
-                .then(html => {
-                    document.querySelector('.rightside').innerHTML = html;
-                })
-                .catch(err => {
-                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
-                });
-            break;
         case 'settings':
             fetch('./admin-settings.php')
                 .then(response => response.text())

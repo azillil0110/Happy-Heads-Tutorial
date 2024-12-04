@@ -373,7 +373,7 @@
                     <div class="col-60">
                     </div>
             <div class="btn">
-                <button type="button"class="edit-btn" onclick="toggleEdit()">Edit</button>
+                <button type="button"class="edit-btn" onclick="editToggle()">Edit</button>
                 <button type="submit"class="save-btn">Save Changes</button>
                 <button type="button" class="close-btn" onclick="closePopUp()">Close</button>
             </div>
