@@ -20,7 +20,7 @@
         </div>
         <div id="team-page-container">
             <?php 
-                $sql = "SELECT * FROM `moderator` WHERE acc_type = 'founder';";
+                $sql = "SELECT * FROM `moderator` WHERE acc_type = 'founder'";
                 $result = mysqli_query($conn, $sql);
                 $resultcheck = mysqli_num_rows($result);
 
@@ -44,7 +44,6 @@
             ?>    
         </div>
 
-        
 
         <hr>
 
@@ -53,7 +52,7 @@
                 <div id="team">
 
                     <?php 
-                        $sql = "SELECT * FROM `moderator` WHERE acc_type = 'tutor';";
+                        $sql = "SELECT * FROM `moderator` WHERE acc_type = 'tutor' AND acc_status = 'active';;";
                         $result = mysqli_query($conn, $sql);
                         $resultcheck = mysqli_num_rows($result);
 

@@ -59,19 +59,6 @@
                     <h4><a href="program.php" class="clickable-txt">Learn More</a></h4>
                 </div>
 
-                <div class="per-info-schedule">
-                    <div class="icon-container-schedule">
-                        <i class="fa-solid fa-calendar"></i>
-                    </div>
-                    <h3>Proper Schedule</h3>
-
-                    <div class="center-text">
-                        <p>A team of highly skilled teachers dedicated to providing guidance and support to students.</p>
-                    </div>
-
-                    <h4><a href="" class="clickable-txt">Learn More</a></h4>
-                </div>
-
                 
             </div>
 
@@ -182,7 +169,7 @@
                 <h1>Our Team</h1>
                 <div id="team">
                     <?php 
-                        $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin'";
+                        $sql = "SELECT * FROM `moderator` WHERE acc_type != 'admin' AND acc_status = 'active'";
                         $result = mysqli_query($conn, $sql);
                         $resultcheck = mysqli_num_rows($result);
 

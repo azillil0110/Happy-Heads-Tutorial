@@ -11,7 +11,7 @@ $currentUser = $_SESSION['username'];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $oldfile = $_POST['pfp_url'];
+    $oldfile = $_POST['oldfilename'];
     $file = $_FILES['userImage'];
     $filename = $_FILES['userImage']['name'];
     $fileTMPname = $_FILES['userImage']['tmp_name'];
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                WHERE mod_usern = '$currentUser'";
 
     if (mysqli_query($conn, $query)) {
-       header('Location: admin-dashboard.php?page=settings');
+       header('Location: admin-dashboard.php');
     } else {
         echo "Error: " . mysqli_error($conn);
     }
