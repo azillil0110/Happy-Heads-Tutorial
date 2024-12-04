@@ -1,0 +1,36 @@
+.floating-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 120px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.356);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.floating-icon:hover {
+    background-color: #eeeeee;
+    transform: scale(1.05);
+}
+
+.float-align {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #770000;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.iconn {
+    font-size: 20px;
+    color: #770000;
+}

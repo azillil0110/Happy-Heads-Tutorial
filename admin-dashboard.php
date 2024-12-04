@@ -5,11 +5,13 @@
     <link id="rightsidestyle" rel="stylesheet" href="css/admin/admin-dashboard.css">
     <link rel="stylesheet" href="css/admin/adminheader.css">
     <link rel="stylesheet" href="css/admin/admindashboard.css">
+    <link rel="stylesheet" href="css/reporticon.css">
     <script src="https://kit.fontawesome.com/9a257cd74f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <?php include('includes/adminheader.php') ?>
     <div class="main_body">
+        <?php include('reporticon.php')?>
         <?php include('includes/admindashboard.php') ?>
         <div class="rightside">
 
@@ -69,5 +71,6 @@
 <script src="javascript/admin-view-tutor.js"></script>
 <script src="javascript/tutor-info-edit.js"></script>
 <script src="javascript/admin-pending-student.js"></script>
+
 </html>
 

@@ -1,88 +1,75 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const studentsButton = document.getElementById('studentsButton');
-    const tutorsButton = document.getElementById('tutorsButton');
-    const auditLogButton = document.getElementById('auditLogButton');
+document.getElementById('studentBtn').addEventListener('click', () => showOverlay('studentOverlay'));
+document.getElementById('tutorBtn').addEventListener('click', () => showOverlay('tutorOverlay'));
+document.getElementById('auditLogBtn').addEventListener('click', () => showOverlay('auditLogOverlay'));
 
-    const studentsReportSection = document.getElementById('studentsReportSection');
-    const tutorsReportSection = document.getElementById('tutorsReportSection');
-    const auditLogReportSection = document.getElementById('auditLogReportSection');
+function closeOverlay() {
+    document.querySelectorAll('.overlay').forEach(overlay => overlay.style.display = 'none');
+}
 
-    const studentsTableContainer = document.getElementById('studentsTableContainer');
-    const tutorsTableContainer = document.getElementById('tutorsTableContainer');
-    const auditLogTableContainer = document.getElementById('auditLogTableContainer');
+function showOverlay(overlayId) {
+    closeOverlay();
+    document.getElementById(overlayId).style.display = 'flex';
+}
 
-    // When the students button is clicked, show the students report and fetch data
-    studentsButton.addEventListener('click', () => {
-        studentsReportSection.style.display = 'block';
-        tutorsReportSection.style.display = 'none';
-        auditLogReportSection.style.display = 'none';
-        fetchReport('students');
-    });
+function applyStudentFilter() {
+    const filter = document.getElementById('studentFilter').value;
+    fetchData('students', filter); 
+}
 
-    // When the tutors button is clicked, show the tutors report and fetch data
-    tutorsButton.addEventListener('click', () => {
-        tutorsReportSection.style.display = 'block';
-        studentsReportSection.style.display = 'none';
-        auditLogReportSection.style.display = 'none';
-        fetchReport('tutors');
-    });
+function applyTutorFilter() {
+    const filter = document.getElementById('tutorFilter').value;
+    fetchData('tutors', filter);
+}
 
-    // When the audit log button is clicked, show the audit log report and fetch data
-    auditLogButton.addEventListener('click', () => {
-        auditLogReportSection.style.display = 'block';
-        studentsReportSection.style.display = 'none';
-        tutorsReportSection.style.display = 'none';
-        fetchReport('audit_log');
-    });
-});
+function applyAuditLogFilter() {
+    const filter = document.getElementById('auditLogFilter').value;
+    fetchData('audit_logs', filter);
+}
 
-// Fetch report data and display it in the corresponding section
-function fetchReport(reportType) {
-    fetch(`admin-reports-fetch.php?report=${reportType}`)
+function fetchData(reportType, filter) {
+    fetch(`admin-reports-fetch.php?report=${reportType}&filter=${filter}`)
         .then(response => response.json())
         .then(data => {
             if (reportType === 'students') {
-                createTable(data, 'students');
+                populateTable('studentTable', data);
             } else if (reportType === 'tutors') {
-                createTable(data, 'tutors');
-            } else if (reportType === 'audit_log') {
-                createTable(data, 'audit_log');
+                populateTable('tutorTable', data);
+            } else if (reportType === 'audit_logs') {
+                populateTable('auditLogTable', data);
             }
         })
-        .catch(err => {
-            console.error("Error fetching data:", err);
-            document.getElementById(`${reportType}TableContainer`).innerHTML = "<p>Error loading data.</p>";
-        });
+        .catch(error => console.error('Fetch Error:', error));
 }
 
-// Create a dynamic table for the fetched data
-function createTable(data, type) {
-    let tableHTML = '<table border="1"><thead><tr>';
-    
-    if (type === 'students') {
-        tableHTML += '<th>Name</th><th>Age</th><th>Grade</th>';
-    } else if (type === 'tutors') {
-        tableHTML += '<th>Name</th><th>Subject</th><th>Email</th>';
-    } else if (type === 'audit_log') {
-        tableHTML += '<th>Action</th><th>Date</th><th>Details</th>';
+function populateTable(tableId, data) {
+    const table = document.getElementById(tableId);
+    table.innerHTML = '';
+
+    const headerRow = document.createElement('tr');
+    if (tableId === 'studentTable') {
+        headerRow.innerHTML = '<th>Name</th><th>Age</th><th>Grade</th>';
+    } else if (tableId === 'tutorTable') {
+        headerRow.innerHTML = '<th>Name</th><th>Gender</th><th>Grade</th>';
+    } else if (tableId === 'auditLogTable') {
+        headerRow.innerHTML = '<th>Name</th><th>Login Time</th><th>Logout Time</th>';
     }
+    table.appendChild(headerRow);
 
-    tableHTML += '</tr></thead><tbody>';
-
-    if (data.length === 0) {
-        tableHTML += `<tr><td colspan="3">No data available</td></tr>`;
-    } else {
-        data.forEach(item => {
-            if (type === 'students') {
-                tableHTML += `<tr><td>${item.stud_fname} ${item.stud_lname}</td><td>${item.stud_age}</td><td>${item.stud_grade_level}</td></tr>`;
-            } else if (type === 'tutors') {
-                tableHTML += `<tr><td>${item.tutor_name}</td><td>${item.subject}</td><td>${item.email}</td></tr>`;
-            } else if (type === 'audit_log') {
-                tableHTML += `<tr><td>${item.action}</td><td>${item.date}</td><td>${item.details}</td></tr>`;
-            }
-        });
-    }
-
-    tableHTML += '</tbody></table>';
-    document.getElementById(`${type}TableContainer`).innerHTML = tableHTML;
+    data.forEach(row => {
+        const tr = document.createElement('tr');
+        if (tableId === 'studentTable') {
+            tr.innerHTML = `<td>${row.stud_fname} ${row.stud_lname}</td><td>${row.stud_age}</td><td>${row.stud_grade_level}</td>`;
+        } else if (tableId === 'tutorTable') {
+            tr.innerHTML = `<td>${row.mod_fname} ${row.mod_lname}</td><td>${row.mod_gender}</td><td>${row.stud_grade_level}</td>`;
+        } else if (tableId === 'auditLogTable') {
+            tr.innerHTML = `<td>${row.mod_fname} ${row.mod_lname}</td><td>${row.log_in_time}</td><td>${row.log_out_time}</td>`;
+        }
+        table.appendChild(tr);
+    });
 }
+
+document.querySelector('.overlay').addEventListener('click', (event) => {
+    if (event.target === document.querySelector('.overlay')) {
+        closeOverlay();
+    }
+});
