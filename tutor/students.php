@@ -1,5 +1,13 @@
 <link rel="stylesheet" href="css/tutor/student.css">
-<?php include_once '../includes/dbh.inc.php'?>
+<?php include_once '../includes/dbh.inc.php';
+session_start();
+
+if (!isset($_SESSION['mod_id'])) {
+    echo "Unauthorized access!";
+    exit;
+}
+$modid = $_SESSION["mod_id"];
+?>
 
 
 <div class="righttop">

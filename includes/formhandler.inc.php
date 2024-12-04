@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $acc = $row['acc_type'];
         $userid = (int)$row['mod_id'];
 
-        if ($userid >= 8) {
+        if ($userid <= 8) {
             if ($password === $row['mod_pass']) {
                 $_SESSION['username'] = $username;
                 $_SESSION['acc_type'] = $row['acc_type'];

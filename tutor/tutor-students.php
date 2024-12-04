@@ -8,9 +8,9 @@
     <title>Student Information</title>
 </head>
 
-<body>
+<div>
     <div class="overlay" id="studentInfo">
-        <form action="tutor-edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
+        <form action="edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
             <h2>Student Information</h2>
             <div class="row" id="pfpup">
                 <div id="pfpup">
@@ -20,7 +20,8 @@
                         </label>
                         <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput" name="studImage"
                             style="display:none">
-                        <input type="text" id="oldfilename" name="oldfilename" value="file_name_here" style="display: none;">
+                        <input type="text" id="oldfilename" name="oldfilename" value="file_name_here"
+                            style="display: none;">
                     </div>
                 </div>
                 <script>
@@ -88,7 +89,8 @@
                 <div class="col-70" id="subrow">
                     <div class="col-50">
                         <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" required></br>
+                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday"
+                            required></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="student-age">AGE</label></br>
@@ -156,10 +158,10 @@
             <div class="row">
                 <div class="col-50" id="subrow">
                     <div class="col-100">
-                    <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
+                        <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
                         <input class="inputtext" type="text" id="parent_fullname1" name="students-full-name"
-                        placeholder="Enter Full Name" required></br>
-                </div>
+                            placeholder="Enter Full Name" required></br>
+                    </div>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
@@ -213,7 +215,7 @@
                         medical issues that we should know about? like allergies?</label></br>
                 </div>
                 <div class="col-30">
-                <div class="option" id="student-ques1-option">
+                    <div class="option" id="student-ques1-option">
                         <input class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
                         <label class="btnlabel1" for="yes">Yes</label><br>
                         <input disabled class="radiobtn1" type="radio" id="meds2" name="yesno_meds">
@@ -252,9 +254,11 @@
                 </div>
                 <div class="col-30">
                     <div class="option" id="student-ques2-option">
-                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent1" name="yesno_pic" value="yes">
+                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent1" name="yesno_pic"
+                            value="yes">
                         <label class="btnlabel2" for="yes">Yes</label><br>
-                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent2" name="yesno_pic" value="no">
+                        <input disabled class="radiobtn2" type="radio" id="student-pic-consent2" name="yesno_pic"
+                            value="no">
                         <label class="btnlabel2" for="no">No</label>
                     </div></br>
                 </div>
@@ -265,8 +269,8 @@
                         child?</label></br>
                 </div>
                 <div class="col-602">
-                    <input class="inputtext" type="text" id="childinfo" name="childinformation"
-                        placeholder="Enter Text" readonly></br>
+                    <input class="inputtext" type="text" id="childinfo" name="childinformation" placeholder="Enter Text"
+                        readonly></br>
                 </div>
             </div>
             <hr id="line-enroll">
@@ -372,11 +376,11 @@
                 <div class="col-60" id="subrow">
                     <div class="col-60">
                     </div>
-            <div class="btn">
-                <button type="button"class="edit-btn" onclick="editToggle()">Edit</button>
-                <button type="submit"class="save-btn">Save Changes</button>
-                <button type="button" class="close-btn" onclick="closeOverlay()">Close</button>
-            </div>
+                    <div class="btn">
+                        <button type="button" class="edit-btn" onclick="editToggle()">Edit</button>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                        <button type="button" class="close-btn" onclick="closeOverlay()">Close</button>
+                    </div>
         </form><!-- end of the div can be form-->
         <div id="successModal" class="modal">
             <div class="modal-content">
@@ -386,8 +390,8 @@
         </div>
         <script src="javascript/overlay.js"></script>
     </div>
-
-    <script src="javascript/toggleread.js"></script>
+</div>
+<script src="javascript/toggleread.js"></script>
 </body>
 
 </html>

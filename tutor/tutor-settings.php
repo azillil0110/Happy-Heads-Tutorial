@@ -1,7 +1,8 @@
+
 <div class="righttop">
     <p class="righttoptext">Settings Page</p>
 </div>
-<link rel="stylesheet" href="css/tutor/setting.css">
+
 
 <div class="contact-form">
     <h1>Personal Information</h1>
@@ -10,18 +11,9 @@
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-        $dsn = 'localhost';
-        $dbusername = "root";
-        $dbpassword = "";
-        $dbname = "happy_heads";
-
-        $conn = new mysqli($dsn, $dbusername, $dbpassword, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $username = $_SESSION['username'];
-        $sql = "SELECT * FROM moderator WHERE mod_usern = 'carlin'";
+        include("../includes/dbh.inc.php");
+        $username = $_SESSION["username"];
+        $sql = "SELECT * FROM `moderator` WHERE mod_usern = '$username'";
         $result = mysqli_query($conn, $sql);
         $resultcheck = mysqli_num_rows($result);
 
@@ -38,11 +30,12 @@
                 $descrip = $row['mod_description'];
                 $pfpurl = $row['pfp_url'];
                 $bdate = date("Y-m-d", strtotime($row['mod_bdate']));
+
             }
         }
         ?>
         <form action="tutor-update-settings.php" method="POST" enctype="multipart/form-data">
-        <div id="pfp-name">
+            <div id="pfp-name">
                 <div id="uploadbox1" style="background-image: url('images/Team/<?php echo $pfpurl ?>')">
                     <label for="fileInput1">
                         <p class="uploadtext">Change Profile</p>
@@ -120,7 +113,7 @@
             <div class="description">
                 <h5>Description</h5>
                 <textarea required="" cols="77" rows="6" placeholder="Short description" name="description"
-                    id="description" value="<?php echo $descrip ?>"></textarea>
+                    id="description" ><?php echo $descrip ?></textarea>
             </div>
             <div>
                 <h1 id="login-security">Login & Security</h1>

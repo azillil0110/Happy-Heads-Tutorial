@@ -1,5 +1,11 @@
-<?php include_once 'includes/dbh.inc.php'?>
+<?php include_once 'includes/dbh.inc.php';
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include("includes/dbh.inc.php"); 
+
+?>
 <div class="top">
     <div class="shortrectangle">
         <p class="rectangletext">TUTOR ACCESS</p>
@@ -12,7 +18,7 @@
 
 
             <?php 
-                $username = $_GET['username'];
+                $username = $_SESSION['username'];
                 $sql = "SELECT * FROM `moderator` WHERE mod_usern = '$username'";
                 $result = mysqli_query($conn, $sql);
                 $resultcheck = mysqli_num_rows($result);
