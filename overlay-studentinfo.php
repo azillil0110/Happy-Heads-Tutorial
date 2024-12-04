@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/admin/admin-student.css">
     <title>Student Information</title>
 </head>
-
+<!-- overlay of student info -->
 <body>
     <div class="overlay" id="scheduleOverlay">
         <form action="admin-edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">

@@ -2,9 +2,9 @@
 session_start();
 
 require_once 'dbh.inc.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
-    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
+    require_once 'D:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
+    require_once 'D:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
+    require_once 'D:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
