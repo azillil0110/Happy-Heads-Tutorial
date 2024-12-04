@@ -167,4 +167,23 @@ function getContent(section) {
     }
 }
 
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+     if(urlParams.has('settings')){
+        const stylesheet = document.getElementById('rightsidestyle');
+        stylesheet.href = 'css/admin/admin-settings.css';
+        fetch('./admin-settings.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.querySelector('.rightside').innerHTML = html;
+                })
+                .catch(err => {
+                    document.querySelector('.rightside').innerHTML = `<p>Error loading student data.</p>`;
+                });
+
+    }
+
+
+  };
+
 /*COMMENTTTTTT*/

@@ -20,7 +20,7 @@
                         </label>
                         <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput" name="studImage"
                             style="display:none">
-                        <input type="text" id="filename" name="filename" value="file_name_here" style="display: none;">
+                        <input type="text" id="oldfilename" name="oldfilename" value="file_name_here" style="display: none;">
                     </div>
                 </div>
                 <script>

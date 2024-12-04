@@ -25,6 +25,7 @@ function showDetails(box) {
     const start_time = box.getAttribute('starttime');
     const end_time = box.getAttribute('endtime');
 
+    document.getElementById('oldfilename').value = pfp;
     document.getElementById('studentid').value = studid;
     document.getElementById('studentfname').value = fname;
     document.getElementById('studentlname').value = lname;
