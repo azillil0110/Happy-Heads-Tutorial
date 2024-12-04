@@ -55,7 +55,7 @@ document.querySelectorAll('.leftoptions, .leftoptions1').forEach(button => {
                 stylesheet.href = 'css/admin/addstudent.css';
                 break;
             case 'reports':
-                stylesheet.href = 'css/admin/reports.css';
+                stylesheet.href = 'css/admin/admin-reports.css';
                 break;
             case 'settings':
                 stylesheet.href = 'css/admin/admin-settings.css';

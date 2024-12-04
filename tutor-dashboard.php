@@ -35,5 +35,7 @@
     <script src="javascript/schedule.js"></script>
     <script src="javascript/student-info.js"></script>
     <script src="javascript/tutor-view-sched-student list.js"></script>
+    <script src="javascript/tutor-view-studinfo.js"></script>
+    <script src="javascript/toggle-read.js"></script>
 </body>
 </html>

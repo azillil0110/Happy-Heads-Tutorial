@@ -3,6 +3,7 @@ session_start();
 
 require_once 'dbh.inc.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
+    require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\PHPMailer.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\Exception.php';
     require_once 'C:\xampp\htdocs\sendemail\phpmailer\src\SMTP.php';
 
@@ -25,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $userid = (int)$row['mod_id'];
 
         if ($userid <= 8) {
+        if ($userid <= 8) {
             if ($password === $row['mod_pass']) {
                 $_SESSION['username'] = $username;
                 $_SESSION['acc_type'] = $row['acc_type'];
@@ -40,9 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->SMTPAuth   = true;
                     $mail->Username   = 'migueleugenio102@gmail.com';
                     $mail->Password   = 'zual spmh kjcw kmpy';
+                    $mail->Username   = 'migueleugenio102@gmail.com';
+                    $mail->Password   = 'zual spmh kjcw kmpy';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port       = 587;
 
+                    $mail->setFrom('migueleugenio102@gmail.com', 'Happy Heads Tutorial Center');
                     $mail->setFrom('migueleugenio102@gmail.com', 'Happy Heads Tutorial Center');
                     $mail->addAddress($_SESSION['email']);
                     $mail->isHTML(true);

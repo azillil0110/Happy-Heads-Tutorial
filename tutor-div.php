@@ -1,16 +1,17 @@
 <link rel="stylesheet" href="css/admin/--admin-tutor.css">
 <div class="overlay" id="tutorinfo-overlay">
+<?php
+    include_once 'includes/dbh.inc.php';
+?>
     <div class="overlay-content">
         <div class="row">
             <div class="col-80">
 
             </div>
             <div class="col-20">
-                <button class="sched-btn" onclick="OpenSched()">Schedule →</button>
+                <button class="sched-btn" onclick="showTutorSchedule()">Schedule →</button>
             </div>
         </div>
-
-
         <form action="tutor-update.php" class="tutorform" method="POST">
             <h1>Personal Information</h1>
             <div class="top-container">
@@ -69,5 +70,11 @@
                 </div>
             </div>
         </form>
+    </div>
+</div>
+<div class="overlay" id="tutorsched-overlay">
+    <div id="overlay-content2">
+        <div id="schedule-content">
+                
     </div>
 </div>
