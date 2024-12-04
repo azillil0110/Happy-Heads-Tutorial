@@ -24,15 +24,15 @@ switch ($report) {
         break;
 
     case 'tutors':
-        $query = "SELECT * FROM moderator JOIN students ON students.modID = moderator.mod_id";
+        $query = "SELECT * FROM moderator JOIN students ON students.modID = moderator.mod_id WHERE moderator.mod_id != 1";
         if ($filter == 'asc_name') {
             $query .= " ORDER BY moderator.mod_fname ASC";
         } elseif ($filter == 'desc_name') {
             $query .= " ORDER BY moderator.mod_fname DESC";
         } elseif ($filter == 'male') {
-            $query .= " WHERE moderator.mod_gender = 'male'";
+            $query .= " AND moderator.mod_gender = 'male'";
         } elseif ($filter == 'female') {
-            $query .= " WHERE moderator.mod_gender = 'female'";
+            $query .= " AND moderator.mod_gender = 'female'";
         }
         break;
 
