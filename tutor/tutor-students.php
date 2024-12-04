@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="css/tutor/student.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tutor/student.css">
+    <title>Student Information</title>
 </head>
+
 <body>
-<div class="overlay" id="studentInfo">
-        <form action="tutor-edit-student.php" class="overlay-content" method="POST">
+    <div class="overlay" id="studentInfo">
+        <form action="tutor-edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
             <h2>Student Information</h2>
-            <div class="row">
-                <div class="col-100">
+            <div class="row" id="pfpup">
+                <div id="pfpup">
+                    <div id="uploadbox">
+                        <label for="fileInput">
+                            <p class="uploadtext">Change Profile</p>
+                        </label>
+                        <input type="file" accept="image/jpeg, image/jpg, image/png" id="fileInput" name="studImage"
+                            style="display:none">
+                        <input type="text" id="oldfilename" name="oldfilename" value="file_name_here" style="display: none;">
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const fileInput = document.getElementById('fileInput');
+                        const filenameInput = document.getElementById('filename');
+                        const uploadBox = document.getElementById('uploadbox');
+
+                        fileInput.addEventListener('change', function (event) {
+                            const file = event.target.files[0];
+
+                            if (file) {
+                                // Update filename in the hidden input
+                                filenameInput.value = file.name;
+
+                                // Optional: Display the filename in the console for debugging
+                                console.log('File name:', file.name);
+
+                                // Display the image as background (if needed)
+                                const reader = new FileReader();
+                                reader.onload = function (e) {
+                                    uploadBox.style.backgroundImage = `url('${e.target.result}')`;
+                                    uploadBox.style.backgroundSize = 'cover';
+                                    uploadBox.style.backgroundPosition = 'center';
+
+                                    // Optional: Hide the text once the image is loaded
+                                    const uploadText = uploadBox.querySelector('.uploadtext');
+                                    if (uploadText) uploadText.style.display = 'none';
+                                };
+                                reader.readAsDataURL(file);
+                            } else {
+                                console.warn('No file selected');
+                            }
+                        });
+                    });
+                </script>
+
+
+                <div class="col-100" style="display: none;">
                     <label class="textlabel" for="stud_id">STUDENT ID</label>
                     <input type="text" id="studentid" name="studentid" class="inputtext" readonly>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col-70" id="subrow">
@@ -36,7 +88,7 @@
                 <div class="col-70" id="subrow">
                     <div class="col-50">
                         <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" readonly></br>
+                        <input class="inputtext" type="date" id="student-bday" name="student-birthday" id="student-bday" required></br>
                     </div>
                     <div class="col-50">
                         <label class="textlabel" for="student-age">AGE</label></br>
@@ -46,7 +98,7 @@
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="gender">GENDER</label></br>
-                    <select disabled name="gender" id="student-gender" readonly>
+                    <select name="gender" id="student-gender" disabled>
                         <option disabled value="">Please select one…</option>
                         <option value="Female">Female</option>
                         <option value="Male">Male</option>
@@ -63,7 +115,7 @@
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="level">GRADE LEVEL</label></br>
-                    <select disabled name="Grade" id="grade">
+                    <select name="Grade" id="grade" disabled>
                         <option disabled value="">Please select one…</option>
                         <option value="Playgroup">Playgroup</option>
                         <option value="Pre-Nursery">Pre-Nursery</option>
@@ -86,7 +138,7 @@
                 </div>
                 <div class="col-30">
                     <label class="textlabel" for="tutor">TUTOR</label></br>
-                    <select disabled name="Tutor" id="tutor">
+                    <select name="Tutor" id="tutor">
                         <option disabled value="">Please select one…</option>
                         <option value="2">Sweden</option>
                         <option value="3">Ann Erica</option>
@@ -99,14 +151,14 @@
             </div>
             <hr id="line-enroll">
             <div class="row">
-                <p class="textlabel" id="parentinfo-title" > PARENT/ GUARDIAN INFORMATION </p>
+                <p class="textlabel" id="parentinfo-title"> PARENT/ GUARDIAN INFORMATION </p>
             </div>
             <div class="row">
                 <div class="col-50" id="subrow">
                     <div class="col-100">
                     <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
                         <input class="inputtext" type="text" id="parent_fullname1" name="students-full-name"
-                        placeholder="Enter Full Name" readonly></br>
+                        placeholder="Enter Full Name" required></br>
                 </div>
                 </div>
                 <div class="col-50">
@@ -129,17 +181,17 @@
             </div>
             <hr id="line-invi">
             <div class="row">
-            <div class="col-50" id="subrow">
+                <div class="col-50" id="subrow">
                     <div class="col-100">
                         <label class="textlabel" for="parent-lname1">FULL NAME</label></br>
                         <input class="inputtext" type="text" id="parent_fullname2" name="students-full-name"
-                            placeholder="Enter Full Name" readonly></br>
+                            placeholder="Enter Full Name" required></br>
                     </div>
                 </div>
                 <div class="col-50">
                     <label class="textlabel" for="sp-relationship2">RELATIONSHIP</label></br>
                     <input class="inputtext" type="text" id="sp-relationship2" name="parent-relationship2"
-                        placeholder="Enter Relationship" readonly></br>
+                        placeholder="Enter Relationship"></br>
                 </div>
             </div>
             <div class="row">
@@ -162,7 +214,7 @@
                 </div>
                 <div class="col-30">
                 <div class="option" id="student-ques1-option">
-                        <input disabled class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
+                        <input class="radiobtn1" type="radio" id="meds1" name="yesno_meds">
                         <label class="btnlabel1" for="yes">Yes</label><br>
                         <input disabled class="radiobtn1" type="radio" id="meds2" name="yesno_meds">
                         <label class="btnlabel1" for="no">No</label>
@@ -223,68 +275,68 @@
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input disabled type="checkbox" id="monday" name="mon" value="monday">
+                    <input type="checkbox" id="monday" name="mon" value="monday" disabled>
                     <label class="labelday" for="mon">MONDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input disabled type="checkbox" id="tuesday" name="tue" value="tuesday">
+                    <input type="checkbox" id="tuesday" name="tue" value="tuesday" disabled>
                     <label class="labelday" for="tue">TUESDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input disabled type="checkbox" id="wednesday" name="wed" value="wednesday">
+                    <input type="checkbox" id="wednesday" name="wed" value="wednesday" disabled>
                     <label class="labelday" for="wed">WEDNESDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input disabled type="checkbox" id="thursday" name="thu" value="thursday">
+                    <input type="checkbox" id="thursday" name="thu" value="thursday" disabled>
                     <label class="labelday" for="thu">THURSDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input disabled type="checkbox" id="friday" name="fri" value="friday">
+                    <input type="checkbox" id="friday" name="fri" value="friday" disabled>
                     <label class="labelday" for="fri">FRIDAY</label><br>
                 </div>
                 <div class="col-16">
-                    <input disabled type="checkbox" id="saturday" name="sat" value="saturday">
+                    <input type="checkbox" id="saturday" name="sat" value="saturday" disabled>
                     <label class="labelday" for="sat">SATURDAY</label><br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-mtime1" name="mtime1"></br>
+                    <input class="inputtime" type="time" id="student-mtime1" name="mtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-ttime1" name="ttime1"></br>
+                    <input class="inputtime" type="time" id="student-ttime1" name="ttime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-wtime1" name="wtime1"></br>
+                    <input class="inputtime" type="time" id="student-wtime1" name="wtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-thtime1" name="thtime1"></br>
+                    <input class="inputtime" type="time" id="student-thtime1" name="thtime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-ftime1" name="ftime1"></br>
+                    <input class="inputtime" type="time" id="student-ftime1" name="ftime1" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-stime1" name="stime1"></br>
+                    <input class="inputtime" type="time" id="student-stime1" name="stime1" disabled></br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-mtime2" name="mtime2"></br>
+                    <input class="inputtime" type="time" id="student-mtime2" name="mtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-ttime2" name="ttime2"></br>
+                    <input class="inputtime" type="time" id="student-ttime2" name="ttime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-wtime2" name="wtime2"></br>
+                    <input class="inputtime" type="time" id="student-wtime2" name="wtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-thtime2" name="thtime2"></br>
+                    <input class="inputtime" type="time" id="student-thtime2" name="thtime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-ftime2" name="ftime2"></br>
+                    <input class="inputtime" type="time" id="student-ftime2" name="ftime2" disabled></br>
                 </div>
                 <div class="col-16">
-                    <input disabled class="inputtime" type="time" id="student-stime2" name="stime2"></br>
+                    <input class="inputtime" type="time" id="student-stime2" name="stime2" disabled></br>
                 </div>
             </div>
             <div class="row">
@@ -292,24 +344,24 @@
                     <label class="textlabel" for="authname">AUTHORIZED INDIVIDUALS</label></br>
                     <label class="lightlabel-small" for="authname-inst">The following individuals are hereby
                         approved by the Parent to pick up the child.</label>
-                    <input readonly class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv1" name="authindiv" placeholder="Fullname">
                     </br>
-                    <input readonly class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname">
+                    <input class="inputtext" type="text" id="authindiv2" name="authindiv" placeholder="Fullname">
                     </br>
                 </div>
                 <div class="col-60" id="subrow">
                     <div class="col-40">
                         <label class="textlabel" for="rel">RELATIONSHIP</label></br></br>
-                        <input readonly class="inputtext" type="text" id="rel3" name="relationship"
+                        <input class="inputtext" type="text" id="rel3" name="relationship"
                             placeholder="Enter relationship"></br>
-                        <input readonly class="inputtext" type="text" id="rel4" name="relationship"
+                        <input class="inputtext" type="text" id="rel4" name="relationship"
                             placeholder="Enter relationship"></br>
                     </div>
                     <div class="col-60">
                         <label class="textlabel" for="connum">CONTACT NUMBER</label></br></br>
-                        <input readonly class="inputtext" type="text" id="connum3" name="contactnumber"
+                        <input class="inputtext" type="text" id="connum3" name="contactnumber"
                             placeholder="Enter Contact Number"></br>
-                        <input readonly class="inputtext" type="text" id="connum4" name="contactnumber"
+                        <input class="inputtext" type="text" id="connum4" name="contactnumber"
                             placeholder="Enter Contact Number"></br>
                     </div>
                 </div>
@@ -326,6 +378,16 @@
                 <button type="button" class="close-btn" onclick="closeOverlay()">Close</button>
             </div>
         </form><!-- end of the div can be form-->
+        <div id="successModal" class="modal">
+            <div class="modal-content">
+                <p class="modal-text">Adding User Successful</p>
+                <p class="modal-text2">username and password are default</p>
+            </div>
+        </div>
+        <script src="javascript/overlay.js"></script>
     </div>
+
+    <script src="javascript/toggleread.js"></script>
 </body>
+
 </html>

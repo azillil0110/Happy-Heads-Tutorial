@@ -84,7 +84,7 @@
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
-                        <a href="admin-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
+                        <a href="overlay-studentinfo.php?id=<?php echo $studentID; ?>" class="righttitle">
                             <?php echo $row['stud_fname'] . " " . $row['stud_lname']; ?>
                         </a>
                         <div class="hover-text">More Info</div>
@@ -103,5 +103,4 @@
     </div>
     <script src="javascript/overlay.js"></script>
     <?php include_once 'overlay-studentinfo.php' ?>
-   
 </div>

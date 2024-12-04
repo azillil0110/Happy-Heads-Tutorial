@@ -80,3 +80,44 @@
 .square1 {
     color: #044c8c;
 }
+
+#pfpup {
+    justify-content: center;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+#filename {
+    border: none;
+    background: none;
+    text-align: center;
+}
+
+
+#uploadbox {
+    width: 200px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#uploadbox:hover {
+    border-color: #007bff; /* Hover border color */
+}
+
+.uploadicon {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+
+.uploadtext {
+    font-weight: bold;
+    font-size: 14px;
+}
