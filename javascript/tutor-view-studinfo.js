@@ -1,4 +1,4 @@
-function showStudentDetails(box) {
+function tutor(box) {
 
     const studid = box.getAttribute('stud-id');
     const fname = box.getAttribute('stud-fname');
@@ -89,27 +89,9 @@ function showStudentDetails(box) {
         document.getElementById('student-stime2').value = end_time;
     }
 
-    document.getElementById('pendingStudent').style.display = 'flex';
+    document.getElementById('studentInfo').style.display = 'flex';
 }
 
 function closeOverlay() {
-    document.getElementById('pendingStudent').style.display = 'none';
-    document.getElementById('monday').checked = false;
-    document.getElementById('tuesday').checked = false;
-    document.getElementById('wednesday').checked = false;
-    document.getElementById('thursday').checked = false;
-    document.getElementById('friday').checked = false;
-    document.getElementById('saturday').checked = false;
-    document.getElementById('student-mtime1').value = "";
-    document.getElementById('student-mtime2').value = "";
-    document.getElementById('student-ttime1').value = "";
-    document.getElementById('student-ttime2').value = "";
-    document.getElementById('student-wtime1').value = "";
-    document.getElementById('student-wtime2').value = "";
-    document.getElementById('student-thtime1').value = "";
-    document.getElementById('student-thtime2').value = "";
-    document.getElementById('student-ftime1').value = "";
-    document.getElementById('student-ftime2').value = "";
-    document.getElementById('student-stime1').value = "";
-    document.getElementById('student-stime2').value = "";
+    document.getElementById('studentInfo').style.display = 'none';
 }

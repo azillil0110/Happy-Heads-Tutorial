@@ -1,10 +1,10 @@
-function toggleEdit() {
+function editToggle() {
             const inputs = document.querySelectorAll('.inputtext, .inputtime, select, input[type="checkbox"]');
             const editButton = document.querySelector('.edit-btn');
             const isEditing = editButton.textContent === 'Edit';
 
             inputs.forEach(input => {
-                if (input.type === 'checkbox' || input.tagName === 'SELECT') {
+                if (input.type === 'checkbox' || input.tagName === 'SELECT' || input.type === 'time') {
                     input.disabled = !isEditing;
                 } else {
                     input.readOnly = !isEditing;
@@ -12,8 +12,4 @@ function toggleEdit() {
             });
 
             editButton.textContent = isEditing ? 'Cancel' : 'Edit';
-        }
-
-        function closeOverlay() {
-            document.getElementById('scheduleOverlay').style.display = 'none';
         }

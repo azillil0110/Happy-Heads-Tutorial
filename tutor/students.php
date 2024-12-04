@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/admin/admin-students.css">
+<link rel="stylesheet" href="css/tutor/student.css">
 <?php include_once '../includes/dbh.inc.php'?>
 
 
@@ -8,16 +8,73 @@
 <div class="rightbot">
     <div class="firstrow">
     <?php 
-            $sql = "SELECT * FROM `students`";
-            $result = mysqli_query($conn, $sql);
-            $resultcheck = mysqli_num_rows($result);
+            $sql = "SELECT 
+            students.stud_id,
+            students.stud_fname,
+            students.stud_lname,
+            students.stud_nname,
+            students.stud_bdate,
+            students.stud_age,
+            students.stud_gender,
+            students.stud_grade_level,
+            students.school_name,
+            students.stud_address,
+            students.pic_perm,
+            students.on_meds,
+            students.stud_comment,
+            students.pfp_url,
+            guardian.grdn_name AS guardian_name,
+            guardian.relationship AS guardian_relationship,
+            guardian.grdn_email AS guardian_email,
+            guardian.grdn_phone AS guardian_phone,
+            authorized_fetcher.fetcher_name AS fetcher_name,
+            authorized_fetcher.relationship AS fetcher_relationship,
+            authorized_fetcher.fetcher_phone AS fetcher_phone,
+            schedule.sched_day,
+            schedule.sched_starttime,
+            schedule.sched_endtime
+        FROM 
+            students
+        LEFT JOIN 
+            guardian ON students.stud_id = guardian.studID
+        LEFT JOIN 
+            authorized_fetcher ON students.stud_id = authorized_fetcher.studID
+        LEFT JOIN 
+            schedule ON students.stud_id = schedule.stud_ID";
+            
+        $result = mysqli_query($conn, $sql);
+        $resultcheck = mysqli_num_rows($result);
 
             if($resultcheck > 0){
                 $i = 1;
                 while($row = mysqli_fetch_assoc($result)){ 
                     $studentID = $row['stud_id']; // ID DITO RAGHHH
                     ?>
-                    <div  class="box" onclick="toggleOverlay()">
+                    <div  class="box" onclick="tutor(this)"
+                    stud-id="<?php echo $row['stud_id']; ?>"
+                        stud-id="<?php echo $row['stud_id']; ?>"
+                        stud-fname="<?php echo $row['stud_fname']; ?>"
+                        stud-lname="<?php echo $row['stud_lname']; ?>"
+                        stud-nname="<?php echo $row['stud_nname']; ?>"
+                        stud-bdate="<?php echo $row['stud_bdate']; ?>"
+                        stud-age="<?php echo $row['stud_age']; ?>"
+                        stud-gender="<?php echo $row['stud_gender']; ?>"
+                        stud-school="<?php echo $row['school_name']; ?>"
+                        stud-grade-level="<?php echo $row['stud_grade_level']; ?>"
+                        stud-address="<?php echo $row['stud_address']; ?>"
+                        full-name="<?php echo $row['guardian_name']; ?>"
+                        relationship="<?php echo $row['guardian_relationship']; ?>"
+                        email="<?php echo $row['guardian_email']; ?>"
+                        phone="<?php echo $row['guardian_phone']; ?>"
+                        fetcher-name="<?php echo $row['fetcher_name']; ?>"
+                        fetcher-relationship="<?php echo $row['fetcher_relationship']; ?>"
+                        fetcher-phone="<?php echo $row['fetcher_phone']; ?>"
+                        pic-perm="<?php echo $row['pic_perm']; ?>"
+                        on-meds="<?php echo $row['on_meds']; ?> "
+                        stud-comment="<?php echo $row['stud_comment']; ?>"
+                        day="<?php echo $row['sched_day']; ?>"
+                        starttime="<?php echo $row['sched_starttime']; ?>"
+                        endtime="<?php echo $row['sched_endtime']; ?>">
                         <div id="stud-pic<?php echo $i; ?>" class="stpfp" 
                              style="background-image: url('./images/students/<?php echo $row['pfp_url']; ?>');">
                         </div>
@@ -32,182 +89,5 @@
             }
         ?> 
     </div>
-</div>
-
-
-<?php if ($clickedStudentId): ?>
-    <p>You clicked on student ID: <?php echo htmlspecialchars($clickedStudentId); ?></p>
-<?php endif; ?>
-
-
-<div class="overlay" id="scheduleOverlay">
-    <div class="overlay-content">
-        <h2>Tutor Information</h2>
-                <div class="row">
-                    <div class="col-70" id="subrow">
-                        <div class="col-50">
-                            <label class="textlabel" for="studentfname">FIRST NAME</label>
-                            <input type="text" id="studentfname" name="student-firstname" class="inputtext" readonly>
-                        </div>
-                        <div class="col-50">
-                            <label class="textlabel" for="studentlname">LAST NAME</label>
-                            <input type="text" id="studentlname" name="student-lastname" class="inputtext" readonly>
-                        </div>
-                    </div>
-                    <div class="col-30">
-                        <label class="textlabel" for="student-nname">NICKNAME</label></br>
-                        <input class="inputtext" type="text" id="student-nname" name="student-nickname" readonly></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-70" id="subrow">
-                        <div class="col-50">
-                            <label class="textlabel" for="student-bday">DATE OF BIRTH</label></br>
-                            <input class="inputtext" type="text" id="student-bday" name="student-birthday" readonly></br>
-                        </div>
-                        <div class="col-50">
-                            <label class="textlabel" for="student-age">AGE</label></br>
-                            <input class="inputtext" type="text" id="student-age" name="student-age" readonly><br>
-                        </div>
-                    </div>
-                    <div class="col-30">
-                        <label class="textlabel" for="gender">GENDER</label></br>
-                        <input class="inputtext" type="text" id="male" name="gender" readonly></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-70">
-                        <label class="textlabel" for="school">SCHOOL</label></br>
-                        <input class="inputtext" type="text" id="school" name="school" readonly></br>
-                    </div>
-                    <div class="col-30">
-                        <label class="textlabel" for="level">GRADE LEVEL</label></br>
-                        <input class="inputtext" type="text" id="grade-level" name="greade-level" readonly></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-70">
-                        <label class="textlabel" for="homeadd">HOME ADDRESS</label></br>
-                        <input class="inputtext" type="text" id="homeadd" name="homeaddress" readonly></br>
-                    </div>
-                    <div class="col-30">
-                        <label class="textlabel" for="level">TUTOR</label></br>
-                        <select name="Grade" id="grade">
-                          <option value="tutor">Tutor</option>
-                          <option value="anne-erica">Ann Erica</option>
-                          <option value="catherine">Catherine</option>
-                          <option value="carlin">Carlin</option>
-                          <option value="bless">Bless</option>
-                          <option value="jillen">Jillen</option>
-                        </select> </br>
-                    </div>
-                </div>
-                <hr id="line-enroll">
-                <h2>Parent/Guardian Information</h2>
-                <div class="row">
-                    <div class="col-50" id="subrow">
-                        <div class="col-50">
-                            <label class="textlabel" for="parent-lname1">LAST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-lname1" name="students-parent-lname1" readonly></br>
-                        </div>
-                        <div class="col-50">
-                            <label class="textlabel" for="parent-fname1">FIRST NAME</label></br>
-                            <input class="inputtext" type="text" id="parent-fname1" name="students-parent-fname1" readobly></br>
-                        </div>
-                    </div>
-                    <div class="col-50">
-                        <label class="textlabel" for="sp-relationship1">RELATIONSHIP</label></br>
-                        <input class="inputtext" type="text" id="sp-relationship1" name="parent-relationship1" readonly></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-50">
-                        <label class="textlabel" for="sp-email1">E-MAIL</label></br>
-                        <input class="inputtext" type="email" id="sp-email1" name="parent-email1" readonly></br>
-                    </div>
-                    <div class="col-50">
-                        <label class="textlabel" for="sp-connum1">CONTACT NUMBER</label></br>
-                        <input class="inputtext" type="text" id="sp-connum1" name="parent-connum1" readonly></br>
-                    </div>
-                </div>
-                <hr id="line-enroll">
-                <h2>Schedule</h2>
-                    <div class="row">
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="mon" value="monday">
-                        <label class="labelday" for="mon">MONDAY</label><br>                    
-                    </div>
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="tue" value="tuesday">
-                        <label class="labelday" for="tue">TUESDAY</label><br>   
-                    </div>
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="wed" value="wednesday">
-                        <label class="labelday" for="wed">WEDNESDAY</label><br>
-                    </div>
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="thu" value="thursday">
-                        <label class="labelday" for="thu">THURSDAY</label><br>
-                    </div>
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="fri" value="friday">
-                        <label class="labelday" for="fri">FRIDAY</label><br>
-                    </div>
-                    <div class="col-16">
-                        <input type="checkbox" id="student-schedday" name="sat" value="saturday">
-                        <label class="labelday" for="sat">SATURDAY</label><br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime1" name="mtime1"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime1" name="ttime1"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime1" name="wtime1"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime1" name="thtime1"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime1" name="ftime1"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime1" name="stime1"></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime2" name="mtime2"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime2" name="ttime2"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime2" name="wtime2"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime2" name="thtime2"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime2" name="ftime2"></br>
-                    </div>
-                    <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime2" name="stime2"></br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-40">
-                    </div>
-                    <div class="col-60" id="subrow">
-                        <div class="col-60">
-                        </div>
-                    </div>
-                </div>
-                <hr id="line-enroll">
-                <button class="close-btn" onclick="toggleOverlay()">Close</button>
-        </div>
-    </div>
+    <?php include_once 'tutor-students.php'; ?>
 </div>
