@@ -20,29 +20,47 @@ $grdn1_relationship = htmlspecialchars($_POST['parent-relationship1']);
 $grdn1_email = htmlspecialchars($_POST['parent-email1']);
 $grdn1_phone = htmlspecialchars($_POST['parent-connum1']);
 
-$grdn2_name = isset($_POST['students-parent-fname2']) && isset($_POST['students-parent-lname2']) 
-? htmlspecialchars($_POST['students-parent-fname2'] . " " . $_POST['students-parent-lname2']) 
-: null;
+$grdn2_name = isset($_POST['students-parent-fname2'], $_POST['students-parent-lname2']) 
+    ? htmlspecialchars($_POST['students-parent-fname2'] . " " . $_POST['students-parent-lname2']) 
+    : null;
 
 $grdn2_relationship = isset($_POST['parent-relationship2']) 
-? htmlspecialchars($_POST['parent-relationship2']) 
-: null;
+    ? htmlspecialchars($_POST['parent-relationship2']) 
+    : null;
 
 $grdn2_email = isset($_POST['parent-email2']) 
-? htmlspecialchars($_POST['parent-email2']) 
-: null;
+    ? htmlspecialchars($_POST['parent-email2']) 
+    : null;
 
 $grdn2_phone = isset($_POST['parent-connum2']) 
-? htmlspecialchars($_POST['parent-connum2']) 
-: null;
+    ? htmlspecialchars($_POST['parent-connum2']) 
+    : null;
 
-$fetcher1_name = isset($_POST['authindiv1']) ? htmlspecialchars($_POST['authindiv1']) : null;
-$fetcher1_relationship = isset($_POST['relationship1']) ? htmlspecialchars($_POST['relationship1']) : null;
-$fetcher1_phone = isset($_POST['contactnumber1']) ? htmlspecialchars($_POST['contactnumber1']) : null;
+// Authorized fetcher 1 details
+$fetcher1_name = isset($_POST['authindiv1']) 
+    ? htmlspecialchars($_POST['authindiv1']) 
+    : null;
 
-$fetcher2_name = isset($_POST['authindiv2']) ? htmlspecialchars($_POST['authindiv2']) : null;
-$fetcher2_relationship = isset($_POST['relationship2']) ? htmlspecialchars($_POST['relationship2']) : null;
-$fetcher2_phone = isset($_POST['contactnumber2']) ? htmlspecialchars($_POST['contactnumber2']) : null;
+$fetcher1_relationship = isset($_POST['relationship1']) 
+    ? htmlspecialchars($_POST['relationship1']) 
+    : null;
+
+$fetcher1_phone = isset($_POST['contactnumber1']) 
+    ? htmlspecialchars($_POST['contactnumber1']) 
+    : null;
+
+// Authorized fetcher 2 details
+$fetcher2_name = isset($_POST['authindiv2']) 
+    ? htmlspecialchars($_POST['authindiv2']) 
+    : null;
+
+$fetcher2_relationship = isset($_POST['relationship2']) 
+    ? htmlspecialchars($_POST['relationship2']) 
+    : null;
+
+$fetcher2_phone = isset($_POST['contactnumber2']) 
+    ? htmlspecialchars($_POST['contactnumber2']) 
+    : null;
 
 $on_meds = !empty($_POST['student-medicalblank']) ? htmlspecialchars($_POST['student-medicalblank']) : 'None';
 $yesno = isset($_POST['yesno_pic']) ? $_POST['yesno_pic'] : 'No';
@@ -108,22 +126,41 @@ if ($insert_student->execute()) {
     }
 
     $days_selected = [];
-    
-    if (isset($_POST['mon'])) $days_selected[] = 'monday';
-    if (isset($_POST['tue'])) $days_selected[] = 'tuesday';
-    if (isset($_POST['wed'])) $days_selected[] = 'wednesday';
-    if (isset($_POST['thu'])) $days_selected[] = 'thursday';
-    if (isset($_POST['fri'])) $days_selected[] = 'friday';
-    if (isset($_POST['sat'])) $days_selected[] = 'saturday';
+if (isset($_POST['mon'])) $days_selected[] = 'monday';
+if (isset($_POST['tue'])) $days_selected[] = 'tuesday';
+if (isset($_POST['wed'])) $days_selected[] = 'wednesday';
+if (isset($_POST['thu'])) $days_selected[] = 'thursday';
+if (isset($_POST['fri'])) $days_selected[] = 'friday';
+if (isset($_POST['sat'])) $days_selected[] = 'saturday';
 
-    $times = [
-        'monday' => ['start' => $_POST['mtime1'], 'end' => $_POST['mtime2']],
-        'tuesday' => ['start' => $_POST['ttime1'], 'end' => $_POST['ttime2']],
-        'wednesday' => ['start' => $_POST['wtime1'], 'end' => $_POST['wtime2']],
-        'thursday' => ['start' => $_POST['thtime1'], 'end' => $_POST['thtime2']],
-        'friday' => ['start' => $_POST['ftime1'], 'end' => $_POST['ftime2']],
-        'saturday' => ['start' => $_POST['stime1'], 'end' => $_POST['stime2']],
-    ];
+// Times for each day
+$times = [
+    'monday' => [
+        'start' => isset($_POST['mtime1']) ? htmlspecialchars($_POST['mtime1']) : null,
+        'end' => isset($_POST['mtime2']) ? htmlspecialchars($_POST['mtime2']) : null,
+    ],
+    'tuesday' => [
+        'start' => isset($_POST['ttime1']) ? htmlspecialchars($_POST['ttime1']) : null,
+        'end' => isset($_POST['ttime2']) ? htmlspecialchars($_POST['ttime2']) : null,
+    ],
+    'wednesday' => [
+        'start' => isset($_POST['wtime1']) ? htmlspecialchars($_POST['wtime1']) : null,
+        'end' => isset($_POST['wtime2']) ? htmlspecialchars($_POST['wtime2']) : null,
+    ],
+    'thursday' => [
+        'start' => isset($_POST['thtime1']) ? htmlspecialchars($_POST['thtime1']) : null,
+        'end' => isset($_POST['thtime2']) ? htmlspecialchars($_POST['thtime2']) : null,
+    ],
+    'friday' => [
+        'start' => isset($_POST['ftime1']) ? htmlspecialchars($_POST['ftime1']) : null,
+        'end' => isset($_POST['ftime2']) ? htmlspecialchars($_POST['ftime2']) : null,
+    ],
+    'saturday' => [
+        'start' => isset($_POST['stime1']) ? htmlspecialchars($_POST['stime1']) : null,
+        'end' => isset($_POST['stime2']) ? htmlspecialchars($_POST['stime2']) : null,
+    ],
+];
+
 
     $latest_stud_id = $conn->insert_id;
 

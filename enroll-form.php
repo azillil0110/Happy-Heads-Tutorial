@@ -263,42 +263,42 @@
                 </div>
                 <div class="row">
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime1" name="mtime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-mtime1" name="mtime1" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime1" name="ttime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-ttime1" name="ttime1" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime1" name="wtime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-wtime1" name="wtime1" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime1" name="thtime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-thtime1" name="thtime1" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime1" name="ftime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-ftime1" name="ftime1" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime1" name="stime1" disabled></br>
+                        <input class="inputtime" type="time" id="student-stime1" name="stime1" ></br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-mtime2" name="mtime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-mtime2" name="mtime2" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ttime2" name="ttime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-ttime2" name="ttime2" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-wtime2" name="wtime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-wtime2" name="wtime2" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-thtime2" name="thtime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-thtime2" name="thtime2" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-ftime2" name="ftime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-ftime2" name="ftime2" ></br>
                     </div>
                     <div class="col-16">
-                        <input class="inputtime" type="time" id="student-stime2" name="stime2" disabled></br>
+                        <input class="inputtime" type="time" id="student-stime2" name="stime2" ></br>
                     </div>
                 </div>
                 <div class="row">
@@ -352,8 +352,8 @@
     </section>
 
     <?php include('includes/footer.php') ?>
+    <script src="javascript/sched.js"></script>
 </body>
 <script src="javascript/overlay.js"></script>
-<script src="javascript/sched.js"></script>
 
 </html>

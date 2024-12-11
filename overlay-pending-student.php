@@ -51,9 +51,9 @@
                         <label class="textlabel" for="gender">GENDER</label></br>
                         <select name="gender" id="student-gender" required>
                             <option disabled value="">Please select one…</option>
-                            <option value="Female">Female</option>
-                            <option value="Male">Male</option>
-                            <option value="Other">Other</option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
                             <option value="Prefer not to answer">Prefer not to Answer</option>
                         </select>
                     </div>

@@ -10,7 +10,7 @@
 
 <div>
     <div class="overlay" id="studentInfo">
-        <form action="edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
+        <form action="./edit-student.php" class="overlay-content" method="POST" enctype="multipart/form-data">
             <h2>Student Information</h2>
             <div class="row" id="pfpup">
                 <div id="pfpup">

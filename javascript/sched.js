@@ -12,6 +12,7 @@ days.forEach(({ name, prefix }) => {
     const startTime = document.querySelector(`input[name="${prefix}time1"]`);
     const endTime = document.querySelector(`input[name="${prefix}time2"]`);
 
+    if (checkbox && startTime && endTime) {
     checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
             startTime.disabled = false;
@@ -27,4 +28,5 @@ days.forEach(({ name, prefix }) => {
             endTime.value = '';
         }
     });
+}
 });

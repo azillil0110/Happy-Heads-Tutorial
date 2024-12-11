@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     WHERE studID = $studID";
 
     if (mysqli_query($conn, $query2) && $flag=1) {
-        header('Location: admin-dashboard.php?page=students');   
+        $flag =1; 
     } else {
         echo "Error: " . mysqli_error($conn);
     }
@@ -140,7 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     WHERE studID = $studID;";
 
     if (mysqli_query($conn, $query3)) {
-        header('Location: admin-dashboard.php?page=students&success=true');
+        header('Location: admin-dashboard.php?success=true');
     } else {
         echo "Error: " . mysqli_error($conn);
     }

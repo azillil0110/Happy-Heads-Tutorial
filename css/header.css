@@ -55,7 +55,7 @@ nav{
     background-image: url('../images/banner.jpg');
     color: white;
     background-size: cover;
-    background-position-y: 40%;
+    background-position-y: 30%;
 }
 .current-page{
     color: rgb(3, 3, 143);
