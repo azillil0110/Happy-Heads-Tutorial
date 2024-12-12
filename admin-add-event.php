@@ -1,5 +1,5 @@
 <div class="righttop">
-    <p class="righttoptext">Add an Event</p>
+    <p class="righttoptext">Add an Announcement</p>
 </div>
 <form class="rightbot" action="includes/insert-event.php" method="POST" enctype="multipart/form-data">
     <div class="bottop">
@@ -15,9 +15,9 @@
         </div>
         <div class="rightbottop">
             <div class="topform">
-                <p class="formtext">Name</p>
-                <input type="text" placeholder="Input Event Name" class="textevent" name="eventName" required>
-                <p class="formtext">Event Date</p>
+                <p class="formtext">Title</p>
+                <input type="text" placeholder="Input Title" class="textevent" name="eventName" required>
+                <p class="formtext">Date</p>
                 <input type="date" id="date" name="eventDate" placeholder="Select a date" required>
             </div>
         </div>
@@ -28,11 +28,11 @@
             <textarea rows="7" cols="90" id="descinp" placeholder="What is the event all about?" name="eventDescription" required></textarea>
         </div>
         <div class="bottomform">
-            <button id="btn-save" type="submit" class="submit">Add Event</button>
+            <button id="btn-save" type="submit" class="submit">Add Announcement</button>
         </div>
         <div id="successModal" class="modal">
             <div class="modal-content">
-                <p class="modal-text">Adding Event Successful</p>
+                <p class="modal-text">Adding Announcement Successful</p>
                 <p class="modal-text2">It is now visible on event page</p>
             </div>
         </div>

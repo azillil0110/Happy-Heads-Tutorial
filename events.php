@@ -15,7 +15,7 @@
     <?php include('includes/header.php') ?>
 
     <div id="banner">
-        <h1 class="largest-font txt-shadow no-margin">EVENTS</h1>
+        <h1 class="largest-font txt-shadow no-margin">ANNOUNCEMENTS</h1>
             <h3 class="txt-shadow">here's what happened to Happy Heads</h3>
     </div>
 
