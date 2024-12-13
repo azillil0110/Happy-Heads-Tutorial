@@ -13,12 +13,12 @@
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'johnlutherdelacruz01@gmail.com';
+        $mail->Username   = 'migueleugenio102@gmail.com';
         $mail->Password   = 'ewhs vkjs uqcj hmjb';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
-        $mail->setFrom('johnlutherdelacruz01@gmail.com', 'Happy Heads Tutorial Center');
+        $mail->setFrom('migueleugenio102@gmail.com', 'Happy Heads Tutorial Center');
         $mail->addAddress($_SESSION['email']);
 
         $mail->isHTML(true);
